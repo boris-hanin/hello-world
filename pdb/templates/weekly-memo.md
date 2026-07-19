@@ -2,7 +2,7 @@
 
 > Produced by the `weekly-investment` workflow. Research output, not
 > individualized investment advice. Every thesis rests on ledger-tracked,
-> backtestable predictions. See `pdb/METHODOLOGY.md` §8–9.
+> backtestable predictions. See `pdb/METHODOLOGY.md` §8 and §10.
 
 ## Scorecard (how well has this system actually predicted?)
 

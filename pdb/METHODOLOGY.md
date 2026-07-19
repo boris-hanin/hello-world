@@ -80,7 +80,19 @@ travels with the conclusion.
 - The weekly memo must open with the current scorecard. A system that
   hides its record is not rational; it is a marketing department.
 
-## 9. Investment memo standards
+## 9. Write for the reader
+
+The brief has exactly one reader: an intelligent generalist, not a desk of
+analysts. Fewer items, treated properly, beat more items skimmed. Every item
+carries a "The mechanics" passage — one to two punchy paragraphs of
+first-principles context that assume zero domain background: the size of the
+system in play in orders of magnitude, the structural facts that make the
+event matter (the "only three chokepoints of this magnitude" kind of fact),
+and the one or two historical episodes that best calibrate expectations.
+Acronyms are spelled out on first use and avoided where a plain word exists.
+Data density stays (numbers over adjectives, §7); notation density goes.
+
+## 10. Investment memo standards
 
 - Every thesis: instrument, direction, horizon, entry logic, invalidation
   condition (a price or data level that proves it wrong), and the ledger

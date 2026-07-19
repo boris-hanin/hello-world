@@ -13,9 +13,15 @@
 ### {N}. {Headline}
 
 - **Status:** confirmed | reported | disputed · **Confidence:** {0.xx} · **Beat:** {beat}
-- **What happened:** {2-4 sentences, numbers over adjectives}
-- **Why it matters:** {macro transmission channel}
-- **Context:** {historical precedent, technical background, base rate}
+- **What happened:** {2-4 sentences of flowing prose, numbers over adjectives, acronyms spelled out}
+- **Why it matters:** {macro transmission channel, in plain language}
+
+**The mechanics.** {one to two punchy first-principles paragraphs: the size and shape
+of the system in play with orders of magnitude, the structural facts that make the
+event important, and the one or two historical episodes that best calibrate
+expectations — written so a smart reader with zero background finishes understanding
+both mechanism and stakes. Include the base rate in plain words.}
+
 - **Data:** {key data points with as_of dates}
 - **Tech/AI angle:** {only if real — one concrete sentence}
 - **Sources:** {publisher} ({grade}) — {url}; ...

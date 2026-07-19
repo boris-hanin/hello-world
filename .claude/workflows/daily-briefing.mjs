@@ -18,13 +18,15 @@ if (!ARGS.date) throw new Error('args.date (YYYY-MM-DD) is required — scripts 
 const DATE = ARGS.date
 const SCALE = ARGS.scale === 'pilot' ? 'pilot' : 'full'
 const OUT_DIR = `pdb/briefings/${DATE}`
-const TOP_N = SCALE === 'pilot' ? 6 : 10
+const TOP_N = SCALE === 'pilot' ? 4 : 5
 const PER_BEAT = SCALE === 'pilot' ? 4 : 6
 
 const METHODOLOGY = `Follow the analytic standards in pdb/METHODOLOGY.md (read it first):
 ICD-203 probability bands, NATO source grades (A-F reliability x 1-6 credibility),
 confirmed-vs-claimed discipline, base rates before significance judgments,
 numbers over adjectives, falsifiability. Ethos: skeptical, pragmatic, rational.
+Write for an intelligent generalist: spell out every acronym on first use (better,
+avoid all but the universally known ones), no analyst shorthand, no ticker soup.
 Use WebSearch and WebFetch (load via ToolSearch if needed) and prefer PRIMARY
 sources: central bank releases, official statistics, exchange data, court
 filings, wire services. Today's date is ${DATE}.`
@@ -222,13 +224,22 @@ revised_confidence and note corrections.`,
 ${METHODOLOGY}
 Signal (verified): ${JSON.stringify(item.signal)}
 Verifier notes: ${JSON.stringify(item.verdict)}
-Produce: (1) context_md — the historical precedent and technical background a smart
-generalist needs to actually understand this item (comparable past episodes with dates
-and outcomes, how the relevant mechanism works), 5-10 tight sentences; (2) base_rate —
-the unconditional frequency of this class of event/move; (3) series — one or two numeric
-time series (5-30 points each) that would make a genuinely informative chart for this
-item, from real data you can find (prices, rates, counts), each point {x: date, y: number},
-with unit and source. Omit series if no honest numeric series exists — never invent data.`,
+Produce: (1) context_md — one to two PUNCHY paragraphs of first-principles context
+written for a smart reader who may know nothing about this domain. Start from the ground
+up: how big is the system in play and why does it matter (orders of magnitude — share of
+world GDP, trade, supply); what are the structural facts that make this event important
+(e.g. for an oil-transit story: roughly a fifth of the world's oil moves through the
+Strait of Hormuz, and it is one of only three maritime chokepoints of that magnitude,
+alongside the Strait of Malacca and the Suez/Bab el-Mandeb corridor); then the one or
+two historical episodes that best calibrate expectations, told in plain language with
+dates and what actually happened. No acronyms unless universally known (spell them out),
+no jargon, no bullet lists — flowing, vivid, information-dense prose. The test: a smart
+reader with zero background should finish these paragraphs understanding both the
+mechanism and the stakes. (2) base_rate — the unconditional frequency of this class of
+event/move, in one plain sentence. (3) series — one or two numeric time series (5-30
+points each) that would make a genuinely informative chart for this item, from real data
+you can find (prices, rates, counts), each point {x: date, y: number}, with unit and
+source. Omit series if no honest numeric series exists — never invent data.`,
       { label: `context:${i}:${item.signal.beat}`, phase: 'Context', schema: CONTEXT_SCHEMA })
       .then(context => ({ ...item, context }))
   }
@@ -289,6 +300,17 @@ Plus a "deep_dives" array: ${JSON.stringify(deepDives)}
    render it as its own subsection), then the red-team dissent VERBATIM, then a
    one-line note of items killed in verification and why. Where an item has a
    tech_ai_angle, include it as a "Tech/AI angle:" line in that item's section.
+
+   READABILITY RULES (these override any denser style in the inputs): the brief is read
+   by one intelligent generalist over coffee, not by a desk of analysts. Per item, write
+   flowing prose, not comma-packed data strings — every number gets a breath of context.
+   Render each item's context as its own "The mechanics" passage of one to two punchy
+   first-principles paragraphs (use the context_md largely verbatim; it was written for
+   this). Spell out every acronym on first use and avoid all but universally known ones
+   (GDP is fine; "FAI", "TTF", "SOX", "LPR" are not — name the thing in words, the
+   abbreviation may follow in parentheses). Keep verifier corrections but fold them into
+   the prose in one clean sentence rather than a forensic changelog. Total brief length
+   target: readable in 10-15 minutes.
 
    Macro trends synthesis:
    --------------------

@@ -160,7 +160,7 @@ if (!survivors.length) throw new Error('All predictions refuted — no memo to w
 // ---- Phase 5: Map to instruments
 phase('Map')
 const mapped = await agent(`You are mapping surviving macro predictions to investment theses.
-${METHODOLOGY} Also read pdb/METHODOLOGY.md section 9 and follow it exactly.
+${METHODOLOGY} Also read pdb/METHODOLOGY.md section 10 (investment memo standards) and follow it exactly.
 Surviving predictions (with refuter notes): ${JSON.stringify(survivors)}
 For each prediction, add an instrument_map: a LIQUID instrument (major ETF, futures
 contract, or FX pair), direction, and an explicit invalidation condition (a price or

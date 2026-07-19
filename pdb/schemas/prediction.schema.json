@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Prediction",
+  "description": "A resolvable, backtestable forecast. One JSON object per line in ledger/predictions.jsonl.",
+  "type": "object",
+  "required": ["id", "date_made", "lens", "statement", "metric", "comparator", "threshold", "resolution_date", "resolution_source", "probability", "rationale"],
+  "properties": {
+    "id": { "type": "string", "description": "e.g. '2026-07-24-eq-03'" },
+    "date_made": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "lens": { "enum": ["rates_fx", "equities", "commodities_energy", "geopolitics"] },
+    "statement": { "type": "string", "description": "Human-readable form of the exact resolvable claim" },
+    "metric": { "type": "string", "description": "Named observable, e.g. 'WTI front-month settle', 'US 10y yield', 'EURUSD spot'" },
+    "comparator": { "enum": [">", ">=", "<", "<=", "within_range", "event_occurs"] },
+    "threshold": { "type": ["number", "string", "array"], "description": "Value, or [low, high] for within_range, or event definition for event_occurs" },
+    "resolution_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "description": "Date on which the metric is read; horizon <= 30 days keeps forecasts short-term and testable" },
+    "resolution_source": { "type": "string", "description": "Named public source used to read the metric, e.g. 'CME settlement', 'FRED DGS10'" },
+    "probability": { "type": "number", "minimum": 0.01, "maximum": 0.99 },
+    "rationale": { "type": "string" },
+    "base_rate_note": { "type": "string", "description": "What the unconditional base rate for this class of move is" },
+    "refutations_survived": { "type": "integer" },
+    "instrument_map": {
+      "type": "object",
+      "properties": {
+        "instrument": { "type": "string" },
+        "direction": { "enum": ["long", "short", "neutral"] },
+        "invalidation": { "type": "string" }
+      }
+    },
+    "status": { "enum": ["open", "resolved_true", "resolved_false", "voided"], "default": "open" }
+  }
+}

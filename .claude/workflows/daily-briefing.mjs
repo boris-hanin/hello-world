@@ -3,7 +3,8 @@ export const meta = {
   description: 'OSINT presidential-style daily brief: collect -> triage -> verify -> context -> synthesize -> compile',
   whenToUse: 'Produce the daily macro intelligence briefing. args: {date: "YYYY-MM-DD" (required), scale: "pilot"|"full" (default full)}',
   phases: [
-    { title: 'Collect', detail: 'parallel beat collectors sweep primary open sources' },
+    { title: 'Directives', detail: 'read operator standing priorities and deep-dive queue' },
+    { title: 'Collect', detail: 'parallel beat collectors sweep primary open sources; deep-dive analysts run alongside' },
     { title: 'Triage', detail: 'dedupe and rank all signals by materiality' },
     { title: 'Verify', detail: 'adversarial verification per signal' },
     { title: 'Context', detail: 'history, technicals, and chartable series per signal' },
@@ -104,18 +105,66 @@ const CONTEXT_SCHEMA = {
   },
 }
 
-// ---- Phase 1: Collect (barrier is required because triage ranks the whole field)
+// ---- Phase 0: Directives — operator feedback steers today's brief
+phase('Directives')
+const directives = await agent(`Read pdb/directives.md in the repo at the current directory. Return JSON:
+{"standing": [each bullet under "Standing priorities" that is a real priority, as a string],
+ "queue": [{"topic": ..., "notes": ..., "requested": "YYYY-MM-DD or unknown"} for each real
+item under "Deep-dive queue"]}. Placeholder bullets like "(none yet)" / "(empty)" do not
+count. If the file is missing, return {"standing": [], "queue": []}.`,
+  { label: 'read-directives', phase: 'Directives', schema: {
+    type: 'object', required: ['standing', 'queue'],
+    properties: {
+      standing: { type: 'array', items: { type: 'string' } },
+      queue: { type: 'array', items: { type: 'object', required: ['topic'], properties: { topic: { type: 'string' }, notes: { type: 'string' }, requested: { type: 'string' } } } },
+    },
+  } }) || { standing: [], queue: [] }
+const STANDING = directives.standing || []
+const QUEUE = (directives.queue || []).slice(0, 5)
+if (QUEUE.length > 0 || STANDING.length > 0) log(`Directives: ${STANDING.length} standing priorities, ${QUEUE.length} queued deep dives`)
+const standingNote = STANDING.length
+  ? `\nThe operator's standing priorities — weight relevant developments on these topics higher: ${STANDING.join('; ')}.`
+  : ''
+
+// ---- Phase 1: Collect (barrier is required because triage ranks the whole field);
+//      operator-requested deep dives run alongside in the same batch
 phase('Collect')
 log(`Sweeping ${BEATS.length} beats at ${SCALE} scale for ${DATE}`)
-const collected = await parallel(BEATS.map(b => () =>
+const DIVE_SCHEMA = {
+  type: 'object',
+  required: ['topic', 'report_md', 'key_findings'],
+  properties: {
+    topic: { type: 'string' },
+    report_md: { type: 'string' },
+    key_findings: { type: 'array', items: { type: 'string' } },
+    series: { type: 'array', items: { type: 'object', required: ['label', 'points'], properties: { label: { type: 'string' }, unit: { type: 'string' }, source: { type: 'string' }, points: { type: 'array', items: { type: 'object', required: ['x', 'y'], properties: { x: { type: 'string' }, y: { type: 'number' } } } } } } },
+    sources: { type: 'array', items: { type: 'object', properties: { url: { type: 'string' }, publisher: { type: 'string' }, grade: { type: 'string' } } } },
+  },
+}
+const collectThunks = BEATS.map(b => () =>
   agent(`You are an intelligence collector on the "${b.key}" beat: ${b.focus}.
-${METHODOLOGY}
+${METHODOLOGY}${standingNote}
 Sweep developments from the last 24-48 hours. Return your ${PER_BEAT} most material
 signals as structured data. Set beat="${b.key}". Grade every source. Include concrete
 data_points (numbers with as_of dates and source URLs) wherever they exist. Do not
 pad: fewer, well-sourced signals beat many thin ones. Skip anything that is pure
-commentary with no new fact.`, { label: `collect:${b.key}`, phase: 'Collect', schema: SIGNALS_SCHEMA })
-))
+commentary with no new fact.`, { label: `collect:${b.key}`, phase: 'Collect', schema: SIGNALS_SCHEMA }))
+const diveThunks = QUEUE.map(d => () =>
+  agent(`You are a deep-dive analyst. The operator of this briefing explicitly requested a
+deep dive on: "${d.topic}"${d.notes ? ` — angle: ${d.notes}` : ''}.
+${METHODOLOGY}
+Research this thoroughly (multiple searches, primary sources). Produce report_md: a
+tight, deeply informative analysis (roughly 400-800 words) with the historical and
+technical context needed to genuinely understand the topic, explicit probability bands
+on any judgments, base rates, and what would falsify your read. key_findings: 3-6
+one-sentence takeaways. series: 1-3 real numeric time series that illuminate the topic
+(never invented). Grade all sources.`,
+    { label: `dive:${d.topic.slice(0, 40)}`, phase: 'Collect', schema: DIVE_SCHEMA }))
+
+const batch = await parallel([...collectThunks, ...diveThunks])
+const collected = batch.slice(0, BEATS.length)
+const deepDives = batch.slice(BEATS.length).filter(Boolean)
+if (QUEUE.length) log(`${deepDives.length}/${QUEUE.length} deep dives completed`)
 
 const allSignals = collected.filter(Boolean).flatMap(r => r.signals || [])
 if (!allSignals.length) throw new Error('No signals collected — check network/search access')
@@ -212,12 +261,14 @@ Read pdb/templates/daily-brief.md for the layout. Then write THREE files:
 1. ${OUT_DIR}/signals.json — the raw structured record. Verified items:
 ${briefingInput}
 Plus a "killed" array for signals rejected in verification: ${JSON.stringify(killed.map(k => ({ headline: k.signal.headline, reason: k.verdict && k.verdict.notes })))}
+Plus a "deep_dives" array: ${JSON.stringify(deepDives)}
 
 2. ${OUT_DIR}/brief.md — the daily brief for ${DATE} per the template: BLUF key judgments
    first (with probability bands), then one section per item (headline, what happened,
-   why it matters, context, sources with grades), then the macro trends synthesis below,
-   then the red-team dissent VERBATIM, then a one-line note of items killed in
-   verification and why.
+   why it matters, context, sources with grades), then — if any deep dives exist — an
+   "Operator deep dives" section with each dive's report_md and key findings, then the
+   macro trends synthesis below, then the red-team dissent VERBATIM, then a one-line
+   note of items killed in verification and why.
 
    Macro trends synthesis:
    --------------------
@@ -231,11 +282,17 @@ Plus a "killed" array for signals rejected in verification: ${JSON.stringify(kil
 
 3. ${OUT_DIR}/brief.html — a single self-contained HTML page of the same content,
    designed for reading: load the "dataviz" skill via the Skill tool BEFORE writing any
-   chart code, then render each item's numeric series (in signals.json "context.series")
-   as inline SVG charts with axis labels, units, and source captions. No external
-   resources of any kind (no CDN, no remote fonts/images) — everything inline. Support
-   light and dark color schemes. Do NOT fabricate data: chart only the series provided;
-   if an item has no series, no chart.
+   chart code, then render each item's and each deep dive's numeric series as inline
+   SVG charts with axis labels, units, and source captions. No external resources of
+   any kind (no CDN, no remote fonts/images) — everything inline. Support light and
+   dark color schemes. Do NOT fabricate data: chart only the series provided; if an
+   item has no series, no chart.
+
+${QUEUE.length ? `4. Update pdb/directives.md: move the consumed deep-dive queue items
+   (${JSON.stringify(QUEUE.map(q => q.topic))}) from "Deep-dive queue" to "Archive",
+   each as "- ${DATE}: <topic> -> pdb/briefings/${DATE}/brief.md". Leave the
+   "Standing priorities" section untouched. If the queue is then empty, leave
+   "- (empty)" as its only bullet.` : ''}
 
 Return exactly this JSON in your final message: {"files": [paths written], "n_items": N, "titles": [item headlines]}`,
   { label: 'compile', phase: 'Compile', schema: { type: 'object', required: ['files', 'n_items'], properties: { files: { type: 'array', items: { type: 'string' } }, n_items: { type: 'integer' }, titles: { type: 'array', items: { type: 'string' } } } } })
@@ -249,5 +306,7 @@ return {
   raw_signals: allSignals.length,
   published_items: surviving.length,
   killed_in_verification: killed.map(k => k.signal.headline),
+  deep_dives: deepDives.map(d => d.topic),
+  standing_priorities: STANDING,
   titles: compileResult.titles,
 }

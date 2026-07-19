@@ -21,6 +21,22 @@ Outputs land in `pdb/briefings/<date>/` and `pdb/weekly/<date>/` as
 The HTML files are fully self-contained and are meant to be published as an
 Artifact (or opened directly) for reading.
 
+## Feedback loop (deep dives)
+
+`pdb/directives.md` steers the next brief:
+
+- **Standing priorities** — persistent emphases; collectors weight them
+  every day until removed.
+- **Deep-dive queue** — one-shot requests; each queued item (max 5/day)
+  gets a dedicated deep-dive analyst in the next daily brief, appears as an
+  "Operator deep dives" section with its own charts, and is then moved to
+  the Archive automatically.
+
+Three ways to feed it: (1) reply to any daily-brief message with directions
+— the session appends them to the queue, commits, and pushes; (2) edit
+`pdb/directives.md` directly on GitHub; (3) ask any Claude session on this
+repo to queue a topic.
+
 ## Scheduling
 
 Two Routines (Claude Code Remote scheduled triggers) drive the system; each

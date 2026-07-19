@@ -33,8 +33,14 @@ pdb/
 
 ## Daily pipeline (`daily-briefing.mjs`)
 
-Six phases; agent counts shown for full scale (pilot scale in parentheses):
+Seven phases; agent counts shown for full scale (pilot scale in parentheses):
 
+0. **Directives** — read `pdb/directives.md`: the operator's standing
+   priorities (weighted into every collector prompt) and the deep-dive
+   queue (each queued topic gets a dedicated deep-dive analyst that runs
+   alongside the collectors; consumed items are archived by the compile
+   step). This is the operator feedback loop: reply to any daily brief
+   with directions and they land in this file for the next morning's run.
 1. **Collect** — 12 (7) beat collectors run in parallel, one per
    geography/sector beat (Europe–Russia, MENA, Indo-Pacific, South/Central
    Asia, Americas, Africa, central banks & macro data, markets,

@@ -10,6 +10,7 @@ export const meta = {
     { title: 'Context', detail: 'history, technicals, and chartable series per signal' },
     { title: 'Synthesize', detail: 'cross-cutting trends plus red-team dissent' },
     { title: 'Compile', detail: 'write brief.md and self-contained brief.html' },
+    { title: 'Present', detail: 'narrated slide deck via the presentify workflow (critique -> narrate -> build -> render review)' },
   ],
 }
 
@@ -111,7 +112,7 @@ const CONTEXT_SCHEMA = {
   properties: {
     context_md: { type: 'string' },
     base_rate: { type: 'string' },
-    series: { type: 'array', items: { type: 'object', required: ['label', 'points'], properties: { label: { type: 'string' }, unit: { type: 'string' }, source: { type: 'string' }, points: { type: 'array', items: { type: 'object', required: ['x', 'y'], properties: { x: { type: 'string' }, y: { type: 'number' } } } } } } },
+    series: { type: 'array', items: { type: 'object', required: ['label', 'points'], properties: { label: { type: 'string' }, unit: { type: 'string' }, source: { type: 'string' }, message: { type: 'string' }, points: { type: 'array', items: { type: 'object', required: ['x', 'y'], properties: { x: { type: 'string' }, y: { type: 'number' } } } } } } },
   },
 }
 
@@ -236,10 +237,15 @@ dates and what actually happened. No acronyms unless universally known (spell th
 no jargon, no bullet lists — flowing, vivid, information-dense prose. The test: a smart
 reader with zero background should finish these paragraphs understanding both the
 mechanism and the stakes. (2) base_rate — the unconditional frequency of this class of
-event/move, in one plain sentence. (3) series — one or two numeric time series (5-30
-points each) that would make a genuinely informative chart for this item, from real data
-you can find (prices, rates, counts), each point {x: date, y: number}, with unit and
-source. Omit series if no honest numeric series exists — never invent data.`,
+event/move, in one plain sentence. (3) series — one or two numeric time series that
+would make a genuinely informative chart for this item, from real data you can find
+(prices, rates, counts), each point {x: date, y: number}, with unit, source, and a
+"message" stating the takeaway the chart should teach. CHART-WORTHINESS BAR: a series
+must have roughly 8+ points of CONSISTENT provenance — one source, one price type; never
+mix intraday quotes with settlements. If the honest data is only 3-5 numbers, return
+them as a series anyway but say in "message" that it should render as a labeled
+comparison, not a trend line. Omit series entirely if no honest numeric story exists —
+never invent data, never pad provenance.`,
       { label: `context:${i}:${item.signal.beat}`, phase: 'Context', schema: CONTEXT_SCHEMA })
       .then(context => ({ ...item, context }))
   }
@@ -340,6 +346,16 @@ Return exactly this JSON in your final message: {"files": [paths written], "n_it
   { label: 'compile', phase: 'Compile', schema: { type: 'object', required: ['files', 'n_items'], properties: { files: { type: 'array', items: { type: 'string' } }, n_items: { type: 'integer' }, titles: { type: 'array', items: { type: 'string' } } } } })
 
 log(`Brief compiled: ${(compileResult.files || []).join(', ')}`)
+
+// ---- Phase 7: Present — narrated slide deck + explicit visual critique (child workflow)
+phase('Present')
+let present = null
+try {
+  present = await workflow({ scriptPath: '.claude/workflows/presentify.mjs' }, { date: DATE })
+} catch (e) {
+  log(`presentify failed (brief itself is unaffected): ${e && e.message}`)
+}
+
 return {
   date: DATE,
   scale: SCALE,
@@ -351,4 +367,5 @@ return {
   deep_dives: deepDives.map(d => d.topic),
   standing_priorities: STANDING,
   titles: compileResult.titles,
+  presentation: present,
 }

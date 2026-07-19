@@ -12,8 +12,9 @@ export const meta = {
   ],
 }
 
-if (!args || !args.date) throw new Error('args.date (YYYY-MM-DD) is required')
-const DATE = args.date
+const ARGS = typeof args === 'string' ? JSON.parse(args) : (args || {})
+if (!ARGS.date) throw new Error('args.date (YYYY-MM-DD) is required')
+const DATE = ARGS.date
 const OUT_DIR = `pdb/weekly/${DATE}`
 
 const METHODOLOGY = `Follow pdb/METHODOLOGY.md (read it first). Ethos: skeptical, pragmatic,

@@ -12,9 +12,10 @@ export const meta = {
   ],
 }
 
-if (!args || !args.date) throw new Error('args.date (YYYY-MM-DD) is required — scripts cannot read the clock')
-const DATE = args.date
-const SCALE = args.scale === 'pilot' ? 'pilot' : 'full'
+const ARGS = typeof args === 'string' ? JSON.parse(args) : (args || {})
+if (!ARGS.date) throw new Error('args.date (YYYY-MM-DD) is required — scripts cannot read the clock')
+const DATE = ARGS.date
+const SCALE = ARGS.scale === 'pilot' ? 'pilot' : 'full'
 const OUT_DIR = `pdb/briefings/${DATE}`
 const TOP_N = SCALE === 'pilot' ? 6 : 10
 const PER_BEAT = SCALE === 'pilot' ? 4 : 6

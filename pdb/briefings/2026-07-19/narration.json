@@ -1,0 +1,112 @@
+[
+  {
+    "title": "The Morning in One Minute",
+    "narration": "Good morning — here's your world in one minute. Oil first: we judge it likely — meaning fifty-five to eighty percent — that Brent crude holds above eighty dollars a barrel and European gas above fifty euros through the end of August, unless a durable ceasefire returns to the Gulf. And if one does arrive, most of that premium likely melts away within two to three weeks. Second, the Federal Reserve: a hold at the late-July meeting with at least one hawkish dissent is likely, but a hike by September is a genuine coin flip — forty-five to fifty-five percent — deliberately below what markets are said to be pricing. Third, China just printed its first growth number below Beijing's own target band since the Covid era, and a policy response by the end of August is likely. Fourth, the roughly three-point-three-trillion-dollar wipeout in chip stocks: we judge it unlikely — twenty to forty-five percent — that this marks a durable de-rating rather than a mean-reverting scare. Fifth, Iran very likely keeps striking Kuwait this week, but a catastrophic export loss from any single barrage is unlikely. One warning before we start: several of these judgments hinge on the same single event — a durable ceasefire. Keep that in mind all morning.",
+    "bullets": [
+      "Oil premium holds — unless ceasefire",
+      "Fed: July hold, September coin flip",
+      "China sub-target print; easing likely",
+      "Chip crash: scare, not de-rating"
+    ],
+    "visual_hint": "Dashboard of the six key judgments with ICD-203 probability bands; highlight the correlation warning that four judgments share one ceasefire falsifier"
+  },
+  {
+    "title": "Hormuz Chokes, Brent Nears $90",
+    "narration": "Oil just posted its biggest weekly gain in months. Brent settled near eighty-eight dollars a barrel on Friday, up roughly fourteen to sixteen percent on the week, after the US–Iran interim ceasefire collapsed and strikes moved to critical infrastructure. Iran has declared the Strait of Hormuz closed, and the United States has reimposed a naval blockade of Iranian ports. Here's the mechanics that make this real rather than sentiment: about a fifth of the world's oil shipments move through Hormuz, and transits are down to a trickle — fifty-seven vessels over the weekend versus about a hundred and thirty a day before the war. The bypass pipelines can carry at most six-and-a-half to eight million barrels a day, against seventeen to twenty-one million of pre-conflict flow. So lost transit is lost supply — you cannot reroute your way out. But keep perspective: this is re-escalation, not a fresh shock. The strait has been mostly blocked since late February, and when the June memorandum briefly reopened traffic, Brent gave back more than thirty dollars in under three weeks. Our call: it's likely — fifty-five to eighty percent — that prices hold above eighty dollars absent a durable ceasefire, and equally likely that most of the premium retraces within two to three weeks if one arrives.",
+    "bullets": [
+      "Brent $88.10, biggest weekly gain in months",
+      "57 transits vs ~130/day pre-war",
+      "Bypass capped at ~6.5–8M bbl/d",
+      "Likely holds >$80 absent ceasefire"
+    ],
+    "visual_hint": "Item 1 — Brent conflict-path price chart ($71 Feb → $128 Apr peak → $76 Jul 8 → $88 Jul 17) alongside Hormuz transit-count bar chart"
+  },
+  {
+    "title": "The Fed's Hawks Multiply",
+    "narration": "Over at the Federal Reserve, the hawks are multiplying ahead of the July 28–29 meeting. Cleveland's Hammack joined Dallas's Logan in arguing rates may need to rise from the current three-and-a-half to three-and-three-quarters percent range, and Vice Chair Jefferson said it could be appropriate to reconsider the stance — conditional language, note, not an explicit hike call. Why it matters: the disinflation story behind the 2024 and 2025 rate cuts is gone. Core inflation on the Fed's preferred measure — personal consumption expenditures — has re-accelerated from about two-and-three-quarters percent last October to roughly three-point-four percent in May. And the European Central Bank and the Bank of Japan both tightened in June, so a Fed hike would complete the first synchronized re-tightening across the big three central banks since 2022. Markets are said to price roughly sixty-five percent odds of a hike by September. We deliberately sit below that, at a coin flip. The mechanics: since 1990, the Fed has resumed hiking within nine months of a final cut exactly once — that's about one in six — and futures two meetings out have historically over-signaled during clusters of hawkish rhetoric. What is likely, though: a July hold with at least one hawkish dissent.",
+    "bullets": [
+      "Two explicit hawks, one conditional",
+      "Core inflation back to ~3.4%",
+      "Market says 65% by September",
+      "Our call: coin flip, not 65%"
+    ],
+    "visual_hint": "Item 2 — timeline of Fed speakers' positions plus core PCE re-acceleration line chart (Oct 2025 to May 2026); callout comparing market-implied 65% vs our 45–55% band"
+  },
+  {
+    "title": "Iran Takes the War to Kuwait",
+    "narration": "Iran has widened this war to the Gulf states themselves. Kuwait Petroleum confirmed that a vital oil-sector facility was hit by repeated Iranian attacks — injuries, fires, significant material damage. It caps a week-long campaign: an offshore platform on July 12, a power and water-desalination plant on the 17th, and in a single twenty-four-hour period Kuwait's defense ministry logged fourteen ballistic missiles and forty-six drones. Why this matters: it's a different class of event from Iran's telegraphed, casualty-free strike on Al Udeid last year. Targeting desalination couples electricity and water security in fifty-degree July heat — Kuwait draws more than ninety percent of its drinking water from those cogeneration plants. And Kuwait hosts around thirteen and a half thousand American troops under a defense pact. Now the supply mechanics, which are smaller than they sound: Kuwait was already down from about two-point-seven million barrels a day before the war to about one-point-six-five million in June under force majeure — much of the export chain was already throttled. And only one modern strike has ever materially cut Gulf output — Abqaiq in 2019 — and that was fully repaired in under three weeks. So: more strikes this week, very likely. A catastrophic export loss from any single barrage, unlikely. But a weeks-long attrition campaign has no clean precedent — watch the loading data.",
+    "bullets": [
+      "14 missiles, 46 drones in 24 hours",
+      "Power and desalination plants hit",
+      "Output already at ~1.65M bbl/d",
+      "Abqaiq precedent: repaired in <3 weeks"
+    ],
+    "visual_hint": "Item 3 — map of struck Kuwaiti sites (offshore platform, oil facility, power/desalination plants) with the week-long strike timeline; Kuwait output chart Feb–June"
+  },
+  {
+    "title": "China Prints a Miss on Purpose",
+    "narration": "China's economy grew four-point-three percent year on year in the second quarter — below consensus, and more importantly, below Beijing's own target band of four-and-a-half to five percent. It's the weakest print since late 2022. Here's why the number itself is the story: official Chinese growth data almost never publicly undershoots the target. This is an interested party with a documented history of smoothing its numbers — so choosing to print a miss is itself a deliberate signal. The tradeable fact is the print, not the true growth rate. Under the hood, the domestic economy is the weak link: fixed-asset investment fell nearly six percent in the first half, retail sales grew under three percent in June, and only booming exports — up more than twenty percent — are cushioning things, likely front-loading ahead of tariff deadlines. And history is unusually clean here: every visible sub-target episode since 2014 has drawn easing within two quarters — the closest template being mid-2024, which triggered a record rate cut and a massive debt-swap package. So we judge it likely — fifty-five to eighty percent — that a policy response arrives by the end of August: the first cut to the loan prime rate in about fourteen months, a fiscal package, or both. The first test comes tomorrow, with the July 20 rate fixing.",
+    "bullets": [
+      "Q2 GDP 4.3% vs 4.5–5.0% band",
+      "The print is the signal",
+      "Investment −5.7%, retail +2.7%",
+      "Easing likely by end-August"
+    ],
+    "visual_hint": "Item 4 — China quarterly GDP bar chart with target band overlay showing the sub-band print; inset of internals (fixed-asset investment, retail, exports)"
+  },
+  {
+    "title": "The $3.3 Trillion Chip Crack",
+    "narration": "The AI trade cracked. Global semiconductor stocks have lost roughly three-point-three trillion dollars since June 22, and the Philadelphia semiconductor index closed Friday about twenty percent below its record — a confirmed bear market, coming off a ninety-six percent run since March. The catalysts attack the thesis itself, not one quarter's numbers: Taiwan Semiconductor guided margins down even as it raised capital spending to a record; there's a reported — but still unconfirmed — plan at Meta to resell excess computing capacity; and China's Moonshot released a new model claiming parity. A note on honesty: the vivid single-day drops you may have seen for Micron and AMD were actually July 1 sessions, misdated in wide circulation. The real story is weekly — Micron down about thirteen percent, AMD about eleven. Now the mechanics of our judgment. Drawdowns of twenty percent or more in this index have happened about a dozen times since 1995, and in all but two — the dot-com bust and the financial crisis — the index reclaimed its high within six to eighteen months. The DeepSeek shock of January 2025 resolved bullishly within weeks. So a durable de-rating is unlikely — twenty to forty-five percent — though we nudge that above the base rate because this time there's no Fed put. Resolution: hyperscaler earnings in late July.",
+    "bullets": [
+      "SOX −20.2% from June record",
+      "~$3.3T sector value erased",
+      "Viral single-day figures were misdated",
+      "De-rating unlikely — but no Fed put"
+    ],
+    "visual_hint": "Item 5 — SOX index chart marking the June 22 record and the 20.2% drawdown; sidebar correcting the misdated Micron/AMD figures with honest weekly numbers"
+  },
+  {
+    "title": "Europe's Gas Scare, Checked",
+    "narration": "European natural gas hit a near four-month high. The Dutch benchmark — the Title Transfer Facility — closed around fifty-seven and a half euros per megawatt-hour, up about forty-two percent in a month. The drivers: Hormuz risk — Qatar supplies about a fifth of the world's liquefied natural gas, all of it through that strait with no bypass — plus Qatar pausing its production ramp-up after an attack on a gas carrier. The transmission mechanics: European electricity prices are set at the margin by gas, so a Middle East shock feeds straight into euro-area inflation, right ahead of the European Central Bank's July 23 decision. And when Qatari cargoes are at risk, Asian buyers bid for Atlantic supply, dragging European prices up with Asian ones. But the storage picture is less scary than the headlines. Yes, storage is about fifty-two percent full against a sixty-seven-and-a-half percent seasonal norm — but that's a sixteen-point gap, not the twenty-three points originally claimed. The very tracker the pessimists cite projects about eighty-one percent by November 1 at the current injection pace, and the European Union is four-for-four on its storage mandates since 2022. We judge it likely the relaxed eighty-percent target gets met. Remember 2022's lesson: high summer prices are self-correcting for storage — they trigger demand destruction and pull in cargoes.",
+    "bullets": [
+      "TTF EUR 57.49, +42% in a month",
+      "Qatar: ~20% of global LNG, no bypass",
+      "Storage gap 16 points, not 23",
+      "80% target likely met — EU is 4-for-4"
+    ],
+    "visual_hint": "Item 6 — TTF price chart plus EU storage fill curve vs five-year norm, with the ~81% Nov-1 tracker projection drawn in"
+  },
+  {
+    "title": "Four Costumes, One Story",
+    "narration": "Step back, and four threads tie this morning together. First, the Gulf energy shock has widened from blocking transit to grinding down production infrastructure — one supply event now propagating through three channels at once: oil, Kuwaiti output, and European gas. Second, that supply-shock inflation is forcing the first synchronized re-tightening across the Federal Reserve, the European Central Bank, and the Bank of Japan since 2022 — and every week the strait stays shut mechanically extends the inflation impulse the hawks cite. Third, the very same oil shock pushes China the opposite way: the world's largest crude importer, with a visibly weak domestic economy, is being pushed toward easing while the West tightens. If both legs fire, rate differentials widen in the dollar's favor into a global economy already absorbing an energy shock — a squeeze on emerging-market funding that few models currently assume. And fourth, the two pillars of this year's risk-asset regime — AI capital-spending earnings and easier money — cracked in the same week. That's why a one-percent down day in the S&P 500 came with a twelve-percent jump in the VIX volatility index. The through-line is worth saying plainly: these are not four independent stories. They are mostly one story, wearing four costumes.",
+    "bullets": [
+      "One supply event, three channels",
+      "First synchronized G3 tightening since 2022",
+      "China eases while the West hikes",
+      "Both market pillars cracked same week"
+    ],
+    "visual_hint": "Macro trends section — network diagram linking the four trends back to the Hormuz shock at the center; dollar/EM-funding squeeze arrow"
+  },
+  {
+    "title": "What We Might Be Getting Wrong",
+    "narration": "Now the honest part — where our own red team pushed hardest. First: the oil story may be a local top, not a launch pad. This is the third leg of a five-month-old event, and this war has already run the full round trip once — Brent went from about a hundred twenty-eight dollars in April to under seventy by July 1 after the June memorandum. The modal outcome for premiums like this is retracement. Second: that sixty-five percent September hike figure traces to a single wire snapshot — claimed, not confirmed — sitting on a roughly one-in-six historical base rate, and the hawk coalition is thinner than it looks: two explicit hawks plus a conditional Vice Chair. Third, and maybe most important: we may have the sign wrong. Oil-shock inflation is historically what central banks look through — the European Central Bank's 2008 and 2011 hikes into oil spikes were reversed within a year. An eighty-eight-dollar demand shock landing on a chip bear market and a slowing China is a growth hit as much as an inflation impulse — Hormuz might actually reduce September hike odds. Finally, structure: this brief is essentially one trade. A durable ceasefire deflates the oil call, the gas call, the Kuwait story, and the hawkish-Fed pricing all at once. Score it as one correlated prediction, not five.",
+    "bullets": [
+      "$88 may be a local top",
+      "65% hike figure: single-wire, claimed",
+      "Oil shocks get looked through",
+      "One trade, not five predictions"
+    ],
+    "visual_hint": "Red-team dissent section — side-by-side 'house view vs red team' table; diagram showing four judgments chained to the single ceasefire falsifier"
+  },
+  {
+    "title": "The Week Ahead: Proof or Refutation",
+    "narration": "Here's what would prove us wrong, and exactly when. Tomorrow, July 20: China's loan prime rate fixing — a cut confirms the easing call; a hold shifts the weight to the late-July Politburo readout, and if both come up empty we downgrade that judgment to a coin flip. July 23: the European Central Bank decides, with gas-driven inflation on the table. July 28 and 29: the Federal Open Market Committee — a hold with fewer than two hawkish dissents deflates the hawk story; a surprise hike validates it early. Late July: second-quarter reports from Microsoft, Alphabet, Meta, and Amazon — reiterated or raised capital-spending guidance would likely stabilize the chip sector within weeks; explicit cuts, or Meta formally confirming a resale model for its computing capacity, would confirm the de-rating instead. Through August: Kuwaiti production and loading data — if exports hold around one-point-six-five million barrels a day, the infrastructure damage isn't biting. And October 1: European gas storage — a fill below about seventy percent would invalidate Brussels' claim that the target is achievable. Above all of it, watch for one event: a durable ceasefire with Hormuz transits recovering toward a hundred-plus vessels a day. That single development rewrites most of this brief within two to three weeks. That's your morning. Go make good decisions.",
+    "bullets": [
+      "Jul 20: China rate fixing",
+      "Jul 28–29: FOMC vote count",
+      "Late July: hyperscaler capex guidance",
+      "The master switch: a durable ceasefire"
+    ],
+    "visual_hint": "Calendar strip of falsifier dates (Jul 20, Jul 23, Jul 28–29, late-July earnings, August loadings, Oct 1 storage) with the ceasefire flagged as the master variable"
+  }
+]

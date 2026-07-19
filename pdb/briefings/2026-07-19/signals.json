@@ -1,0 +1,1155 @@
+{
+  "date": "2026-07-19",
+  "produced_by": "daily-briefing workflow",
+  "methodology": "pdb/METHODOLOGY.md",
+  "verified": [
+    {
+      "signal": {
+        "headline": "Crude posts biggest weekly gain in months as Hormuz traffic collapses; Brent ends week near $88",
+        "summary": "Brent settled at $88.10 (+4.6% Friday, roughly +14% on the week) and WTI at $82.49 (~+16% w/w) after the US-Iran interim ceasefire collapsed and strikes moved to critical infrastructure. Kuwait said Iran hit two of its power/water desalination plants on consecutive days; the IRGC said it 'struck and disabled' two tankers in the Strait of Hormuz. Iran has declared the strait closed and the US has reimposed a naval blockade, with transit traffic described as 'down to a trickle.' The IEA warned prolonged Hormuz disruption (about 20% of global oil shipments) threatens global energy security. Friday's risk-off spillover: S&P 500 -1%, VIX +12.2% to 18.77, gold +0.7% to $4,018.80, DXY roughly flat at 100.75.",
+        "why_it_matters": "A functioning Hormuz closure is the tail risk energy markets price but rarely see realized; the base rate of actual sustained closures is zero in the modern era, which is why the move is in the front of the curve rather than a one-day spike. At ~$88 Brent, the supply shock feeds directly into the inflation problem the Fed flagged in its June minutes, mechanically reducing room for easing and pressuring the long end (30Y already 5.06%). Falsifier: a re-established ceasefire and resumption of tanker transits would likely (55-80%) retrace most of the week's ~$10-11/bbl geopolitical premium within two weeks; escalation to Gulf-side production infrastructure would put Brent well above $90 (likely, 55-80%).",
+        "beat": "markets",
+        "region": "Global / Middle East",
+        "sector": "Energy / Commodities",
+        "status": "confirmed",
+        "confidence": 0.9,
+        "materiality": 9,
+        "novelty": "Escalation from military-target exchanges to civilian water/power infrastructure and tanker strikes is new within the last 48 hours; the ~14% weekly crude move is the largest in months.",
+        "sources": [
+          {
+            "url": "https://tradingeconomics.com/commodity/brent-crude-oil",
+            "publisher": "Trading Economics (exchange data aggregator)",
+            "grade": "B2",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://www.nbcnews.com/world/iran/water-energy-sites-hit-us-iran-strikes-escalate-rcna588143",
+            "publisher": "NBC News",
+            "grade": "B2",
+            "published_at": "2026-07-18"
+          },
+          {
+            "url": "https://www.pbs.org/newshour/world/as-u-s-strikes-bridges-in-iran-it-targets-a-water-desalination-plant-in-kuwait",
+            "publisher": "PBS NewsHour / AP",
+            "grade": "B1",
+            "published_at": "2026-07-18"
+          },
+          {
+            "url": "https://www.fxleaders.com/news/2026/07/19/wti-crude-oil-usoil-ends-the-week-above-82-can-middle-east-risks-push-crude-toward-90/",
+            "publisher": "FX Leaders",
+            "grade": "C3",
+            "published_at": "2026-07-19"
+          },
+          {
+            "url": "https://oilprice.com/Energy/Energy-General/Geopolitical-Risk-Premium-Returns-as-Crude-Posts-Biggest-Weekly-Gain-in-Months.html",
+            "publisher": "OilPrice.com",
+            "grade": "C2"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "Brent crude settle",
+            "value": 88.1,
+            "unit": "USD/bbl",
+            "as_of": "2026-07-17",
+            "source_url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+          },
+          {
+            "metric": "WTI crude settle",
+            "value": 82.49,
+            "unit": "USD/bbl",
+            "as_of": "2026-07-17",
+            "source_url": "https://www.fxleaders.com/news/2026/07/19/wti-crude-oil-usoil-ends-the-week-above-82-can-middle-east-risks-push-crude-toward-90/"
+          },
+          {
+            "metric": "WTI weekly change",
+            "value": "+16",
+            "unit": "% w/w (approx)",
+            "as_of": "2026-07-17",
+            "source_url": "https://www.fxleaders.com/news/2026/07/19/wti-crude-oil-usoil-ends-the-week-above-82-can-middle-east-risks-push-crude-toward-90/"
+          },
+          {
+            "metric": "VIX close",
+            "value": 18.77,
+            "unit": "index (+12.2% d/d)",
+            "as_of": "2026-07-17",
+            "source_url": "https://finance.yahoo.com/quote/%5EVIX/"
+          },
+          {
+            "metric": "Gold close",
+            "value": 4018.8,
+            "unit": "USD/oz",
+            "as_of": "2026-07-17",
+            "source_url": "https://www.riotimesonline.com/global-economy-briefing-july-17-2026/"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.85,
+        "best_source_grade": "B1",
+        "corrections": "1) Novelty field overstates recency: IRGC tanker strikes (\"struck and disabled\" supertankers) occurred July 13-14, with earlier strikes July 7 — not \"within the last 48 hours\" of the 7/17-19 window; only the Kuwait desalination/power strikes (7/17 and 7/18) are that fresh. 2) Weekly-change figures inconsistent: signal says Brent ~+14% w/w, but Investrade reports both Brent and WTI up over 16% w/w; the WTI ~+16% figure is corroborated, Brent w/w may be understated. 3) Base-rate framing in why_it_matters is stale: Hormuz has been \"mostly blocked\" since the conflict began Feb 28, 2026 (IEA: ~12.8M bbl/d already off supply, IEA-coordinated 400M bbl release ongoing) — this week is re-escalation after an interim-ceasefire collapse, not the first realization of the closure tail risk. 4) DXY 100.75 not independently verified (minor). US \"naval blockade\" is specifically of Iranian ports per CNBC, slightly narrower than the signal's phrasing.",
+        "notes": "Adversarial pass failed to refute the core. Settlement prices confirmed to the cent by independent sources (Brent $88.10 +4.59%, WTI $82.49 +4.48% on 7/17 per Investrade; FX Leaders corroborates WTI). Friday cross-asset prints confirmed exactly: VIX 18.77 +12.19%, gold $4,018.80 +0.67%, S&P 500 -1% (TheStreet/Motley Fool/Yahoo). Kuwait plant strikes independently confirmed by Bloomberg, AP/PBS, Gulf News, NBC, with second plant hit within 24h (properly attributed as Kuwait's claim). IRGC tanker strikes and 7/12 strait-closure declaration confirmed by CNN, Maritime Executive, Wikipedia; one death aboard Mombasa B on 7/14. IEA/Birol warning confirmed via Reuters-syndicated stories (Insurance Journal, Arab News) and Al Jazeera, dated 7/16-17. Attribution discipline in the signal is sound (claims stated as claims with claimants named). \"Confirmed\" status is warranted — multiple independent B-grade-or-better sources plus exchange settlement data; best composite grade B1 (wire/major-outlet reporting confirmed by independents; price data effectively A-grade exchange settles via aggregators). Confidence trimmed 0.9 to 0.85 for the 48-hour novelty error, Brent weekly-% inconsistency, and the outdated zero-base-rate framing of a closure that has in fact been largely in effect since late February 2026."
+      },
+      "context": {
+        "context_md": "**Mechanism.** The Strait of Hormuz carried roughly 17-21M bbl/d pre-conflict (~20% of global oil consumption) through shipping lanes only ~2 nm wide each way; bypass capacity is hard-capped at ~6.5-8M bbl/d (Saudi East-West pipeline ~5M bbl/d, UAE's Habshan-Fujairah line ~1.5-1.8M bbl/d), so most Gulf barrels physically cannot reroute — which is why Gulf producers shut in production (EIA: 11.2M bbl/d peak shut-in, May 2026) rather than divert. **Precedents.** The 1984-88 Tanker War saw ~450 ships attacked and US reflagging convoys (Operation Earnest Will, 1987), yet transit never stopped and prices *fell* amid the mid-80s glut — the origin of the old \"Hormuz never actually closes\" base rate. Iraq's Aug 2, 1990 invasion of Kuwait took monthly-average crude from ~$17 (Jul) to ~$36 (Oct), a premium erased in a single record ~33% down-day on Jan 17, 1991 once Desert Storm proved supply secure. The Sept 14, 2019 Abqaiq strike knocked out 5.7M bbl/d — the largest instantaneous outage ever — driving Brent +14.6% in a day ($60→$69) with full retracement inside two weeks as Saudi output was restored; Russia's Feb 2022 invasion put Brent at $139 intraday (Mar 7) before ~180M bbl US SPR plus IEA-coordinated releases pulled it back under $100 by August. **This episode is different in kind:** the strait has been mostly blocked since the war began Feb 28, 2026 — Brent averaged ~$71 in February, $103 in March, peaked near $128 on Apr 2, with an IEA-coordinated ~400M bbl stock release ongoing — so the old zero-closure base rate is dead. The retracement mechanism has already fired once *within this war*: the June 18 MOU reopened traffic and Brent fell below $70 by July 1, back to pre-war levels. The current leg is re-escalation after that ceasefire collapsed: Brent $76.48 (Jul 8) → $85.92 (Jul 14) → $88.10 settle (Jul 17), with Fri-Sun transits at 57 vessels versus a ~130/day pre-war baseline (>50% w/w drop). Macro transmission is mechanical: a sustained $10/bbl adds roughly 0.3-0.4pp to US headline CPI over a year, which is the channel to the Fed's June-minutes inflation concern and the 5.06% 30Y. Given the June precedent, a durable re-ceasefire retracing most of the ~$16-18 rebuilt premium within weeks is likely (55-80%); strikes on Gulf production/export infrastructure (Abqaiq-class targets) would instead re-test the April ~$128 regime.",
+        "base_rate": "Two reference classes. (1) Weekly Brent gains of ~+14% or more: roughly 5-8 occurrences since 1990 (~0.3% of weeks; e.g., Aug 1990, the Apr 2020 rebound, early Mar 2022) — a once-every-2-3-years event, so the move itself is genuinely tail-sized. (2) Hormuz closure: zero sustained closures 1980-2025 (even the 1984-88 Tanker War with ~450 ships attacked never halted transit), but that prior is no longer operative — the strait has been mostly blocked since Feb 28, 2026, so the live class is \"re-escalation spike after ceasefire collapse,\" where geopolitical premiums historically retrace >50% within weeks-to-months once physical supply resumes (Abqaiq 2019: ~2 weeks; Gulf War 1990-91: ~5 months; 2022: ~4 months; this war's own June 2026 MOU: ~$30+ retraced in under 3 weeks).",
+        "series": [
+          {
+            "label": "Brent monthly average spot, 2026 conflict path",
+            "unit": "USD/bbl (monthly average)",
+            "source": "EIA Short-Term Energy Outlook, July 2026 (eia.gov/outlooks/steo/report/global_oil.php); April from Statista monthly Brent series (statista.com/statistics/262861). Feb and May derived arithmetically from EIA-stated month-over-month deltas (Mar was +$32 vs Feb; Jun was -$22 vs May).",
+            "points": [
+              {
+                "x": "2026-02",
+                "y": 71
+              },
+              {
+                "x": "2026-03",
+                "y": 103
+              },
+              {
+                "x": "2026-04",
+                "y": 117.29
+              },
+              {
+                "x": "2026-05",
+                "y": 107
+              },
+              {
+                "x": "2026-06",
+                "y": 85
+              }
+            ]
+          },
+          {
+            "label": "Brent dated prints — June MOU retrace and July re-escalation",
+            "unit": "USD/bbl (mixed intraday quotes and settles, as labeled in source)",
+            "source": "6/29 intraday $73.17 (Capital.com); 7/8 $76.48 and 7/14 $85.92 Sept-futures quotes (Al Jazeera); 7/17 settle $88.10 (Trading Economics); 7/16 derived from Trading Economics' stated +4.59% d/d move into 7/17. EIA separately reports Brent below $70 on 7/1 (no exact print, point omitted).",
+            "points": [
+              {
+                "x": "2026-06-29",
+                "y": 73.17
+              },
+              {
+                "x": "2026-07-08",
+                "y": 76.48
+              },
+              {
+                "x": "2026-07-14",
+                "y": 85.92
+              },
+              {
+                "x": "2026-07-16",
+                "y": 84.23
+              },
+              {
+                "x": "2026-07-17",
+                "y": 88.1
+              }
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Dominant global macro fact: ~20% of world oil transits Hormuz and traffic has collapsed to 6-8 ships/day (Kpler/MarineTraffic, B1) with a reinstated US naval blockade and 9+ vessels attacked since July 6; Brent +14% w/w to $88.10 and war-risk hull premiums at 3-10% vs 0.25% pre-war transmit the shock into inflation, freight, and risk assets simultaneously. This is a physical supply regime change, not a sentiment move. Merged: [6] transit collapse, [7]/[20] same Brent settlement, [21] insurance repricing — one underlying closure event across four beats."
+    },
+    {
+      "signal": {
+        "headline": "Fed hawks multiply before July 28-29 FOMC: Hammack, Logan and Jefferson float rate HIKES as futures price ~65% chance of an increase by September",
+        "summary": "On 2026-07-17 Cleveland Fed President Beth Hammack publicly joined Dallas Fed's Lorie Logan and Vice Chair Philip Jefferson in arguing rates may need to RISE from the current 3.50-3.75% target range to counter persistent inflation; Hammack estimated June core PCE at ~3.3% y/y. NY Fed's Williams pushed back, saying 'unquestionably high' inflation will ease, citing absent wage pressure. Chair Kevin Warsh declined to signal a stance in congressional testimony this week. Rate futures price roughly 15% odds of a hike at the July 28-29 meeting and about 65% by September. Note this inverts the post-2024 easing baseline: the ECB already hiked 25bp in June and the BoJ raised to 1.0%, so a Fed hike would complete a synchronized G3 re-tightening.",
+        "why_it_matters": "A hiking-bias FOMC with likely dissents at only Warsh's second meeting is the largest two-sided risk event on the calendar. Base rate: intermeeting hawkish choruses precede an actual hike far less often than pricing implies, but 65% September odds is already a regime signal for the dollar, front-end yields and EM funding. Falsifier: the 2026-07-29 FOMC statement and vote count (federalreserve.gov); a hold with fewer than two hawkish dissents would deflate this signal, an actual July hike (market-implied ~15%, i.e. 'very unlikely'-to-'unlikely' band) would validate the hawks. It is likely (55-80%) the July meeting holds with at least one dissent, per current pricing and on-record positions.",
+        "beat": "macro-central-banks",
+        "region": "United States",
+        "sector": "Monetary policy / rates",
+        "status": "confirmed",
+        "confidence": 0.9,
+        "materiality": 5,
+        "novelty": "New on-record hawkish escalation by a 2026 FOMC voter (Hammack, 2026-07-17) plus first market pricing showing a majority-probability hike by September; sets up possible dissents at the next meeting.",
+        "sources": [
+          {
+            "url": "https://finance.yahoo.com/economy/policy/articles/fed-rate-hike-voices-swell-173156437.html",
+            "publisher": "Reuters (via Yahoo Finance)",
+            "grade": "B1",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://www.bloomberg.com/news/articles/2026-07-17/fed-s-hammack-sees-no-conflict-in-mandate-inflation-her-worry",
+            "publisher": "Bloomberg",
+            "grade": "B1",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+            "publisher": "Federal Reserve Board",
+            "grade": "A1",
+            "published_at": "2026-06-17"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "Fed funds target range",
+            "value": "3.50-3.75",
+            "unit": "%",
+            "as_of": "2026-06-17",
+            "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm"
+          },
+          {
+            "metric": "Market-implied probability of July hike (rate futures)",
+            "value": 15,
+            "unit": "%",
+            "as_of": "2026-07-17",
+            "source_url": "https://finance.yahoo.com/economy/policy/articles/fed-rate-hike-voices-swell-173156437.html"
+          },
+          {
+            "metric": "Market-implied probability of hike by September FOMC",
+            "value": 65,
+            "unit": "%",
+            "as_of": "2026-07-17",
+            "source_url": "https://finance.yahoo.com/economy/policy/articles/fed-rate-hike-voices-swell-173156437.html"
+          },
+          {
+            "metric": "Hammack estimate of June core PCE y/y",
+            "value": 3.3,
+            "unit": "%",
+            "as_of": "2026-07-17",
+            "source_url": "https://www.bloomberg.com/news/articles/2026-07-17/fed-s-hammack-sees-no-conflict-in-mandate-inflation-her-worry"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.85,
+        "best_source_grade": "A1",
+        "corrections": "1) Novelty overstated: hawkish dissents already occurred at the April 28-29, 2026 FOMC (Hammack, Logan, Kashkari dissented over the easing bias; four total dissents, most since Oct 1992), so July dissents would be a recurrence, not a first; June was then unanimous 12-0, which weakens the 'likely dissent in July' inference. 2) Jefferson is characterized too aggressively: he said it 'could be appropriate to reconsider our current policy stance' — conditional, not an explicit hike call like Logan's 'modestly higher interest rates'; the signal has two explicit hawks plus one conditional. 3) The ~15% July / ~65% September odds trace to a single wire (Reuters, B1); an independent same-day syndication snapshot put July at ~12%, and the claim of 'first majority-probability pricing' is unverifiable — treat pricing figures as claimed snapshots, not confirmed levels.",
+        "notes": "Adversarial re-search failed to refute the signal. Independently confirmed via primary sources: fed funds range 3.50-3.75% held 12-0 on 2026-06-17 (federalreserve.gov, A1); Warsh sworn in 2026-05-22, making July 28-29 his second meeting (Fed press release A1); ECB +25bp effective 2026-06-17 (ecb.europa.eu, A1); BoJ to 1.00% on 2026-06-16 by 7-1 vote (boj.or.jp, A1), so the G3 re-tightening framing holds. The Hammack/Logan/Jefferson/Williams quotes and Hammack's ~3.3% June core PCE estimate are confirmed by Reuters plus multiple independent syndications and outlets (B1). Base-rate discipline in the signal is sound and explicitly stated; the 'likely (55-80%) hold with at least one dissent' judgment is consistent with pricing and the April precedent. Confidence shaved from 0.90 to 0.85 for the framing corrections (novelty, Jefferson) and single-wire market-pricing figures; falsifier (2026-07-29 statement and vote count) is well-specified and resolves the prediction."
+      },
+      "context": {
+        "context_md": "**Mechanism.** The FOMC's 12 voters (7 governors, NY Fed, 4 rotating presidents) set the funds target in 25bp steps; fed funds futures back out meeting-by-meeting odds, and dissents — normally 0-1 per meeting — are the visible gauge of committee fracture. **How we got here:** the Fed eased 175bp in two phases (100bp Sep-Dec 2024, 75bp Sep-Dec 2025) to 3.50-3.75%, but core PCE re-accelerated from 2.75% y/y in Oct 2025 to 3.41% in May 2026 (FRED, highest since Oct 2023), gutting the disinflation premise of the cuts. **The key precedent** is 1998-99: after 75bp of LTCM/Russia insurance cuts (Sep-Nov 1998), the Fed re-hiked on 30 Jun 1999 — 7.5 months after the last cut, the only post-1990 pivot that fast; a Jul/Sep 2026 hike would be 7.5-9 months after the Dec 2025 cut, an almost exact rhyme. Other cut-to-hike gaps ran far longer (Mar 1997: 14 mo; Jun 2004: 12 mo; Feb 1994: 36 mo; Dec 2015: 84 mo; Mar 2022: 24 mo). **Cautionary precedents cut the other way:** the ECB's Jul 2008 and Apr/Jul 2011 hikes and the BoJ's Aug 2000 hike were all reversed within roughly a year — premature G3 re-tightening has a poor track record, which is Williams's implicit argument. **Dissent context:** the four dissents at the Apr 2026 meeting were the most since Oct 1992 (modern runner-up: three in Sep 2019), but June 2026 was 12-0, so July dissents would be a recurrence after a truce, not a novelty. **New-chair precedent** favors the hawks at the margin: Greenspan hiked the discount rate six weeks into the job (Sep 1987) and Powell hiked at his first meeting (Mar 2018) — incoming chairs tend to buy inflation-fighting credibility early, and July 28-29 is Warsh's second meeting. **On pricing reliability:** futures are near-infallible only inside a week of a meeting at >90% odds; a ~65% probability two meetings out is genuinely unsettled and has historically over-signaled action during hawkish-rhetoric clusters. A Fed hike would complete the first synchronized G3 tightening since 2022-23 (ECB +25bp and BoJ to 1.00%, both mid-Jun 2026), a regime few EM funding models currently assume.",
+        "base_rate": "Since 1990 the Fed has completed six easing phases; it resumed hiking within 9 months of the final cut exactly once (Jun 1999, 7.5 months after the Nov 1998 cut) — roughly 1-in-6, ~15-20%. Median cut-to-first-hike gap across the six episodes: ~19 months (range 7.5-84). A Jul/Sep 2026 hike, 7.5-9 months after the Dec 2025 cut, would therefore be a \"very unlikely-to-unlikely\" event by unconditional history — notably below the ~65% market-implied September odds, which conditions on the observed inflation re-acceleration. Secondary base rate: FOMC meetings with 2+ dissents run ~2-4% of meetings since 1990 (April 2026's four was the most since Oct 1992), so repeated multi-dissent meetings are themselves a tail signal.",
+        "series": [
+          {
+            "label": "US core PCE inflation, y/y",
+            "unit": "% y/y",
+            "source": "FRED series PCEPILFE (BEA), y/y % change computed from index levels; last obs May 2026, retrieved 2026-07-19",
+            "points": [
+              {
+                "x": "2025-01-31",
+                "y": 2.78
+              },
+              {
+                "x": "2025-02-28",
+                "y": 2.97
+              },
+              {
+                "x": "2025-03-31",
+                "y": 2.67
+              },
+              {
+                "x": "2025-04-30",
+                "y": 2.61
+              },
+              {
+                "x": "2025-05-31",
+                "y": 2.78
+              },
+              {
+                "x": "2025-06-30",
+                "y": 2.81
+              },
+              {
+                "x": "2025-07-31",
+                "y": 2.86
+              },
+              {
+                "x": "2025-08-31",
+                "y": 2.91
+              },
+              {
+                "x": "2025-09-30",
+                "y": 2.83
+              },
+              {
+                "x": "2025-10-31",
+                "y": 2.75
+              },
+              {
+                "x": "2025-11-30",
+                "y": 2.83
+              },
+              {
+                "x": "2025-12-31",
+                "y": 2.97
+              },
+              {
+                "x": "2026-01-31",
+                "y": 3.1
+              },
+              {
+                "x": "2026-02-28",
+                "y": 3.05
+              },
+              {
+                "x": "2026-03-31",
+                "y": 3.25
+              },
+              {
+                "x": "2026-04-30",
+                "y": 3.32
+              },
+              {
+                "x": "2026-05-31",
+                "y": 3.41
+              }
+            ],
+            "unit_note": null
+          },
+          {
+            "label": "Fed funds target range midpoint (dates of change)",
+            "unit": "%",
+            "source": "FRED series DFEDTARU (Federal Reserve Board target upper bound, midpoint = upper bound − 0.125), retrieved 2026-07-19",
+            "points": [
+              {
+                "x": "2024-08-01",
+                "y": 5.375
+              },
+              {
+                "x": "2024-09-19",
+                "y": 4.875
+              },
+              {
+                "x": "2024-11-08",
+                "y": 4.625
+              },
+              {
+                "x": "2024-12-19",
+                "y": 4.375
+              },
+              {
+                "x": "2025-09-18",
+                "y": 4.125
+              },
+              {
+                "x": "2025-10-30",
+                "y": 3.875
+              },
+              {
+                "x": "2025-12-11",
+                "y": 3.625
+              },
+              {
+                "x": "2026-07-18",
+                "y": 3.625
+              }
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Trend-line inversion for global rates: three Fed officials (incl. the Vice Chair) publicly floating HIKES from 3.50-3.75%, June minutes stripping the cut bias, and futures at ~25% July / ~65% September hike odds reverse the post-2024 easing baseline; with the ECB and BoJ already tightening, a Fed hike completes synchronized G3 re-tightening — a regime change affecting every asset class. Curve data (2Y 3.80%, 10Y 4.40%, 30Y 5.06%) is primary. Merged: [18] (minutes + futures) and [12] (July 17 speeches) are one underlying repricing story."
+    },
+    {
+      "signal": {
+        "headline": "Iran widens war to GCC states: Kuwait oil facility, offshore platform, and power/desalination plants hit in missile-drone barrage",
+        "summary": "Kuwait Petroleum Corporation confirmed on July 18 that a 'vital' oil-sector facility was hit by repeated Iranian attacks, causing multiple injuries, fires, and significant material damage; an offshore Kuwait Oil Company drilling platform sustained drone damage (Bloomberg/Xinhua reporting on official Kuwaiti statements). Al Jazeera reported a Kuwaiti power plant ablaze July 19, with reports of hits on two power/desalination plants and rolling blackouts. Three ballistic missiles reportedly impacted near Shuwaikh Port. Kuwait International Airport temporarily suspended operations and Kuwait Airways rescheduled most flights. Five civil-defense and three oil-sector fire teams were reported fighting one blaze. The exact facility identities and full damage extent are not yet independently verified.",
+        "why_it_matters": "Base rate check: Iran's prior strikes on GCC soil (Al Udeid, Qatar, June 2025) were telegraphed and caused no casualties or infrastructure loss — deliberately symbolic. Repeated strikes causing injuries, oil-sector fires, and blackouts in a GCC capital are a different event class with essentially no modern precedent outside the 2019 Abqaiq attack (which briefly halved Saudi output). Targeting desalination in an arid state raises humanitarian stakes and pressure for GCC-wide air-defense integration or invocation of US security guarantees. Kuwait produced roughly 2.4-2.5 mb/d pre-war; sustained damage to its export chain would compound the Hormuz supply loss. Falsifier: KPC production/export figures for July-August; if Kuwaiti loadings hold steady, physical damage was limited.",
+        "beat": "geo-mena",
+        "region": "Kuwait / Gulf",
+        "sector": "energy-infrastructure",
+        "status": "confirmed",
+        "confidence": 0.85,
+        "materiality": 5,
+        "novelty": "First Iranian attacks of this war to cause confirmed injuries and oil/power infrastructure damage inside a GCC state, moving beyond symbolic strikes on US bases",
+        "sources": [
+          {
+            "url": "https://www.bloomberg.com/news/articles/2026-07-18/kuwait-faces-intense-night-of-iranian-attacks-as-power-plant-hit",
+            "publisher": "Bloomberg",
+            "grade": "B1",
+            "published_at": "2026-07-18"
+          },
+          {
+            "url": "https://www.aljazeera.com/news/2026/7/19/kuwaiti-power-plant-ablaze-as-iran-hits-us-gulf-allies",
+            "publisher": "Al Jazeera",
+            "grade": "B1",
+            "published_at": "2026-07-19"
+          },
+          {
+            "url": "https://english.news.cn/20260718/d6da206503b14d29a0ef1d231647f238/c.html",
+            "publisher": "Xinhua (reporting KPC statement)",
+            "grade": "D2",
+            "published_at": "2026-07-18"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "Ballistic missile impacts reported near Shuwaikh Port, Kuwait City",
+            "value": 3,
+            "unit": "impacts",
+            "as_of": "2026-07-18",
+            "source_url": "https://www.bloomberg.com/news/articles/2026-07-18/kuwait-faces-intense-night-of-iranian-attacks-as-power-plant-hit"
+          },
+          {
+            "metric": "Fire teams deployed at single oil-sector blaze (5 fire service + 3 oil sector)",
+            "value": 8,
+            "unit": "teams",
+            "as_of": "2026-07-18",
+            "source_url": "https://english.news.cn/20260718/d6da206503b14d29a0ef1d231647f238/c.html"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.8,
+        "best_source_grade": "A2",
+        "corrections": "1) Offshore KOC platform drone strike occurred July 12 (one worker injured; Kuwait army called it \"hostile\" without naming Iran), not part of the July 18 barrage — signal mis-bundles it. 2) Novelty claim is false: July 18 was not the first injury/infrastructure event of this war on GCC soil — preceded by the July 12 platform strike and a July 17 power/desalination plant hit; July 18-19 is intensification of a week-long campaign (IRGC \"wave 15 of Operation Nasr 2\"; Kuwait MoD logged 14 ballistic missiles and 46 drones in one 24h period). 3) Fire-team data point garbled: Kuwait Fire Force statement describes TWO fires — 5 teams plus unquantified oil-sector support at site one, 3 teams at site two — not 8 teams at one blaze; the cited Xinhua URL does not contain these figures. 4) \"Rolling blackouts\" overstated: officially confirmed only generation-unit deactivations plus conservation appeals (11:00-17:00). 5) \"Three ballistic missiles near Shuwaikh Port\" is single-stream reporting (Bloomberg/aggregators), reported not verified.",
+        "notes": "Core event independently confirmed far beyond cited sources: Reuters, AFP, Al Jazeera, Gulf News, Al Arabiya, RFE/RL, CNN, Kuwait Times. Attribution is not a one-party claim: Kuwait's foreign ministry, Ministry of Electricity, Kuwait Fire Force, and KPC (via KUNA) all issued official statements naming Iran, and Iran/IRGC itself claimed the strikes (asserting US-military targets Camp Udairi and Ali Al Salem AB). Fact of Iranian strikes on Kuwait with injuries and oil/power/desalination damage: almost certain (95-99%). Damage EXTENT remains Kuwaiti-official self-reporting with no independent physical/satellite assessment yet — hence A2 not A1 on specifics, and confidence 0.80. Base-rate criticism: the signal's framing (leap from symbolic Al Udeid June 2025 to this) ignores that the discontinuity opened ~July 11-12, not July 18; the correct read is sustained-campaign escalation, not a first strike. Falsifier stands and is good: KPC/JODI July-August loadings; if Kuwaiti crude exports hold ~2.4 mb/d equivalent, physical damage to the export chain was limited. Materiality 5 is contingent on that falsifier, not yet demonstrated."
+      },
+      "context": {
+        "context_md": "**Precedent.** The only modern case of a strike materially cutting GCC oil output is Abqaiq–Khurais (14 Sep 2019): ~25 Iranian drones and cruise missiles knocked out 5.7 mb/d — the largest volumetric outage in oil-market history — Brent jumped up to 19.5% intraday (a record), yet Aramco restored full production in under three weeks and prices round-tripped within a month. The operative lesson: Gulf processing plant is usually repaired faster than first-day reporting implies, which is why the KPC-loadings falsifier outranks damage photos. Kuwait itself has prior form as an Iranian target: in the 1984–88 Tanker War Iran attacked Kuwaiti shipping and hit the reflagged tanker Sea Isle City with a Silkworm missile (Oct 1987), pulling the US into convoy escort (Operation Earnest Will) and direct combat with Iran (Operation Praying Mantis, Apr 1988) — the standing precedent that strikes on Kuwait draw in Washington, relevant since Kuwait hosts ~13,500 US troops (Camp Arifjan, Ali Al Salem, Camp Udairi) under a 1991 defense pact; the IRGC claims those bases were the targets while Kuwaiti ministries document civilian-infrastructure hits. Iran's 23 Jun 2025 Al Udeid strike was the opposite event class: telegraphed and casualty-free. **Current campaign context.** This war already contains the largest energy-supply disruption since the 1970s (IEA characterization): after the 28 Feb 2026 US/Israeli strikes and Iran's 2–4 Mar Hormuz closure, Kuwait declared force majeure (7 Mar) and its crude output collapsed from ~2.66 mb/d (Feb) to ~0.56 mb/d (Apr) on storage and export constraints, recovering to ~1.65 mb/d in June under the truce — so the marginal supply at risk from these strikes is well below Kuwait's nameplate 2.4–2.7 mb/d, because most of the export chain was already throttled. **Mechanism.** The desalination targeting is the genuine novelty: Kuwait has effectively no fresh water and draws ~90%+ of potable supply from cogeneration power-desalination plants (Doha East/West, Az-Zour, Subiya, Shuaiba), so hitting power plants in 50°C July couples electricity and water security — closer in kind to Russia's 2022–23 grid campaign against Ukraine than to Abqaiq. Per the verifier, the discontinuity opened 11–12 Jul (offshore KOC platform), and the 18–19 Jul barrage (Kuwait MoD count: 14 ballistic missiles, 46 drones in 24h) is week-two intensification, not a first strike.",
+        "base_rate": "Unconditional: state or state-proxy strikes causing confirmed physical damage/casualties inside a GCC state have occurred in roughly 5-6 episodes over 40 years (Tanker War hits on Kuwait 1987, Iraqi Scuds on Saudi 1991, Houthi campaign vs Saudi 2019-22 including Abqaiq, Al Udeid 2025) — about one episode every 6-8 years. Strikes that materially cut oil output: once in the modern era (Abqaiq 2019, 5.7 mb/d lost, fully restored in ~3 weeks; Brent retraced within a month). Conditional on the current active war, Iranian strikes on Kuwait have run near-daily since ~11 Jul 2026, so further strikes are very likely (80-95%); an Abqaiq-scale incremental export loss from any single barrage is unlikely (20-45%) given the rapid-repair base rate — but a weeks-long attrition campaign against one GCC state's infrastructure has no clean precedent, so that base rate carries low weight for cumulative damage.",
+        "series": [
+          {
+            "label": "Brent crude, key settlements through the 2026 Iran war",
+            "unit": "USD/bbl",
+            "source": "Compiled from Al Jazeera market reports (17 Jun, 8 Jul, 13 Jul 2026), CNBC (17 Jul 2026), militaryspend.org Hormuz tracker, Wikipedia 2026 Strait of Hormuz crisis; wartime futures peak $118-126 depending on contract, physical cargoes traded up to ~$150 in March",
+            "points": [
+              {
+                "x": "2026-02-27",
+                "y": 72
+              },
+              {
+                "x": "2026-03-02",
+                "y": 72
+              },
+              {
+                "x": "2026-03-08",
+                "y": 100
+              },
+              {
+                "x": "2026-03-09",
+                "y": 118
+              },
+              {
+                "x": "2026-04-18",
+                "y": 95
+              },
+              {
+                "x": "2026-06-17",
+                "y": 78.24
+              },
+              {
+                "x": "2026-07-08",
+                "y": 76.48
+              },
+              {
+                "x": "2026-07-13",
+                "y": 78.82
+              },
+              {
+                "x": "2026-07-17",
+                "y": 88.1
+              }
+            ]
+          },
+          {
+            "label": "Kuwait crude oil production, monthly",
+            "unit": "thousand b/d",
+            "source": "OPEC secondary sources via YCharts/TradingEconomics/CEIC (ycharts.com/indicators/kuwait_crude_oil_production; tradingeconomics.com/kuwait/crude-oil-production); March 2026 omitted — not published in retrieved sources (reported only as ~2x the April level, i.e. ~1.2 mb/d); this series is the falsifier baseline for the signal",
+            "points": [
+              {
+                "x": "2025-09",
+                "y": 2645
+              },
+              {
+                "x": "2025-10",
+                "y": 2595
+              },
+              {
+                "x": "2025-11",
+                "y": 2635
+              },
+              {
+                "x": "2025-12",
+                "y": 2685
+              },
+              {
+                "x": "2026-01",
+                "y": 2660
+              },
+              {
+                "x": "2026-02",
+                "y": 2660
+              },
+              {
+                "x": "2026-04",
+                "y": 562
+              },
+              {
+                "x": "2026-05",
+                "y": 578
+              },
+              {
+                "x": "2026-06",
+                "y": 1650
+              }
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Qualitative escalation-frontier break: Iran striking Kuwaiti oil facilities, an offshore platform, and power/desalination plants moves the war from US-Iran bilateral to GCC energy infrastructure, expanding supply-at-risk from Iranian exports to Gulf production broadly and raising state-stability stakes (desalination). KPC confirmation is official primary sourcing (~B1-B2), though facility identities and damage extent lack independent verification — flagged accordingly. Base rate: GCC territory had not been systematically struck in this war; this changes the escalation trend line, unlike [4] which continues it."
+    },
+    {
+      "signal": {
+        "headline": "China Q2 GDP growth slows to 4.3% YoY, first print below Beijing's target band since the Covid era",
+        "summary": "China's National Bureau of Statistics reported July 15 that Q2 2026 real GDP grew 4.3% YoY (0.9% QoQ), below consensus of 4.5% and below the government's 2026 target band of 4.5-5%. It is the weakest quarterly print since December 2022. H1 growth was 4.7% on output of roughly RMB 69.57tn (~$10.25tn). Drags cited: slumping investment and fading consumption subsidies plus higher energy import costs from the Iran conflict; the offset was Q2 exports up 27% YoY on semiconductors and computer parts. Released 4 days ago (just outside the 24-48h window) but it remains the dominant live macro fact: it frames the July 20 loan prime rate fixing and the late-July Politburo economic meeting.",
+        "why_it_matters": "Base rate: official Chinese GDP prints almost never undershoot the announced target band; a public miss is a deliberate signal of either tolerated slowdown or imminent stimulus. Judgment: a policy response (LPR cut and/or fiscal package) by end-August is likely (55-80%). Falsification: if the July 20 LPR is held AND the July Politburo readout contains no incremental easing language, downgrade to roughly even chance. Export surge (+27%) alongside weak domestic demand also sharpens trade-war friction ahead of the US-China truce deadline dynamics.",
+        "beat": "geo-indopacific",
+        "region": "China",
+        "sector": "macro/economy",
+        "status": "confirmed",
+        "confidence": 0.95,
+        "materiality": 5,
+        "novelty": "Weakest quarterly growth since Dec 2022; first sub-target print since Covid era",
+        "sources": [
+          {
+            "url": "https://www.cnbc.com/2026/07/15/china-gdp-retail-sales-investment-june-.html",
+            "publisher": "CNBC (reporting NBS release)",
+            "grade": "B1",
+            "published_at": "2026-07-15"
+          },
+          {
+            "url": "https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk",
+            "publisher": "CNN Business",
+            "grade": "B1",
+            "published_at": "2026-07-15"
+          },
+          {
+            "url": "https://www.bloomberg.com/news/articles/2026-07-15/china-s-gdp-growth-weakens-to-4-3-below-official-target-range",
+            "publisher": "Bloomberg",
+            "grade": "B1",
+            "published_at": "2026-07-15"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "China real GDP growth, Q2 2026 YoY",
+            "value": 4.3,
+            "unit": "%",
+            "as_of": "2026-07-15",
+            "source_url": "https://www.cnbc.com/2026/07/15/china-gdp-retail-sales-investment-june-.html"
+          },
+          {
+            "metric": "China real GDP growth, Q2 2026 QoQ",
+            "value": 0.9,
+            "unit": "%",
+            "as_of": "2026-07-15",
+            "source_url": "https://www.fxstreet.com/news/chinas-economy-expands-09-qoq-in-q2-as-expected-202607150201"
+          },
+          {
+            "metric": "China H1 2026 GDP growth",
+            "value": 4.7,
+            "unit": "% YoY",
+            "as_of": "2026-07-15",
+            "source_url": "https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk"
+          },
+          {
+            "metric": "2026 official growth target band",
+            "value": "4.5-5.0",
+            "unit": "%",
+            "as_of": "2026-07-15",
+            "source_url": "https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk"
+          },
+          {
+            "metric": "China Q2 2026 exports",
+            "value": 27,
+            "unit": "% YoY",
+            "as_of": "2026-07-15",
+            "source_url": "https://www.cnn.com/2026/07/14/business/china-q2-gdp-export-economy-intl-hnk"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.93,
+        "best_source_grade": "A1",
+        "corrections": "(1) Export data point mislabeled: the 27% YoY figure is June exports only (dollar/customs terms as reported by press), not Q2. NBS primary release (yuan terms): June exports +20.8% YoY, H1 exports +13.4% YoY. Summary line \"Q2 exports up 27%\" should read \"June exports up 27% (dollar terms) / +20.8% (yuan terms, NBS)\". (2) Novelty framing \"first sub-target print since Covid era\" holds only because 2026 is the first year with an explicit 4.5% floor (4.5-5% band, lowest target on record, third-ever range); under prior \"around 5%\" point targets, 2024 quarterly prints of 4.6-4.7% were arguably sub-target. (3) Minor: CNN URL path dated 07/14 vs 07/15 publication.",
+        "notes": "Verified against the primary source: NBS English release of 2026-07-15 (stats.gov.cn/english/PressRelease/202607/t20260715_1964120.html) confirms Q2 GDP +4.3% YoY, +0.9% QoQ SA, H1 GDP 69,570.4bn yuan +4.7% YoY — all exactly matching the signal. Target band 4.5-5% confirmed via March 2026 Government Work Report (gov.cn primary, plus CNBC/Al Jazeera). \"Weakest since Q4 2022\" and Bloomberg consensus of 4.5% independently corroborated (NPR, Bloomberg). \"Slumping investment\" understated if anything: NBS shows FAI -5.7% YoY, retail sales +2.7%. Iran-war/oil drag is press attribution, not NBS causation — correctly treated as reported framing. Note the epistemics: the 4.3% figure is an official Chinese statistic (interested party with a known smoothing history); it is confirmed as the official print, which is the tradeable fact the signal claims. Best source upgraded from B1 to A1 (official primary release, independently relayed). Forward judgment (policy response likely, 55-80%, falsified by held July 20 LPR + no Politburo easing language) is calendar-accurate and properly falsifiable; the base-rate claim that public target misses are rare and deliberate signals is sound (2022 was the last clear full-year miss). Confidence trimmed 0.95 -> 0.93 solely for the erroneous export data point."
+      },
+      "context": {
+        "context_md": "**How the mechanism works.** China's growth target is set each March at the National People's Congress; 2026's 4.5–5.0% band is only the third range target ever and the lowest on record. The NBS publishes quarterly GDP ~2 weeks after quarter-end, and the policy response runs through two levers on a fixed calendar: the monthly Loan Prime Rate fixing (quoted by 20 banks on the 20th, guided since mid-2024 by the PBOC's 7-day reverse-repo rate) and the Politburo's economic work meetings (April, late July, December), whose readouts set the fiscal stance. **Precedent.** Official full-year GDP has visibly undershot the target only three times in three decades — 1998 (7.8% vs 8%), 2014 (7.4% vs ~7.5%), and 2022 (3.0% vs ~5.5%) — and each episode was followed by easing: 2014–15 brought six rate cuts and the shantytown-loan (PSL) mini-stimulus; the 2022 miss ended with the December 2022 Covid-exit pivot. The closest template is mid-2024: Q2/Q3 prints of 4.7%/4.6% under an \"around 5%\" target triggered the September 24, 2024 package — a record 25bp LPR cut to 3.10% in October and a RMB 10tn local-debt swap in November — after which Q4 2024 snapped back to 5.4%. The 1-year LPR has since been cut just once more (to 3.00% in May 2025) and held for 13 consecutive fixings through June 2026, so a July 20 or August cut would be the first easing in ~14 months. Two caveats a generalist needs: official Chinese GDP is produced by an interested party with a documented smoothing history, so the tradeable fact is the *official print and its signal*, not the true growth rate — publishing 4.3% below the band floor is itself a choice; and the Q2 cushion was external (June exports +27% YoY in dollar terms, +20.8% in yuan terms per NBS) while domestic demand deteriorated (H1 fixed-asset investment -5.7%, June retail sales +2.7%), an export-frontloading pattern that historically fades once tariff deadlines pass. The falsification test is clean and near-term: the July 20 LPR fixing plus the late-July Politburo readout.",
+        "base_rate": "Official full-year GDP undershooting the announced target is rare: ~3 clear misses in 30+ target years (1998, 2014, 2022) — roughly a 10% unconditional frequency; quarterly sub-target prints are only modestly more common (2022's Covid quarters, Q2–Q3 2024 vs \"around 5%\"). But conditional on a visible sub-target print, some monetary/fiscal easing within two quarters has followed in effectively 100% of post-2014 episodes (2014–15, 2022, Sept–Nov 2024), which is why the signal's 55–80% policy-response call is, if anything, conservative.",
+        "series": [
+          {
+            "label": "China real GDP growth, quarterly YoY (headline prints)",
+            "unit": "% YoY",
+            "source": "NBS quarterly releases (stats.gov.cn) via Trading Economics/NBS press releases; 2026-07-15 print per NBS English release",
+            "points": [
+              {
+                "x": "2022-03-31",
+                "y": 4.8
+              },
+              {
+                "x": "2022-06-30",
+                "y": 0.4
+              },
+              {
+                "x": "2022-09-30",
+                "y": 3.9
+              },
+              {
+                "x": "2022-12-31",
+                "y": 2.9
+              },
+              {
+                "x": "2023-03-31",
+                "y": 4.5
+              },
+              {
+                "x": "2023-06-30",
+                "y": 6.3
+              },
+              {
+                "x": "2023-09-30",
+                "y": 4.9
+              },
+              {
+                "x": "2023-12-31",
+                "y": 5.2
+              },
+              {
+                "x": "2024-03-31",
+                "y": 5.3
+              },
+              {
+                "x": "2024-06-30",
+                "y": 4.7
+              },
+              {
+                "x": "2024-09-30",
+                "y": 4.6
+              },
+              {
+                "x": "2024-12-31",
+                "y": 5.4
+              },
+              {
+                "x": "2025-03-31",
+                "y": 5.4
+              },
+              {
+                "x": "2025-06-30",
+                "y": 5.2
+              },
+              {
+                "x": "2025-09-30",
+                "y": 4.8
+              },
+              {
+                "x": "2025-12-31",
+                "y": 4.5
+              },
+              {
+                "x": "2026-03-31",
+                "y": 5
+              },
+              {
+                "x": "2026-06-30",
+                "y": 4.3
+              }
+            ]
+          },
+          {
+            "label": "China 1-year Loan Prime Rate (fixings at change points, then holds)",
+            "unit": "%",
+            "source": "PBOC LPR announcements (pbc.gov.cn); holds through June 2026 confirmed via PBOC/global-rates",
+            "points": [
+              {
+                "x": "2022-08-22",
+                "y": 3.65
+              },
+              {
+                "x": "2023-06-20",
+                "y": 3.55
+              },
+              {
+                "x": "2023-08-21",
+                "y": 3.45
+              },
+              {
+                "x": "2024-07-22",
+                "y": 3.35
+              },
+              {
+                "x": "2024-10-21",
+                "y": 3.1
+              },
+              {
+                "x": "2025-05-20",
+                "y": 3
+              },
+              {
+                "x": "2025-11-20",
+                "y": 3
+              },
+              {
+                "x": "2026-06-22",
+                "y": 3
+              }
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "First sub-target Chinese GDP print since the Covid era (Q2 4.3% YoY vs 4.5-5% band, weakest since Dec 2022) — an A1 NBS release that changes the trend line for the world's second-largest economy and directly frames two near-term policy events (July 20 LPR fixing, late-July Politburo). The 27% YoY export surge masking domestic demand weakness sharpens the global rebalancing signal. Slightly stale (July 15) but remains the dominant live macro fact from Asia."
+    },
+    {
+      "signal": {
+        "headline": "AI-chip trade cracks: global semiconductor stocks have shed ~$3.3T since June 22; Micron -10.6%, AMD -6.9% Friday",
+        "summary": "The semiconductor complex led a global equity selloff into the weekend: on Friday July 17 Micron fell 10.6%, AMD 6.9%, and Nvidia 1.25%, dragging the Nasdaq -1.5% and the S&P 500 -1% (Dow -407). Fortune reports global semiconductor stocks have lost roughly $3.3 trillion in market value since June 22, approaching bear-market territory for the group. Cited catalysts: TSMC's Q3 capex/margin guidance (revenue outlook $44.6-45.8B was strong, but the capex guide stoked AI-cost-sustainability worries), Meta signaling enough excess GPU capacity to become a seller rather than pure buyer (undermining the GPU-scarcity thesis), and a new model from Chinese startup Moonshot claimed to match leading US labs. Valuation left little cushion (AMD trailing P/E ~163x pre-selloff).",
+        "why_it_matters": "AI-linked megacaps are the dominant weight in US and global benchmarks, so a repricing of hyperscaler capex assumptions transmits directly to index level, credit issuance plans for data-center buildouts, and the capex-driven GDP impulse. Base rate check: 10%+ single-name drawdowns in semis are common (several per year) and usually mean-revert; a $3.3T four-week sector drawdown is not, and is better read as a regime question about the scarcity premium. Falsifier: hyperscaler Q2 earnings (late July) reiterating or raising capex guidance would likely (55-80%) stabilize the group; guidance cuts would confirm the de-rating. Note the 'Meta as GPU seller' catalyst is a reported interpretation, not a confirmed corporate announcement.",
+        "beat": "markets",
+        "region": "Global / US / Taiwan",
+        "sector": "Equities / Technology",
+        "status": "confirmed",
+        "confidence": 0.85,
+        "materiality": 8,
+        "novelty": "Friday's leg extended a four-week drawdown to near bear-market territory for the sector; the Moonshot model release and Meta capacity signal are new within 48-72 hours.",
+        "sources": [
+          {
+            "url": "https://fortune.com/2026/07/17/tech-stocks-global-selloff-as-investors-ai-semiconductor-chips/",
+            "publisher": "Fortune",
+            "grade": "B2",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://finance.yahoo.com/markets/stocks/articles/chipmakers-other-high-flying-stocks-135657496.html",
+            "publisher": "Yahoo Finance / Reuters syndication",
+            "grade": "B2",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://www.cnbc.com/2026/07/16/stock-market-today-live-updates.html",
+            "publisher": "CNBC",
+            "grade": "B2",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://247wallst.com/investing/2026/07/17/amd-falls-5-intel-drops-4-nvidia-slides-3-before-recovering-as-rotation-hits-semiconductor-stocks/",
+            "publisher": "24/7 Wall St.",
+            "grade": "C3",
+            "published_at": "2026-07-17"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "Global semiconductor market-cap loss since June 22",
+            "value": 3.3,
+            "unit": "USD trillion (approx)",
+            "as_of": "2026-07-17",
+            "source_url": "https://fortune.com/2026/07/17/tech-stocks-global-selloff-as-investors-ai-semiconductor-chips/"
+          },
+          {
+            "metric": "Micron daily change",
+            "value": -10.57,
+            "unit": "%",
+            "as_of": "2026-07-17",
+            "source_url": "https://247wallst.com/investing/2026/07/17/amd-falls-5-intel-drops-4-nvidia-slides-3-before-recovering-as-rotation-hits-semiconductor-stocks/"
+          },
+          {
+            "metric": "AMD daily change",
+            "value": -6.89,
+            "unit": "%",
+            "as_of": "2026-07-17",
+            "source_url": "https://247wallst.com/investing/2026/07/17/amd-falls-5-intel-drops-4-nvidia-slides-3-before-recovering-as-rotation-hits-semiconductor-stocks/"
+          },
+          {
+            "metric": "S&P 500 daily change",
+            "value": -1,
+            "unit": "%",
+            "as_of": "2026-07-17",
+            "source_url": "https://tradingeconomics.com/united-states/stock-market"
+          },
+          {
+            "metric": "Nasdaq Composite daily change",
+            "value": -1.5,
+            "unit": "%",
+            "as_of": "2026-07-17",
+            "source_url": "https://tradingeconomics.com/united-states/stock-market"
+          },
+          {
+            "metric": "TSMC Q3 2026 revenue guidance",
+            "value": "44.6-45.8",
+            "unit": "USD billion",
+            "as_of": "2026-07-16",
+            "source_url": "https://intellectia.ai/blog/ai-chip-stocks-july-2026-selloff"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.6,
+        "best_source_grade": "B2",
+        "corrections": "(1) Headline single-name moves are misdated: Micron -10.57% and AMD -6.89% were the July 1, 2026 closing moves, not Friday July 17. Exchange price history shows July 17 closes of MU -0.50% ($848.95) and AMD -1.03% ($495.76); Nvidia closed -2.21% (signal said -1.25%). The data_points citing 24/7 Wall St (C3) for July 17 closes must be replaced — that article described intraday dips that partially recovered within the first hour. (2) Nasdaq fell -1.40% (25,520.24), not -1.5%; Dow -406.55 (-0.77%) and S&P -1.01% are correct. (3) Novelty error: the Meta excess-compute story (\"Meta Compute\" cloud plan) broke July 1, 2026, not within 48-72 hours; initial reaction sent Meta stock up 6-9%, its bearish read-through for chip vendors developed later. It remains a reported plan, correctly not treated as a confirmed corporate announcement. (4) AMD trailing P/E ~163x is unverified. (5) Several outlets report the SOX crossed the -20% bear-market threshold from its late-June record on July 17, so \"approaching bear-market territory\" is if anything slightly understated; the weekly rout was the worst for chips since April 2025.",
+        "notes": "Core macro claim stands and is independently confirmed well beyond the cited sources: ~$3.3T global chip market-cap loss since June 22 (Yahoo Finance Chart of the Day, plus multiple outlets; SOX >20% off its late-June record after a 105% March-to-June run), a semis-led global selloff Friday July 17 (Dow -406.55/-0.77%, S&P -1.01%, Nasdaq -1.40%), TSMC's July 16 call confirmed exactly (Q3 revenue guide $44.6-45.8B, 2026 capex raised ~15% to record $60-64B, Q3 GM guided down to 65-67% on 2nm dilution), and Moonshot's Kimi K3 release genuinely new within the 48-72h window. However, the two most vivid headline numbers (MU -10.6%, AMD -6.9% \"Friday\") are refuted by daily exchange history — they are July 1 sessions conflated onto July 17 — a material data-discipline failure (METHODOLOGY.md sec. 7), and the Meta catalyst's freshness is wrong by ~2.5 weeks. Weekly context that could replace the wrong figures: MU -13.3% and AMD -11.1% for the week of July 13-17. Status stays \"confirmed\" for the sector-drawdown event itself (multiple independent B-grade sources plus exchange data), but confidence in the signal as composed drops from 0.85 to 0.6 pending correction of the headline and data_points. Base-rate framing and the hyperscaler-Q2-earnings falsifier in the original are sound and unchanged."
+      },
+      "context": {
+        "context_md": "The PHLX Semiconductor Index (SOX) closed July 17 at 11,673.89 — 20.2% below its June 22 record close of 14,634.72 (Nasdaq data via FRED, A1) — a confirmed bear-market close, after nearly doubling (+96%) from its late-March close of 7,457.67. Sector bears of this size are routine, not rare: the SOX has logged roughly a dozen 20%+ peak-to-trough drawdowns since 1995 (about one every 2.5 years), and in all but two — 2000-02 (-84%) and 2007-09 (~-70%), both accompanied by actual end-demand collapse — it reclaimed its prior high within 6-18 months. Recent analogs: July-August 2024, ~-25% in about four weeks on AI-ROI doubts plus the yen-carry unwind, stabilized once Q2 hyperscaler earnings reiterated capex; and the April 2025 tariff shock, previously the worst chip week, which preceded the very rally that produced the June 2026 record. The closest mechanism analog is the DeepSeek shock of January 27, 2025: a Chinese model claiming frontier performance at low cost erased ~$589B of Nvidia market cap in one day (then the largest single-day loss in market history), yet the feared capex cuts never came — hyperscalers raised guidance within weeks and the sector went on to new highs — which is why Moonshot's Kimi K3 release alone is weak evidence of regime change. The transmission mechanism: AI-chip valuations discount a multi-year stream of hyperscaler capex, so the marginal news that moves the sector is capex-intention news rather than current shipments — hence Meta's reported excess-compute/reseller plan (broke July 1, still not a confirmed corporate announcement) matters more than any single earnings print. TSMC's July 16 call cut both ways: it confirmed record demand (Q3 revenue guide $44.6-45.8B, 2026 capex raised ~15% to a record $60-64B) while guiding Q3 gross margin down to 65-67% on 2nm dilution, feeding the AI-cost-sustainability worry. Historically the discriminator between a mean-reverting scare and a genuine de-rating has been the next guidance cycle: in 2024 and 2025 reiterated or raised capex ended the drawdowns within weeks, whereas in 2000-02 and 2008 drawdowns deepened because orders actually fell — making the late-July Q2 reports from Microsoft, Alphabet, Meta, and Amazon the resolution point. Note that the headline \"$3.3T lost\" is a record in absolute dollars largely because the sector's starting market cap was itself a record; in percentage terms (-20% in four weeks) this ranks with 1998, 2020, and 2024, not with 2000-02.",
+        "base_rate": "SOX 20%+ peak-to-trough drawdowns: ~12 episodes since 1995, i.e. roughly one every 2.5 years (most recent prior: April 2025). Median depth ~30%; in all but two episodes (2000-02, -84%; 2007-09, ~-70%) the index reclaimed its prior high within 6-18 months. A -20% decline compressed into ~4 weeks is rarer — about 4-5 instances in 30 years (1998, COVID March 2020, July-August 2024, April 2025). Unconditional frequency that a drawdown of this class marks a durable de-rating rather than mean reversion: roughly 15-25% (2 of ~12 historical episodes), which is the prior against which the late-July hyperscaler capex guidance should be weighed.",
+        "series": [
+          {
+            "label": "PHLX Semiconductor Index (SOX), daily close — June 22 record to bear-market close",
+            "unit": "index points",
+            "source": "Nasdaq exchange data via FRED series NASDAQSOX (fred.stlouisfed.org/series/NASDAQSOX), A1, as_of 2026-07-17",
+            "points": [
+              {
+                "x": "2026-06-08",
+                "y": 12906.69
+              },
+              {
+                "x": "2026-06-09",
+                "y": 12657.81
+              },
+              {
+                "x": "2026-06-10",
+                "y": 12206.46
+              },
+              {
+                "x": "2026-06-11",
+                "y": 13171.44
+              },
+              {
+                "x": "2026-06-12",
+                "y": 13371.47
+              },
+              {
+                "x": "2026-06-15",
+                "y": 14099.62
+              },
+              {
+                "x": "2026-06-16",
+                "y": 13294.22
+              },
+              {
+                "x": "2026-06-17",
+                "y": 13477.07
+              },
+              {
+                "x": "2026-06-18",
+                "y": 14341.78
+              },
+              {
+                "x": "2026-06-22",
+                "y": 14634.72
+              },
+              {
+                "x": "2026-06-23",
+                "y": 13482.51
+              },
+              {
+                "x": "2026-06-24",
+                "y": 13458.19
+              },
+              {
+                "x": "2026-06-25",
+                "y": 13940.87
+              },
+              {
+                "x": "2026-06-26",
+                "y": 13203.57
+              },
+              {
+                "x": "2026-06-29",
+                "y": 13709.66
+              },
+              {
+                "x": "2026-06-30",
+                "y": 14246.96
+              },
+              {
+                "x": "2026-07-01",
+                "y": 13353.28
+              },
+              {
+                "x": "2026-07-02",
+                "y": 12626.22
+              },
+              {
+                "x": "2026-07-06",
+                "y": 12900.14
+              },
+              {
+                "x": "2026-07-07",
+                "y": 12300.52
+              },
+              {
+                "x": "2026-07-08",
+                "y": 12574.97
+              },
+              {
+                "x": "2026-07-09",
+                "y": 12960
+              },
+              {
+                "x": "2026-07-10",
+                "y": 12967.16
+              },
+              {
+                "x": "2026-07-13",
+                "y": 12347.78
+              },
+              {
+                "x": "2026-07-14",
+                "y": 12661.93
+              },
+              {
+                "x": "2026-07-15",
+                "y": 12398.89
+              },
+              {
+                "x": "2026-07-16",
+                "y": 11867.5
+              },
+              {
+                "x": "2026-07-17",
+                "y": 11673.89
+              }
+            ]
+          },
+          {
+            "label": "SOX weekly (Friday) close — the +96% March-June run-up and the crack",
+            "unit": "index points",
+            "source": "Nasdaq exchange data via FRED series NASDAQSOX, A1, as_of 2026-07-17 (holiday-shortened weeks omitted: Apr 3, Jun 19, Jul 3)",
+            "points": [
+              {
+                "x": "2026-02-27",
+                "y": 8098.37
+              },
+              {
+                "x": "2026-03-06",
+                "y": 7514.74
+              },
+              {
+                "x": "2026-03-13",
+                "y": 7646.64
+              },
+              {
+                "x": "2026-03-20",
+                "y": 7670.61
+              },
+              {
+                "x": "2026-03-27",
+                "y": 7457.67
+              },
+              {
+                "x": "2026-04-10",
+                "y": 8889.83
+              },
+              {
+                "x": "2026-04-17",
+                "y": 9555.88
+              },
+              {
+                "x": "2026-04-24",
+                "y": 10513.66
+              },
+              {
+                "x": "2026-05-01",
+                "y": 10595.34
+              },
+              {
+                "x": "2026-05-08",
+                "y": 11775.5
+              },
+              {
+                "x": "2026-05-15",
+                "y": 11588.46
+              },
+              {
+                "x": "2026-05-22",
+                "y": 12202.54
+              },
+              {
+                "x": "2026-05-29",
+                "y": 12829.38
+              },
+              {
+                "x": "2026-06-05",
+                "y": 12220.76
+              },
+              {
+                "x": "2026-06-12",
+                "y": 13371.47
+              },
+              {
+                "x": "2026-06-26",
+                "y": 13203.57
+              },
+              {
+                "x": "2026-07-10",
+                "y": 12967.16
+              },
+              {
+                "x": "2026-07-17",
+                "y": 11673.89
+              }
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Potential break in the AI-capex equity leadership trend: ~$3.3T of global semiconductor market value erased since June 22, with Friday's -10.6% Micron / -6.9% AMD moves and catalysts that attack the GPU-scarcity thesis itself (Meta as GPU seller, Moonshot K3 parity claims) rather than one quarter's numbers. At AMD ~163x trailing P/E pre-selloff, valuation offered no cushion. Given AI capex has been a material US growth and equity driver, a sustained crack is macro, not sector, news. Distinct corporate events [24]/[26]/[27] kept separate as catalysts."
+    },
+    {
+      "signal": {
+        "headline": "European gas at near 4-month high: TTF EUR 57.49/MWh (+42% m/m) on US-Iran escalation and Hormuz LNG risk, while EU storage sits at ~52% vs ~75% seasonal norm",
+        "summary": "Dutch TTF front-month closed at EUR 57.49/MWh on July 17 (+4.7% d/d, +41.9% m/m, +71.1% y/y), the highest in nearly four months. Drivers: US strikes on Iran and a re-imposed naval blockade, plus Qatar halting LNG production-expansion plans after a tanker was attacked near Hormuz — together threatening the LNG flows Europe needs to rebuild inventories. EU storage stood near 51.8% full in mid-July vs a ~75% seasonal norm (mandatory target relaxed from 90% to 80% for winter 2026-27; trackers estimate ~3,786 GWh/day of injections needed to hit it by November). The Commission's Energy Union Task Force (July 13) and Gas Coordination Group (July 1) both state targets remain 'achievable' with no immediate supply concern.",
+        "why_it_matters": "This is Europe's core structural vulnerability re-priced: electricity prices remain gas-marginal, so a Middle East shock transmits directly into European inflation and industrial competitiveness. The 23-percentage-point storage gap vs. norm plus a +42% monthly price move means winter-2026/27 risk is now market-priced, not hypothetical. Falsifiable checkpoints: GIE AGSI+ fill rate on Oct 1 (below ~70% would invalidate the Commission's 'achievable' claim); TTF holding above EUR 50/MWh through August signals a persistent risk premium. Roughly even chance (45-55%) the 80% target is met on time if Hormuz disruption persists through Q3.",
+        "beat": "geo-europe-russia",
+        "region": "Europe",
+        "sector": "energy",
+        "status": "confirmed",
+        "confidence": 0.9,
+        "materiality": 5,
+        "novelty": "Price at ~4-month high; storage deficit vs. norm is the widest at this calendar point since 2021",
+        "sources": [
+          {
+            "url": "https://tradingeconomics.com/commodity/eu-natural-gas",
+            "publisher": "TradingEconomics (ICE TTF data)",
+            "grade": "B1",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://energy.ec.europa.eu/news/energy-union-task-force-takes-stock-oil-and-gas-security-supply-eu-2026-07-13_en",
+            "publisher": "European Commission DG ENER",
+            "grade": "A2",
+            "published_at": "2026-07-13"
+          },
+          {
+            "url": "https://energy.ec.europa.eu/news/gas-coordination-group-no-immediate-concerns-about-security-eu-gas-supply-2026-07-01_en",
+            "publisher": "European Commission DG ENER",
+            "grade": "A2",
+            "published_at": "2026-07-01"
+          },
+          {
+            "url": "https://global-energy-flow.com/storage/",
+            "publisher": "GEF tracker (GIE AGSI+ data)",
+            "grade": "C3",
+            "published_at": "2026-07-17"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "Dutch TTF front-month price",
+            "value": 57.49,
+            "unit": "EUR/MWh",
+            "as_of": "2026-07-17",
+            "source_url": "https://tradingeconomics.com/commodity/eu-natural-gas"
+          },
+          {
+            "metric": "TTF monthly change",
+            "value": 41.86,
+            "unit": "% m/m",
+            "as_of": "2026-07-17",
+            "source_url": "https://tradingeconomics.com/commodity/eu-natural-gas"
+          },
+          {
+            "metric": "TTF year-over-year change",
+            "value": 71.13,
+            "unit": "% y/y",
+            "as_of": "2026-07-17",
+            "source_url": "https://tradingeconomics.com/commodity/eu-natural-gas"
+          },
+          {
+            "metric": "EU gas storage fill level (vs ~75% seasonal norm; 80% mandatory target)",
+            "value": 51.8,
+            "unit": "% full",
+            "as_of": "2026-07-15",
+            "source_url": "https://global-energy-flow.com/storage/"
+          },
+          {
+            "metric": "Required injection rate to hit target by November",
+            "value": 3786,
+            "unit": "GWh/day",
+            "as_of": "2026-07-15",
+            "source_url": "https://global-energy-flow.com/storage/trajectory/"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.7,
+        "best_source_grade": "A2",
+        "corrections": "1) Seasonal norm is ~67.5% (5-yr average per the signal's own cited GEF/AGSI+ tracker), not ~75%; the storage deficit is ~15-16pp, not 23pp — headline and why_it_matters overstate the gap by ~7pp. 2) The 3,786 GWh/day required-injection figure matches the arithmetic for the OLD 90% target (~3,850 GWh/day), not the relaxed 80% target (~2,850 GWh/day); treat as stale/unverified C3 data. 3) Energy Union Task Force met 10 July (news published 13 July). 4) Qatar 'paused its push to ramp up LNG' after the July 7 tanker attack (Bloomberg, July 9); the North Field expansion itself was already delayed to 2027+ after the March Ras Laffan drone attack — 'halted expansion plans' is a mild mischaracterization of a pause on production revival. 5) A later TradingEconomics snapshot showed July 17 at EUR 58.91 (+7.28%); the signal's 57.49 matches the cited page at its as-of but the settle may have been higher. 6) Novelty claim 'widest deficit since 2021' is marginal (~16pp in 2026 vs ~15pp mid-July 2021) and unproven.",
+        "notes": "Core signal stands: TTF at a near-4-month high (~57-59 EUR/MWh, ~+42% m/m) is confirmed by the cited exchange-data aggregator; the US-Iran escalation, reimposed naval blockade, July 7 Hormuz attack on Qatari LNG carrier Al Rekayat, and Qatar's LNG ramp-up pause are independently confirmed by NPR, CNN, Al Jazeera, The Hill, and Bloomberg (B1-B2). Commission 'targets achievable / no immediate concern' statements verified on both DG ENER pages (A2) and are properly attributed as claims by an interested party. Storage ~51.8% cross-checks across trackers (51.1% on Jul 8, 51.8% on Jul 12). However, the signal's storage-deficit framing fails its own source: the 5-yr norm is ~67.5%, not ~75%, so the gap is ~16pp, not 23pp — a material overstatement in a headline element — and the 3,786 GWh/day figure appears keyed to the superseded 90% target. Note also the cited tracker projects ~81% by Nov 1 at the current injection pace, supporting the Commission's claim; the signal's conditional 45-55% on the 80% target is defensible but at the pessimistic edge. Base rate: a +42% m/m gas move amid attacks on LNG shipping at Hormuz is within the expected class response, not anomalous. Downgraded confidence 0.9 -> 0.7 for the numeric errors; status remains confirmed because every load-bearing fact has independent multi-source confirmation."
+      },
+      "context": {
+        "context_md": "**Mechanism.** TTF is Europe's gas benchmark, and gas plants set the marginal price in the EU's merit-order electricity market, so a gas shock passes near-directly into power prices and HICP energy — the channel that made the 2021-22 Russian supply squeeze an inflation event, not just a commodity story. Europe replaced Russian pipeline gas mostly with LNG (~one-third of supply), which means it now bids against Asia for cargoes: Qatar supplies ~20% of global LNG, ~83% of it bound for Asia, and all of it exits via Hormuz with no pipeline bypass — so a Hormuz disruption forces Asian buyers into the Atlantic spot market and pulls TTF up with JKM. **Precedent.** 2021-22: TTF rose from ~EUR 16 (Jan 2021) to an intraday record ~EUR 345 (Mar 2022, all-time high per TradingEconomics), yet the EU still filled storage to ~95% by Nov 2022 via ~15% demand destruction and LNG reallocation, and prices collapsed to EUR 25-40 through 2023-24 — the strongest evidence that high prices are self-correcting for storage. Feb 2025: TTF hit ~EUR 58 (then a 2-year high) after the Jan 1, 2025 end of Ukraine transit; storage exited winter around the mid-30s%, the EU relaxed the rigid 90% mandate, and the premium unwound below EUR 35 by mid-2025 within ~10 weeks. **Current shock.** Hormuz closed ~Mar 1-2, 2026 amid the US-Iran war; QatarEnergy declared force majeure Mar 3-4 (~20% of global LNG affected, per EIA); TTF jumped +35% d/d through EUR 60 on Mar 3 and touched >EUR 70; Iran's Mar 18 strike on Ras Laffan cut ~17% of Qatari liquefaction capacity with repair estimates of 3-5 years; an Apr 8 ceasefire let TTF fade to EUR 40-45 by June before the Jul 7 tanker attack (Al Rekayat) and the Jul 14 reimposed US naval blockade re-priced it to EUR 55-59. **Storage arithmetic.** Fill was 51.8% on Jul 12 vs a ~67.5% five-year norm (a ~16pp gap — per the verifier, not the 23pp in the headline), closest to 2021's profile; but the EU has met its Nov-1 storage target in every year since the 2022 storage regulation existed, and the cited tracker's own projection is ~81% by Nov 1 at the current +0.26pp/day injection pace vs +0.25pp/day required — the Commission's \"achievable\" claim is arithmetically supported, with a margin roughly one August-sized LNG outage wide. History says summer risk premia unwind within 8-12 weeks when physical flows normalize (2025) and persist only when supply stays physically constrained (2022) — making TTF >EUR 50 through August a clean tell for which regime this is.",
+        "base_rate": "TTF front-month gains of >=+40% m/m are unconditionally rare — roughly 5-7 occurrences in the ~66 months since Jan 2021 (~8-10% of months: Sep/Dec 2021, Mar/Jul/Aug 2022, Mar 2026), and on the order of ~4% of all months since 2010 — but conditional on an active physical supply shock to a major LNG source (the current regime), a move of this size is the modal class response, not an anomaly. On the storage question: the EU has met its Nov-1 storage mandate in all four winters since the 2022 regulation (fills ~95% in 2022, ~99% in 2023, ~95% in 2024, ~83% in 2025 vs the applicable/relaxed targets) — an observed miss rate of 0/4 — which argues the prior for hitting the relaxed 80% target should sit above the signal's 45-55%, likely (55-80%) absent further physical degradation of LNG flows.",
+        "series": [
+          {
+            "label": "TTF front-month price (documented prints, not continuous)",
+            "unit": "EUR/MWh",
+            "source": "Elenger Q1-2026 market overview (Dec 31 close, Mar 31 close); CNBC 2026-03-03 (settle >60 after +35% d/d); TradingEconomics/ICE (Jun 17 m/m base, Jul 17 close); GEF tracker (Jul 16 close)",
+            "points": [
+              {
+                "x": "2025-12-31",
+                "y": 26.73
+              },
+              {
+                "x": "2026-03-03",
+                "y": 60
+              },
+              {
+                "x": "2026-03-31",
+                "y": 50.76
+              },
+              {
+                "x": "2026-06-17",
+                "y": 40.52
+              },
+              {
+                "x": "2026-07-16",
+                "y": 55.11
+              },
+              {
+                "x": "2026-07-17",
+                "y": 57.49
+              }
+            ]
+          },
+          {
+            "label": "EU gas storage fill level (5-yr norm for Jul 12 is ~67.5%; Nov 1 target 80%)",
+            "unit": "% of working capacity",
+            "source": "GEF tracker (GIE AGSI+ data), global-energy-flow.com/storage/ and /storage/trajectory/",
+            "points": [
+              {
+                "x": "2025-11-01",
+                "y": 83
+              },
+              {
+                "x": "2026-04-01",
+                "y": 36.5
+              },
+              {
+                "x": "2026-06-20",
+                "y": 46.1
+              },
+              {
+                "x": "2026-07-08",
+                "y": 51.1
+              },
+              {
+                "x": "2026-07-12",
+                "y": 51.8
+              }
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Europe's winter energy balance trajectory is bending: TTF +42% m/m to EUR 57.49 with storage at ~52% vs ~75% seasonal norm (a 23pp gap requiring ~3,786 GWh/day of injections) while Qatar's maritime halt takes ~20% of global LNG offline — a quantified trend-line change feeding directly into euro-area inflation ahead of the July 23 ECB decision, with spillover to Asian spot LNG. Confirmed exchange and Commission data anchor the merged 'reported' Qatar element. Edges out [19] (yen 162.5, weakest since 1986) on the trend-change criterion: the yen story is a continuation still inside the cited 163-165 intervention band."
+    }
+  ],
+  "killed": []
+}

@@ -29,6 +29,13 @@ Use WebSearch and WebFetch (load via ToolSearch if needed) and prefer PRIMARY
 sources: central bank releases, official statistics, exchange data, court
 filings, wire services. Today's date is ${DATE}.`
 
+const CROSS_THEME = `Standing cross-cutting theme: TECHNOLOGY & AI. Across every beat, actively look
+for the tech/AI dimension of what you cover — compute and chips as strategic resources,
+AI diffusion into economies and militaries, export controls, energy demand from data
+centers, labor-market effects, state capacity and surveillance. When a signal has a real
+tech/AI angle, populate its tech_ai_angle field with one concrete sentence. Do NOT force
+it: most signals have none, and a strained connection is worse than an empty field.`
+
 const ALL_BEATS = [
   { key: 'geo-europe-russia', pilot: true, focus: 'Europe and Russia/Ukraine: war developments, EU policy, NATO, European politics and energy security' },
   { key: 'geo-mena', pilot: true, focus: 'Middle East and North Africa: conflicts, Gulf states, Iran, Israel, oil politics, shipping chokepoints' },
@@ -65,6 +72,7 @@ const SIGNALS_SCHEMA = {
           confidence: { type: 'number' },
           materiality: { type: 'integer' },
           novelty: { type: 'string' },
+          tech_ai_angle: { type: 'string' },
           sources: { type: 'array', items: { type: 'object', required: ['url', 'publisher', 'grade'], properties: { url: { type: 'string' }, publisher: { type: 'string' }, grade: { type: 'string' }, published_at: { type: 'string' } } } },
           data_points: { type: 'array', items: { type: 'object', properties: { metric: { type: 'string' }, value: {}, unit: { type: 'string' }, as_of: { type: 'string' }, source_url: { type: 'string' } } } },
         },
@@ -143,7 +151,8 @@ const DIVE_SCHEMA = {
 }
 const collectThunks = BEATS.map(b => () =>
   agent(`You are an intelligence collector on the "${b.key}" beat: ${b.focus}.
-${METHODOLOGY}${standingNote}
+${METHODOLOGY}
+${CROSS_THEME}${standingNote}
 Sweep developments from the last 24-48 hours. Return your ${PER_BEAT} most material
 signals as structured data. Set beat="${b.key}". Grade every source. Include concrete
 data_points (numbers with as_of dates and source URLs) wherever they exist. Do not
@@ -178,8 +187,11 @@ ${METHODOLOGY}
 Below are today's raw signals. Deduplicate semantically (same underlying event reported
 by two beats = one signal; record duplicates in merged_with). Then select the TOP ${TOP_N}
 by materiality to global macro trends — prefer items that change a trend line over items
-that merely continue one, and penalize single-source unconfirmed reports. Return the
-selected indices ranked most material first.
+that merely continue one, and penalize single-source unconfirmed reports. Technology & AI
+is the brief's standing cross-cutting theme: between two otherwise equally material
+signals, prefer the one that illuminates the tech/AI current (this is a tie-breaker, not
+a license to promote weak tech items over material non-tech ones). Return the selected
+indices ranked most material first.
 
 ${numbered}`, { label: 'triage', phase: 'Triage', schema: TRIAGE_SCHEMA })
 
@@ -240,7 +252,11 @@ Identify 2-4 cross-cutting macro trends that connect multiple signals (e.g. seve
 signals jointly implying a tightening/loosening, escalation/de-escalation, supply
 tightening). For each trend: name it, list which signals support it, state a key
 judgment with an explicit ICD-203 probability band, and name what evidence would
-falsify it. Return markdown.`, { label: 'synthesis', phase: 'Synthesize' }),
+falsify it. Technology & AI is the brief's standing organizing theme: additionally
+weave a "Tech & AI thread" — a short synthesis of the tech_ai_angle fields across
+today's signals, connecting the tech/AI dimension of events across beats. If today's
+evidence gives that thread nothing real to say, say exactly that in one sentence
+rather than manufacturing a trend. Return markdown.`, { label: 'synthesis', phase: 'Synthesize' }),
   () => agent(`You are the red team on a daily intelligence brief. You did not write it and you
 are rewarded for finding what is wrong with it.
 ${METHODOLOGY}
@@ -248,6 +264,8 @@ Verified signals with context: ${briefingInput}
 Write a "What we might be getting wrong" section, markdown, 4-8 bullets: which items are
 likely overhyped relative to base rates, where the sourcing is weakest, what plausible
 alternative interpretation is being ignored, and what the consensus narrative would miss.
+The brief carries a standing Tech & AI organizing theme — police it: if any signal's
+tech_ai_angle is a strained connection or recycled hype, call that out by name.
 Be specific — name the signals you are attacking.`, { label: 'red-team', phase: 'Synthesize' }),
 ])
 
@@ -267,8 +285,10 @@ Plus a "deep_dives" array: ${JSON.stringify(deepDives)}
    first (with probability bands), then one section per item (headline, what happened,
    why it matters, context, sources with grades), then — if any deep dives exist — an
    "Operator deep dives" section with each dive's report_md and key findings, then the
-   macro trends synthesis below, then the red-team dissent VERBATIM, then a one-line
-   note of items killed in verification and why.
+   macro trends synthesis below (which includes the standing "Tech & AI thread" —
+   render it as its own subsection), then the red-team dissent VERBATIM, then a
+   one-line note of items killed in verification and why. Where an item has a
+   tech_ai_angle, include it as a "Tech/AI angle:" line in that item's section.
 
    Macro trends synthesis:
    --------------------

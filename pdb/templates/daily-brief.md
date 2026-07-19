@@ -17,9 +17,15 @@
 - **Why it matters:** {macro transmission channel}
 - **Context:** {historical precedent, technical background, base rate}
 - **Data:** {key data points with as_of dates}
+- **Tech/AI angle:** {only if real — one concrete sentence}
 - **Sources:** {publisher} ({grade}) — {url}; ...
 
 ## Macro trends
+
+### Tech & AI thread
+
+{standing organizing theme: the tech/AI current connecting today's items across
+beats — or one honest sentence that today gave it nothing}
 
 ### Trend: {name}
 

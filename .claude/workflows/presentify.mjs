@@ -155,7 +155,7 @@ only if it genuinely ships as-is.`,
   } })
 
 let fixed = 0
-if (review && !review.passes && review.issues.length) {
+if (review && review.issues.length) {
   log(`Render review found ${review.issues.length} issues — fixing`)
   await agent(`Fix these concrete issues in ${DIR}/present.html (edit in place, keep it
 self-contained, keep both themes and the narration player working):
@@ -168,8 +168,9 @@ After fixing, re-screenshot the affected slides with headless Chromium (binary u
 
 // ---- Persist the critique for the record
 await agent(`Write ${DIR}/visual-critique.md containing exactly this markdown (plus a
-"# Visual critique — ${DATE}" heading and a rendered-review appendix listing these
-issues and that they were addressed: ${JSON.stringify(review ? review.issues : [])}):
+"# Visual critique — ${DATE}" heading and a rendered-review appendix). The appendix must
+list these issues: ${JSON.stringify(review ? review.issues : [])} and truthfully state
+their status: ${fixed > 0 ? 'a fix pass was run for them' : 'NO fix pass was run for them (none were flagged as blocking)'} — do not claim an issue was fixed unless verified in the file.
 
 ${critique.summary_md}
 

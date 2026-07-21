@@ -1,0 +1,90 @@
+[
+  {
+    "title": "The Morning in One Minute",
+    "narration": "Good morning. Here's where we land after this weekend. First: two of the world's great chokepoints are under pressure at once — the Strait of Hormuz and China's grip on rare earths — but we judge it unlikely, twenty to forty-five percent, that either goes to sustained maximal disruption in the next three months. History is on our side here: Hormuz has never been effectively closed since 1945, and every Chinese rare-earth squeeze on record has ended in re-licensing. Second: the blanket ten percent tariff expires Friday, and we judge it likely — fifty-five to eighty percent — that its replacement lands in the Federal Register on or within days of the deadline. Third: hyperscaler earnings start this week, and it's likely they reaffirm, rather than cut, their capital spending — repeating the DeepSeek pattern from January of last year. Fourth: the oil move since early July likely shows up as a positive energy print in the July Consumer Price Index. One honesty note before we start: judgments one and four share a single falsifier — a durable truce between the United States and Iran — so score them as one correlated call, not two independent ones.",
+    "bullets": [
+      "Chokepoint shutdowns: unlikely, 20–45%",
+      "Tariff replacement lands on time: likely",
+      "Hyperscaler capex holds: likely",
+      "Oil feeds July inflation print"
+    ],
+    "visual_hint": "Key judgments panel from the BLUF section, with the four probability bands and the correlation warning flagged."
+  },
+  {
+    "title": "Oil at Ninety: A Contested Strait, Not a Closed One",
+    "narration": "Brent crude touched almost ninety-one dollars a barrel on Monday — the highest since mid-June — before fading back to about eighty-eight the moment an Iranian foreign-ministry spokesperson signaled openness to talks. That caps the biggest weekly gain since April, driven by the resumed war between the United States and Iran: the June truce was declared over on July seventh, the United States has flown eight straight nights of strikes, and Iran's Islamic Revolutionary Guard Corps attacked three tankers, killing one crew member. Transits through the Strait of Hormuz fell to roughly ten ships a day against a normal eighty-eight, and war-risk insurance is running twelve to forty times pre-crisis levels. Here's the mechanics. About a fifth of all the oil humanity uses squeezes through a waterway twenty-one nautical miles wide, and there's no real detour — bypass pipelines can carry only about a third of the normal flow. But history says attacks on Gulf shipping usually fail to stop it: during the Tanker War of the eighties, roughly four hundred fifty ships were attacked and traffic never stopped. The market agrees — at ninety dollars it's pricing a partial, contested strait, not a closed one. And if a new truce arrives, or transits recover above fifty a day, Brent very likely — eighty to ninety-five percent — heads back toward the seventies, just as it did in June.",
+    "bullets": [
+      "Brent near $90, highest since June",
+      "Hormuz transits: ~10 vs 88 normal",
+      "No detour: pipelines carry a third",
+      "Truce → very likely back to $70s"
+    ],
+    "visual_hint": "Item 1: Brent price arc chart — $138 April peak, $68.53 July 2 trough, ~$88–90 now — alongside the Hormuz transit-count collapse."
+  },
+  {
+    "title": "Kimi K3: The Three-Trillion-Dollar Question",
+    "narration": "Beijing's Moonshot AI launched Kimi K3 — a nearly three-trillion-parameter model — in Shanghai on July sixteenth, and chip stocks had their worst week since April of last year: an estimated three point three trillion dollars erased from semiconductor market value worldwide, though flag that as a single-origin estimate. Then, over the weekend, two telling moves. Moonshot paused all new subscriptions, saying two days of demand had maxed out its computing capacity — and it circulated a shareholder resolution for a Hong Kong initial public offering at a valuation above thirty billion dollars. The mechanics: the four biggest American cloud builders have guided toward roughly half a trillion dollars of capital spending this year, all resting on the assumption that frontier artificial intelligence requires that outlay. A cheap, copyable Chinese model attacks that thesis at the root. But two hard facts cut the other way. Moonshot's own computers buckled within about four days — demand for running these models is real and physically binding. And Taiwan Semiconductor Manufacturing Company, which would feel a real demand collapse first, posted a seventy-seven percent profit jump and raised its investment budget the very week of the rout. The closest precedent is DeepSeek in January 2025: a violent one-day shock, fully retraced in eighteen trading days once the cloud builders reaffirmed spending. We judge it likely — fifty-five to eighty percent — that this earnings round does the same.",
+    "bullets": [
+      "~$3.3 trillion chip selloff (estimate)",
+      "Moonshot's compute buckled in ~96 hours",
+      "TSMC: profit up 77%, budget raised",
+      "DeepSeek pattern: likely repeat"
+    ],
+    "visual_hint": "Item 2: Philadelphia Semiconductor Index drawdown chart with the June 22 peak, the pre-K3 slide, and the K3 launch marked; TSMC earnings callout."
+  },
+  {
+    "title": "Friday's Tariff Handoff",
+    "narration": "The blanket ten percent tariff on most United States imports dies this Friday, July twenty-fourth — and the law says it can't be saved. Here's why. It was imposed under Section one twenty-two of the Trade Act of 1974, a balance-of-payments authority that self-destructs after one hundred fifty days, a fuse Congress wrote after Richard Nixon's 1971 surcharge. The intended replacement runs on Section three-oh-one — an unfair-trade-practices tool with no rate cap and no expiration — proposing twelve and a half percent on forty-six economies and ten percent on fourteen others. But as of Monday, nothing has been published in the Federal Register. The stakes: America imports about three point three trillion dollars of goods a year — roughly nine billion dollars crossing the border every day, which means each day's tariff rate is worth close to a billion dollars in duty. If the handoff misses, importers revert to the old default rates of roughly two percent — an arbitrage every importer with cargo on the water can see. The base rate says don't bet on the gap: when the Supreme Court struck the previous emergency tariffs early this year, the replacement was in place within days. The administrative record closed July sixteenth; nothing procedural remains. We judge it likely — fifty-five to eighty percent — that this is continuity executed late, resolving in the Federal Register by Friday. Separately, a twenty-five percent duty on Brazil takes effect Wednesday.",
+    "bullets": [
+      "Blanket 10% sunsets Friday",
+      "Replacement: 12.5% on 46 economies",
+      "Gap would revert to ~2% rates",
+      "Likely: continuity, executed late"
+    ],
+    "visual_hint": "Item 3: timeline graphic of the Section 122 to Section 301 handoff — February 24 start, July 16 record close, July 22 Brazil, July 24 sunset."
+  },
+  {
+    "title": "Rare Earths: The Dial, Not the Switch",
+    "narration": "The International Energy Agency put a price tag on China's rare-earth leverage last week: full implementation of Beijing's export restrictions would put roughly six and a half trillion dollars a year of downstream production at risk outside China — cars, defense, energy hardware. Be clear about what that number is: a scenario estimate of gross exposure, not a forecast of losses. But the structure underneath it is real. Rare earths aren't rare in the ground — they're rare in usable form, because separating them is a filthy, capital-hungry process the world spent thirty years outsourcing to China, which now processes up to ninety percent of global supply and effectively all of the heavy rare earths that go into permanent magnets. A few kilograms sit in every electric-vehicle motor; hundreds of kilograms go into a single F-35 fighter jet. And Beijing just ran the rehearsal: in April of last year it imposed licensing, magnet exports collapsed about eighty percent within four months, Ford halted a production line — and then Beijing re-licensed, with exports back above pre-control levels by August. That's the pattern: throttle, extract concessions, re-license. A dial, not a switch. The worst provisions of the October rules are suspended only until November tenth, and the enforcement drumbeat — a whistleblower hotline, detentions, entity listings — is Beijing making sure everyone believes the threat. We judge full November implementation unlikely: twenty to forty-five percent.",
+    "bullets": [
+      "$6.5 trillion at risk — a scenario",
+      "China processes up to 90%",
+      "April rehearsal ended in re-licensing",
+      "Full November cutoff: unlikely"
+    ],
+    "visual_hint": "Item 4: China magnet-export time series — the 2025 collapse from 6,357 to 1,238 tonnes and the rebound — with the November 10 suspension expiry marked."
+  },
+  {
+    "title": "Three Threads Running Through Everything",
+    "narration": "Step back and this week has three connected stories. First, chokepoint weaponization: two of the most concentrated physical supply nodes on earth — the Strait of Hormuz for oil, Chinese refining for rare earths — came under pressure in the same week, and in both cases the historical pattern is throttle-and-negotiate, not maximal cutoff. Markets are pricing exactly that. Second, call it the deadline economy: nearly every decisive fact right now is a calendar entry, not a surprise — Friday's tariff sunset, the earnings round starting today, the November rare-earth deadline. That makes this an unusually resolvable week, and it makes the gaps between expiry and replacement the tradeable object. Third, a synchronized cost push: oil up roughly thirty percent from its early-July low, the tariff floor set to move from ten to twelve and a half percent on most imports, and a scarcity premium priced into anything touching critical minerals. Three cost shocks, one direction, moving at different speeds. Which is why we judge it likely that the July Consumer Price Index shows energy swinging positive — though we make no claim that this tips the Federal Reserve hawkish; the signals don't support it yet. And one tech through-line: the market spent the week debating whether artificial-intelligence software is overvalued while every hardware input — chips, assembly, magnets — got more expensive or more contested.",
+    "bullets": [
+      "Chokepoints used as dials",
+      "Calendar entries, not surprises",
+      "Energy + tariffs + materials, one direction",
+      "Hardware contested while software debated"
+    ],
+    "visual_hint": "Macro trends section: a three-column trend board linking the four items to chokepoints, deadlines, and the cost-push impulse."
+  },
+  {
+    "title": "What We Might Be Getting Wrong",
+    "narration": "Now the red team, honestly. On oil: our most dramatic number is our stalest. That ten-ships transit count is a single observation from July twelfth — over a week old — and the price tape itself disagrees with our escalation framing. Brent at eighty-eight against an April peak of one thirty-eight means the market calls sustained closure unlikely, and Monday's fade on one Iranian comment shows how much premium is a single headline from evaporating. The likelier near-term path may simply be the June pattern repeating: truce, reopening, seventies. On Kimi K3: we're over-attributing. The chip index was already down fifteen percent before the model appeared; the launch added the last six. The three-trillion figure is single-origin, the compute-strain story rests on the vendor's own marketing days before its listing vote, and one independent test reportedly found the model hallucinating on about half its confident answers. And our comforting DeepSeek base rate is a sample of one — an anecdote wearing a lab coat. On the tariff cliff: the widely reported July twentieth deadline couldn't be found in any primary source. The honest headline is routine handoff expected on time — which wouldn't rank third. And on rare earths: that six-and-a-half-trillion figure measures gross exposure, not loss, from an agency with a stockpiling agenda — and by the signal's own evidence, the odds of a full November cutoff arguably belong in the five-to-twenty percent band, not ours. It's a magnets story, not a chips story.",
+    "bullets": [
+      "Transit count is eight days stale",
+      "K3 rout was mostly pre-existing",
+      "Tariff 'cliff' is likely a non-event",
+      "$6.5T is exposure, not loss"
+    ],
+    "visual_hint": "The dissent ledger: red-team counterpoints listed per item, side by side with the original claims."
+  },
+  {
+    "title": "What to Watch — and What Would Prove Us Wrong",
+    "narration": "Here's the scorecard, because every judgment we made this morning comes with a tripwire. Wednesday, July twenty-second: the twenty-five percent Brazil duty takes effect. Friday, July twenty-fourth: the blanket tariff sunsets — watch the Federal Register; no final determination by July thirty-first, plus a visible surge in customs entries, falsifies our continuity call. July twenty-first through thirty-first: hyperscaler earnings — if any of Microsoft, Alphabet, Amazon, or Meta guides capital spending down for the year, our demand-is-intact read is dead within ten days. July twenty-seventh: Moonshot is promising to actually publish Kimi K3's weights — until then, largest open-weight model is a commitment, not a fact. Daily, via ship tracking: Hormuz transits above fifty a day very likely sends Brent back toward the seventies; transits stuck below twenty for more than two weeks, or Brent settling above the April peak of one thirty-eight, breaks our contested-not-closed read. Mid-August: the July Consumer Price Index, where we expect energy to swing positive. And November tenth: the suspension on China's rare-earth controls expires — license denials showing up in the monthly customs magnet-export data is the tell. Remember the correlation: one durable truce between the United States and Iran knocks out both the oil call and the inflation call at once. That's the brief — see you tomorrow.",
+    "bullets": [
+      "Jul 24: Federal Register or gap",
+      "Jul 21–31: capex guidance verdict",
+      "Daily: Hormuz transit counts",
+      "Nov 10: rare-earth suspension expires"
+    ],
+    "visual_hint": "Closing calendar: dated tripwires from July 22 through November 10, each tagged with the judgment it would confirm or falsify."
+  }
+]

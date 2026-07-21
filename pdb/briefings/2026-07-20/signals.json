@@ -1,0 +1,575 @@
+{
+  "date": "2026-07-20",
+  "produced_by": "daily-briefing workflow",
+  "methodology": "pdb/METHODOLOGY.md",
+  "verified": [
+    {
+      "signal": {
+        "headline": "Brent tops $90 as US-Iran war re-escalates and Strait of Hormuz traffic collapses again",
+        "summary": "Brent crude futures rose about 3% on Monday July 20 to $90.79 per barrel, the highest since June 11, after a 15.9% gain last week (the biggest weekly rise since April). The driver is the resumed US-Iran war: the June 17 truce that had reopened the Strait of Hormuz was ended by President Trump on July 8, the US has conducted nine consecutive nights of strikes on Iran, and Iran's Islamic Revolutionary Guard Corps attacked three tankers in the strait on July 14 (the chemical tanker Stolt Magnesium and the oil tankers Mombasa B and Al Bahyah), killing one Indian crew member. Transits through the strait fell to roughly 10 ships on July 12 versus a normal ~88 per day, and war-risk insurance is priced at roughly 8 times pre-crisis levels. For calibration: at the crisis peak in May, Brent traded above $107 (some accounts cite an intraday peak near $126 earlier in the crisis), then slid to $71 during the truce — so the market is pricing partial, not full, loss of the roughly 20% of world seaborne oil that normally transits Hormuz.",
+        "why_it_matters": "Hormuz is the single largest oil chokepoint on earth (~20-25% of seaborne oil trade). A sustained closure has no full workaround: Saudi and UAE bypass pipelines can reroute only ~6-7 million barrels per day of the ~17-20 million that normally transit. The prior leg of this crisis took Brent above $107; whether prices revisit that level depends almost entirely on whether the strait stays shut. Falsifier: a new truce or resumption of >50 transits/day (trackable via ship-counting services) would very likely (80-95%) send Brent back toward the $70s, as it did in June.",
+        "beat": "energy-commodities",
+        "region": "Middle East / Global",
+        "sector": "crude oil",
+        "status": "confirmed",
+        "confidence": 0.9,
+        "materiality": 5,
+        "novelty": "Fresh 24-48h development: Brent crossing $90 on July 19-20 is the first time since the July 8 truce collapse; extends last week's 15.9% rally.",
+        "tech_ai_angle": "",
+        "sources": [
+          {
+            "url": "https://www.bloomberg.com/news/articles/2026-07-19/latest-oil-market-news-and-analysis-for-july-20",
+            "publisher": "Bloomberg",
+            "grade": "B1",
+            "published_at": "2026-07-19"
+          },
+          {
+            "url": "https://www.axios.com/2026/07/19/oil-prices-90-middle-east-fighting-gas-prices",
+            "publisher": "Axios",
+            "grade": "B2",
+            "published_at": "2026-07-19"
+          },
+          {
+            "url": "https://finance.yahoo.com/news/brent-oil-tops-90-us-001615973.html",
+            "publisher": "Reuters (via Yahoo Finance)",
+            "grade": "B1",
+            "published_at": "2026-07-20"
+          },
+          {
+            "url": "https://tradingeconomics.com/commodity/brent-crude-oil",
+            "publisher": "Trading Economics (exchange data)",
+            "grade": "B2",
+            "published_at": "2026-07-20"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "Brent crude front-month futures",
+            "value": 90.79,
+            "unit": "USD per barrel (+3.05% on the day, highest since June 11)",
+            "as_of": "2026-07-20",
+            "source_url": "https://finance.yahoo.com/news/brent-oil-tops-90-us-001615973.html"
+          },
+          {
+            "metric": "Brent weekly gain, week ended July 17",
+            "value": 15.9,
+            "unit": "percent (largest since April)",
+            "as_of": "2026-07-17",
+            "source_url": "https://finance.yahoo.com/news/brent-oil-tops-90-us-001615973.html"
+          },
+          {
+            "metric": "Strait of Hormuz ship transits",
+            "value": 10,
+            "unit": "ships on July 12 vs ~88/day normal",
+            "as_of": "2026-07-12",
+            "source_url": "https://straits.live/"
+          },
+          {
+            "metric": "Tanker war-risk insurance vs pre-crisis",
+            "value": 8,
+            "unit": "multiple of pre-crisis premium",
+            "as_of": "2026-07-20",
+            "source_url": "https://straits.live/"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.85,
+        "best_source_grade": "A2",
+        "corrections": "1) War-risk insurance multiple is understated: The National (July 17) reports hull war-risk premiums of 3-10% of hull value (~5% after the July 14 attacks) versus 0.25% pre-war, i.e. roughly 12-40x pre-crisis, not the claimed 8x (sourced only to straits.live, the weakest source cited). 2) The $90.79 print was an intraday high; Brent pared gains to about $88.26 later Monday July 20 after an Iranian foreign ministry spokesperson signaled openness to negotiations — 'tops $90' is accurate intraday, not as a settled level. 3) Price calibration misdated: the crisis peak was above $126 intraday on April 30 (Al Jazeera), i.e. in April, not May; Brent traded near $110 in May, so 'May peak above $107' is directionally right but puts the peak in the wrong month. 4) Trump declared the truce over on July 7, not July 8 (CBS/Britannica). 5) Casualty count likely understated: one Indian crew member confirmed dead (Mombasa B), but Oman reported three more crew missing from Al Bahyah (Xinhua). 6) The Stolt Magnesium was struck late July 13 about 40 nautical miles off Qalhat, Oman (Gulf of Oman side), not in the strait on July 14; the two very large crude carriers were struck July 14 off Musandam. 7) 'Nine consecutive nights of strikes' only completes with Monday night July 20 itself (July 17 was the sixth night per OilPrice), so it was eight completed nights at time of writing.",
+        "notes": "Every load-bearing claim independently corroborated beyond the cited sources: Brent above $90 on July 20 (Bloomberg, Energy Connects, Tradingpedia); 15.9% weekly gain, biggest since April (Reuters via Yahoo, OilPrice, Montel); three tankers attacked July 13-14 with named vessels matching (Reuters/US News, Maritime Executive, The National, UAE Ministry of Defence via Sharjah24, Xinhua); truce collapse and resumed nightly US strikes plus naval blockade (CBS, CNBC, Britannica); 10 Hormuz transits on July 12 vs 88/day baseline corroborated by IMF PortWatch, an official primary dataset (reliability A), upgrading that data point above its cited straits.live sourcing; truce-era low near $71 (Al Jazeera July 2, CNBC). Attribution discipline check passes: Iran attribution for the tanker strikes is not merely a claim by interested parties (UAE/US) — CNN reported Iran itself said it struck two tankers on July 13, and UAE MOD named the two VLCCs. Base rate check: a ~90% collapse in transits at the world's largest oil chokepoint has no post-1945 precedent (even the 1984-88 Tanker War never stopped traffic), so a 3%/day, 16%/week repricing is proportionate, and the signal correctly notes the market is pricing partial rather than full loss of ~20% of seaborne oil. The falsifier (>50 transits/day or new truce, verifiable via ship-tracking) is well-formed. Signal stands as confirmed, but confidence trimmed from 0.90 to 0.85 for the corrections above — chiefly the understated insurance multiple, the intraday-vs-settle framing of $90.79, and the misdated price peak. Materiality 5 and the novelty framing are justified."
+      },
+      "context": {
+        "context_md": "The world burns roughly 100 million barrels of oil a day, and about two-fifths of it travels by sea. Of that seaborne flow, around one barrel in four — 17 to 20 million barrels a day, about a fifth of all the oil humanity uses — passes through the Strait of Hormuz, the waterway between Iran and Oman that narrows to about 21 nautical miles, with inbound and outbound shipping lanes just two miles wide apiece. It is one of only three maritime chokepoints of that magnitude on earth (the others being the Strait of Malacca and the Suez Canal–Bab el-Mandeb corridor), and the only one with no real detour: Saudi Arabia and the United Arab Emirates have bypass pipelines to the Red Sea and the Gulf of Oman, but together those can reroute only about 6-7 million barrels a day — a third of the normal flow — and Qatar's liquefied natural gas, roughly a fifth of the world's total, has no bypass at all. So when transits fell to about 10 ships on July 12 against a normal 88 a day, the market was watching something with no modern precedent: even at its worst, the Gulf has never lost 90% of its traffic.\n\nHistory says attacks on Gulf shipping usually fail to stop it — which is precisely why this episode stands out. During the 1984-88 \"Tanker War\" phase of the Iran-Iraq war, the two sides attacked roughly 450 merchant ships over four years, yet traffic never stopped: insurance premiums rose, crews drew danger pay, and oil prices actually fell across the period because the world was oversupplied. The better calibrator for price is Iraq's August 1990 invasion of Kuwait, which roughly doubled oil prices in two months on fear of lost supply, then gave the entire move back within months when the feared shortage never materialized. The current crisis has already traced both halves of that pattern once: Brent spot ran from the low $70s before the war to $138 at the April 7 peak (US Energy Information Administration daily data), collapsed to $68.53 on July 2 during the June truce, and has retraced to roughly $88-90 in the nine trading days since President Trump declared the truce over on July 7. At $90 the market is pricing a partial, contested strait — not a closed one. A genuinely sustained closure of a fifth of world oil supply would put prices well above April's peak; conversely, a new truce or a recovery to more than 50 transits a day (checkable daily via ship-tracking data) would very likely (80-95%) send Brent back toward the $70s, exactly as it did in June.",
+        "base_rate": "In the eight decades since 1945 the Strait of Hormuz has never been effectively closed — even the 1984-88 Tanker War, with some 450 ships attacked, never cut traffic remotely close to the ~90% collapse recorded on July 12 — and weekly Brent moves of 15% or more have occurred only a handful of times since 1990, essentially confined to wars (1990, 2022) and the 2020 pandemic.",
+        "series": [
+          {
+            "label": "Brent crude daily spot price (Europe Brent, free-on-board), April 1 - July 13, 2026",
+            "unit": "USD per barrel",
+            "source": "US Energy Information Administration, daily Europe Brent spot price series (https://www.eia.gov/dnav/pet/hist/RBRTED.htm), retrieved July 21, 2026",
+            "message": "The full crisis arc in one consistent primary-source series: spot peaked at $138.21 on April 7, slid to a truce-era low of $68.53 on July 2, then re-broke $80 within four trading days of the July 7 truce collapse. Note: EIA publishes with roughly a one-week lag, so the July 14-20 futures leg to ~$90 is not yet in this series — do not splice intraday futures quotes onto it.",
+            "points": [
+              {"x": "2026-04-01", "y": 119.56},
+              {"x": "2026-04-02", "y": 127.61},
+              {"x": "2026-04-07", "y": 138.21},
+              {"x": "2026-04-08", "y": 122.11},
+              {"x": "2026-04-09", "y": 119.03},
+              {"x": "2026-04-10", "y": 119.07},
+              {"x": "2026-04-13", "y": 123.28},
+              {"x": "2026-04-14", "y": 118.69},
+              {"x": "2026-04-15", "y": 114.93},
+              {"x": "2026-04-16", "y": 116.63},
+              {"x": "2026-04-17", "y": 98.63},
+              {"x": "2026-04-20", "y": 103.4},
+              {"x": "2026-04-21", "y": 106.14},
+              {"x": "2026-04-22", "y": 113.44},
+              {"x": "2026-04-23", "y": 113.25},
+              {"x": "2026-04-24", "y": 111.86},
+              {"x": "2026-04-27", "y": 113.89},
+              {"x": "2026-04-28", "y": 117.62},
+              {"x": "2026-04-29", "y": 124.16},
+              {"x": "2026-04-30", "y": 124.24},
+              {"x": "2026-05-01", "y": 118.26},
+              {"x": "2026-05-05", "y": 114.51},
+              {"x": "2026-05-06", "y": 103.7},
+              {"x": "2026-05-07", "y": 101.82},
+              {"x": "2026-05-08", "y": 103.48},
+              {"x": "2026-05-11", "y": 106.11},
+              {"x": "2026-05-12", "y": 111.37},
+              {"x": "2026-05-13", "y": 110.28},
+              {"x": "2026-05-14", "y": 110.91},
+              {"x": "2026-05-15", "y": 113.96},
+              {"x": "2026-05-18", "y": 116.73},
+              {"x": "2026-05-19", "y": 114.64},
+              {"x": "2026-05-20", "y": 108.93},
+              {"x": "2026-05-21", "y": 105.84},
+              {"x": "2026-05-22", "y": 106.9},
+              {"x": "2026-05-26", "y": 102.75},
+              {"x": "2026-05-27", "y": 97.11},
+              {"x": "2026-05-28", "y": 95.47},
+              {"x": "2026-05-29", "y": 92.88},
+              {"x": "2026-06-01", "y": 98.29},
+              {"x": "2026-06-02", "y": 98.49},
+              {"x": "2026-06-03", "y": 101.69},
+              {"x": "2026-06-04", "y": 98.98},
+              {"x": "2026-06-05", "y": 97.29},
+              {"x": "2026-06-08", "y": 97.46},
+              {"x": "2026-06-09", "y": 94.15},
+              {"x": "2026-06-10", "y": 95.73},
+              {"x": "2026-06-11", "y": 92.84},
+              {"x": "2026-06-12", "y": 88.64},
+              {"x": "2026-06-15", "y": 84.36},
+              {"x": "2026-06-16", "y": 80.5},
+              {"x": "2026-06-17", "y": 80.33},
+              {"x": "2026-06-18", "y": 79.35},
+              {"x": "2026-06-19", "y": 80.46},
+              {"x": "2026-06-22", "y": 76.49},
+              {"x": "2026-06-23", "y": 75.69},
+              {"x": "2026-06-24", "y": 72.09},
+              {"x": "2026-06-25", "y": 73.74},
+              {"x": "2026-06-26", "y": 70.16},
+              {"x": "2026-06-29", "y": 71.59},
+              {"x": "2026-06-30", "y": 70.46},
+              {"x": "2026-07-01", "y": 69.24},
+              {"x": "2026-07-02", "y": 68.53},
+              {"x": "2026-07-03", "y": 68.68},
+              {"x": "2026-07-06", "y": 69.56},
+              {"x": "2026-07-07", "y": 71.78},
+              {"x": "2026-07-08", "y": 76.5},
+              {"x": "2026-07-09", "y": 74.46},
+              {"x": "2026-07-10", "y": 74.34},
+              {"x": "2026-07-13", "y": 81.62}
+            ]
+          },
+          {
+            "label": "Strait of Hormuz daily ship transits: pre-crisis norm vs July 12, 2026",
+            "unit": "ships per day",
+            "source": "straits.live transit count, corroborated by IMF PortWatch (per verifier); latest published count is multi-day-lagged",
+            "message": "Render as a labeled two-bar comparison, NOT a trend line — only one lagged post-attack observation has been published. The takeaway: traffic at the world's largest oil chokepoint is down roughly 89% (10 ships vs a normal ~88), a collapse with no post-1945 precedent.",
+            "points": [
+              {"x": "Normal (pre-crisis baseline)", "y": 88},
+              {"x": "2026-07-12", "y": 10}
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Most material signal of the period and a clean trend-BREAK, not a continuation. Brent to ~$90-91 (four-year high, +~16% on the week, the biggest weekly move since April) driven by the resumed US-Iran war and the effective closure of the Strait of Hormuz (~10-11 transits/day vs ~88 baseline; ~20% of world seaborne oil). This is the single most-corroborated event in the set: reported independently by the energy [48], markets [42] and central-banks [36] beats (all the same underlying $90 Brent print on 20 July), with the Hormuz-traffic collapse [8][61] the transmission mechanism and the European gas surge [4][49] (TTF +29% in July) the second-order energy leg. Sourcing is strong: exchange/futures data plus MarineTraffic transit counts (A-B/1-2). The war-strike and regional-spillover signals ([6],[18],[7],[9]) are the driver and are geopolitically distinct events, but their global-MACRO transmission is precisely this oil/energy price move, which is already captured here; they are noted below rather than given separate top-5 slots."
+    },
+    {
+      "signal": {
+        "headline": "Moonshot AI's Kimi K3 shock enters phase two: subscriptions paused, Hong Kong listing push, chip rout stabilizes",
+        "summary": "Beijing-based Moonshot AI, whose 2.8-trillion-parameter open-weight Kimi K3 model (released July 16-17 at the World Artificial Intelligence Conference in Shanghai) triggered the worst weekly rout in semiconductor stocks since April 2025, took two consequential steps over the weekend: it circulated a shareholder resolution on Sunday July 19 seeking approval for a Hong Kong initial public offering within six months, and on Monday July 20 it paused all new Kimi K3 subscriptions, saying demand over 48 hours had pushed its computing capacity to its limits (existing subscribers unaffected; capacity to reopen in batches). The selloff K3 triggered — roughly $3.3 trillion erased from global semiconductor market value, with the Philadelphia Semiconductor Index falling more than 20% below its late-June peak — paused on Monday July 20, with a major semiconductor exchange-traded fund rebounding about 1.6% in premarket trading as Big Tech earnings week began.",
+        "why_it_matters": "This is the most direct test since the January 2025 DeepSeek episode of the core assumption funding the AI buildout: that frontier capability requires proportional Western capital spending on chips and data centers. Two facts cut against the bear case, however: Moonshot's own compute ran out within days of launch (demand for inference is real and binding, even in China), and Taiwan Semiconductor Manufacturing Company reported a 77% year-over-year profit jump and raised guidance the same week the rout unfolded. Base rate: the DeepSeek selloff of January 2025 reversed within weeks as capex plans were reaffirmed. It is likely (55-80%) that this rout similarly fails to dent announced hyperscaler capital spending, but a Chinese open-weight model at claimed near-frontier quality permanently pressures Western model pricing power. Falsifier: hyperscaler capex guidance cuts in the July 21-31 earnings round would invalidate the 'demand is intact' read.",
+        "beat": "tech-ai",
+        "region": "China / Global",
+        "sector": "Semiconductors / Frontier AI",
+        "tech_ai_angle": "An open-weight 2.8-trillion-parameter Chinese model hitting compute capacity limits within 96 hours of launch is direct evidence that inference compute, not model weights, is the binding strategic resource.",
+        "status": "confirmed",
+        "confidence": 0.9,
+        "materiality": 5,
+        "novelty": "New phase of a story that began July 16-17; the subscription pause, IPO resolution, and market stabilization are all from July 19-21.",
+        "data_points": [
+          {
+            "metric": "Kimi K3 parameter count",
+            "value": 2.8,
+            "unit": "trillion parameters (largest open-weight model; 1-million-token context window)",
+            "as_of": "2026-07-16",
+            "source_url": "https://fortune.com/2026/07/17/china-moonshot-kimi-k3-markets-china-ai/"
+          },
+          {
+            "metric": "Global semiconductor market value erased since K3 release",
+            "value": 3.3,
+            "unit": "trillion USD",
+            "as_of": "2026-07-20",
+            "source_url": "https://www.techtimes.com/articles/321066/20260720/kimi-k3-wipes-33t-chip-stocks-moonshot-moves-toward-hong-kong-ipo.htm"
+          },
+          {
+            "metric": "Philadelphia Semiconductor Index drawdown from late-June peak",
+            "value": -20,
+            "unit": "percent (bear-market threshold crossed)",
+            "as_of": "2026-07-17",
+            "source_url": "https://www.kucoin.com/news/flash/chip-stocks-enter-bear-market-after-moonshot-ai-unveils-kimi-k3-model"
+          },
+          {
+            "metric": "Moonshot new-subscription pause announced",
+            "value": "pause",
+            "unit": "new Kimi K3 signups halted; existing users unaffected",
+            "as_of": "2026-07-20",
+            "source_url": "https://kfgo.com/2026/07/20/chinas-moonshot-pauses-kimi-subscriptions-amid-hot-demand-ipo-push/"
+          },
+          {
+            "metric": "Semiconductor ETF premarket rebound as rout paused",
+            "value": 1.6,
+            "unit": "percent",
+            "as_of": "2026-07-20",
+            "source_url": "https://features.financialjuice.com/2026/07/20/stocks-rise-while-oil-steady-and-the-chip-rout-stops-europe-market-wrap/"
+          }
+        ],
+        "sources": [
+          {
+            "url": "https://kfgo.com/2026/07/20/chinas-moonshot-pauses-kimi-subscriptions-amid-hot-demand-ipo-push/",
+            "publisher": "Reuters (syndicated)",
+            "grade": "B1",
+            "published_at": "2026-07-20"
+          },
+          {
+            "url": "https://www.caixinglobal.com/2026-07-21/kimi-k3-demand-surge-forces-moonshot-ai-to-pause-sign-ups-102466370.html",
+            "publisher": "Caixin Global",
+            "grade": "B2",
+            "published_at": "2026-07-21"
+          },
+          {
+            "url": "https://fortune.com/2026/07/17/china-moonshot-kimi-k3-markets-china-ai/",
+            "publisher": "Fortune",
+            "grade": "B2",
+            "published_at": "2026-07-17"
+          },
+          {
+            "url": "https://www.techtimes.com/articles/321066/20260720/kimi-k3-wipes-33t-chip-stocks-moonshot-moves-toward-hong-kong-ipo.htm",
+            "publisher": "TechTimes",
+            "grade": "C3",
+            "published_at": "2026-07-20"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.88,
+        "best_source_grade": "A1",
+        "corrections": "1) \"Open-weight\" is prospective, not accomplished: Kimi K3 launched July 16 via app and API, but the model weights are scheduled for publication July 27, 2026 — until then the \"largest open-weight model\" label is a Moonshot commitment. 2) Source misattribution: the cited Reuters/KFGO article does not contain the shareholder-resolution or six-month-IPO detail; that comes from Bloomberg (July 19, syndicated by Japan Times) — the fact holds, on a better source than cited. 3) The $3.3 trillion \"erased\" figure is a single-origin market-cap aggregation echoed by C-grade aggregators (TechTimes, KuCoin); direction and magnitude are consistent with the confirmed SOX bear-market move but the exact number should be labeled an estimate. 4) Pause announcement date: several outlets date it Sunday July 19 (China time), not Monday July 20. 5) Monday stabilization was stronger than stated: VanEck Semiconductor ETF rose ~2.6% intraday July 20 (vs. the 1.6% premarket figure). 6) Causal framing: at least one outlet argues the selloff was a primed valuation correction that K3 merely triggered; attribution of the full drawdown to K3 alone is analytic judgment, not fact.",
+        "notes": "Adversarial re-search failed to refute any load-bearing claim. Independently confirmed beyond cited sources: (a) subscription pause — Reuters bylined story plus at least six independent outlets, with Moonshot's own statement (\"user requests sharply exceeded forecasts, approaching the limits of existing clusters\"; existing users unaffected; batch reopening); (b) shareholder resolution for a Hong Kong IPO within six months at >$30bn valuation — Bloomberg July 19 (B1), corroborated by Japan Times, Coindesk, TNW; (c) SOX >20% below late-June peak crossing bear-market threshold Friday July 17, worst weekly chip rout since April 2025 — multiple independent outlets; (d) Monday July 20 chip rebound ahead of Big Tech earnings — Reuters market wrap and others; (e) TSMC Q2 2026: net income and diluted EPS +77.4% YoY (NT$706.6bn), Q3 revenue guided above consensus, 2026 capex guidance raised to $60-64bn — confirmed at A1 via TSMC's own earnings release and SEC Form 6-K, reported July 16 as the signal states. Interested-party claims are properly framed: compute-capacity strain is Moonshot's own account (self-serving ahead of an IPO — a demand-signaling incentive exists — though consistent with observed API behavior and third-party reporting), and \"near-frontier quality\" is hedged as claimed; independent testing reportedly found hallucination rate ~51% on confidently-attempted answers, supporting the hedge. Base rate reasoning (DeepSeek January 2025 reversal within weeks; TSMC guidance raise cutting against the bear case) is sound and the falsifier (hyperscaler capex cuts in July 21-31 earnings) is well-specified and imminent. Confidence trimmed 0.90 to 0.88 for the open-weights-not-yet-published caveat, the single-origin $3.3T estimate, and the one-day pause-date ambiguity."
+      },
+      "context": {
+        "context_md": "The system in play is the machinery of the entire digital economy. Semiconductors are a roughly $700-billion-a-year industry whose stock-market value had been bid to many multiples of that on a single thesis: that frontier artificial intelligence requires staggering, ongoing Western capital spending — the four biggest American cloud builders (Microsoft, Alphabet, Amazon, Meta) have guided toward roughly half a trillion dollars of 2026 capital outlays, most of it data centers and the chips inside them, and about 90% of the world's most advanced chips come out of one company, Taiwan Semiconductor Manufacturing Company. A Chinese startup releasing a claimed near-frontier model, with a promise to publish the model's weights for anyone to download on July 27, attacks that thesis at its root: if frontier capability turns out to be cheap and copyable, hundreds of billions in planned spending looks like malinvestment. That is the mechanism behind the roughly $3.3 trillion (a single-origin estimate, but directionally confirmed) wiped off chip stocks worldwide in the week of Kimi K3's July 16-17 launch — an erasure comparable to the annual economic output of France, or nearly five years of the entire chip industry's revenue. Two hard facts cut the other way: Moonshot's own computing capacity buckled within about 96 hours of launch — meaning demand for running these models is real and physically binding even in China — and Taiwan Semiconductor, the company that would feel a real demand collapse first, reported a 77% jump in quarterly profit and raised its 2026 investment budget to $60-64 billion the very week the rout unfolded.\n\nTwo calibrating facts, both from the exchange tape rather than the headlines. First, the closest precedent: on January 27, 2025, the release of China's DeepSeek R1 model knocked 9.1% off the Philadelphia Semiconductor Index (a basket of 30 major chip companies) in one day and erased $589 billion from Nvidia alone — then the largest one-day loss of value by any company in history. Within days the big cloud builders reaffirmed and even raised their spending plans, and the index regained its pre-shock level in 18 trading days. Second, this rout was mostly not K3's doing: the index had already fallen 15.3% from its June 22 peak by July 15, the day before K3 appeared; the launch added a final 5.8% over two days, tipping the drawdown past the 20% bear-market line on July 17. K3 was the trigger pulled on an already-primed valuation correction, not the whole cause — which is precisely why the DeepSeek precedent (sharp shock, fast reversal once spending plans were confirmed) is the right template, and why the July 21-31 earnings round, when those spending plans are either reaffirmed or cut, is the event that resolves the question. It is likely (55-80%) the capex holds; a guidance cut would falsify it within ten days.",
+        "base_rate": "Drawdowns of 20% or more in the Philadelphia Semiconductor Index have occurred roughly once a year over the past decade (2018, 2020, 2022, mid-2024, April 2025), and outside genuine end-demand recessions they have retraced within a few months — the AI-scare subset (DeepSeek, January 2025, a 9.1% one-day drop) fully retraced in 18 trading days.",
+        "series": [
+          {
+            "label": "Philadelphia Semiconductor Index, daily close, June-July 2026",
+            "unit": "index points (official daily closes)",
+            "source": "PHLX Semiconductor Index (^SOX), Nasdaq Global Index Data Service closes via Yahoo Finance chart API, retrieved 2026-07-21",
+            "message": "The rout was mostly pre-K3: from the June 22 peak (14,634.7) the index was already down 15.3% by July 15, the day before Kimi K3 launched; the two launch days (July 16-17) added a further 5.8%, tipping the drawdown to -20.2% and past the bear-market line, before a +0.6% stabilization on July 20. Mark the July 16 launch with a vertical reference line — the chart should teach that K3 triggered the final leg of an already-primed correction, not the whole slide.",
+            "points": [
+              {"x": "2026-06-01", "y": 12965.65},
+              {"x": "2026-06-02", "y": 13726.27},
+              {"x": "2026-06-03", "y": 13916.96},
+              {"x": "2026-06-04", "y": 13617.5},
+              {"x": "2026-06-05", "y": 12220.76},
+              {"x": "2026-06-08", "y": 12906.69},
+              {"x": "2026-06-09", "y": 12657.81},
+              {"x": "2026-06-10", "y": 12206.46},
+              {"x": "2026-06-11", "y": 13171.44},
+              {"x": "2026-06-12", "y": 13371.47},
+              {"x": "2026-06-15", "y": 14099.62},
+              {"x": "2026-06-16", "y": 13294.22},
+              {"x": "2026-06-17", "y": 13477.07},
+              {"x": "2026-06-18", "y": 14341.78},
+              {"x": "2026-06-22", "y": 14634.72},
+              {"x": "2026-06-23", "y": 13482.51},
+              {"x": "2026-06-24", "y": 13458.2},
+              {"x": "2026-06-25", "y": 13940.87},
+              {"x": "2026-06-26", "y": 13203.57},
+              {"x": "2026-06-29", "y": 13709.66},
+              {"x": "2026-06-30", "y": 14246.96},
+              {"x": "2026-07-01", "y": 13353.28},
+              {"x": "2026-07-02", "y": 12626.22},
+              {"x": "2026-07-06", "y": 12900.14},
+              {"x": "2026-07-07", "y": 12300.52},
+              {"x": "2026-07-08", "y": 12574.97},
+              {"x": "2026-07-09", "y": 12960},
+              {"x": "2026-07-10", "y": 12967.16},
+              {"x": "2026-07-13", "y": 12347.78},
+              {"x": "2026-07-14", "y": 12661.93},
+              {"x": "2026-07-15", "y": 12398.89},
+              {"x": "2026-07-16", "y": 11867.5},
+              {"x": "2026-07-17", "y": 11673.89},
+              {"x": "2026-07-20", "y": 11743.85}
+            ]
+          },
+          {
+            "label": "DeepSeek precedent: Philadelphia Semiconductor Index around the January 27, 2025 shock",
+            "unit": "index points (official daily closes)",
+            "source": "PHLX Semiconductor Index (^SOX), Nasdaq Global Index Data Service closes via Yahoo Finance chart API, retrieved 2026-07-21",
+            "message": "The base-rate template: DeepSeek knocked 9.1% off the index in one day (Jan 24 close 5,341.9 to Jan 27 close 4,853.2), and once hyperscalers reaffirmed capital spending the index regained its pre-shock level in 18 trading days (Feb 20 close 5,310.6, within 0.6% of Jan 24). The late-February slide that follows in this window was tariff-driven, not a DeepSeek relapse — annotate it so the reversal reads cleanly.",
+            "points": [
+              {"x": "2025-01-21", "y": 5378.5},
+              {"x": "2025-01-22", "y": 5469.29},
+              {"x": "2025-01-23", "y": 5444.69},
+              {"x": "2025-01-24", "y": 5341.94},
+              {"x": "2025-01-27", "y": 4853.24},
+              {"x": "2025-01-28", "y": 4907.03},
+              {"x": "2025-01-29", "y": 4918.1},
+              {"x": "2025-01-30", "y": 5030.53},
+              {"x": "2025-01-31", "y": 5015.85},
+              {"x": "2025-02-03", "y": 4924.81},
+              {"x": "2025-02-04", "y": 4976.59},
+              {"x": "2025-02-05", "y": 5091.5},
+              {"x": "2025-02-06", "y": 5092.59},
+              {"x": "2025-02-07", "y": 5009.34},
+              {"x": "2025-02-10", "y": 5082.67},
+              {"x": "2025-02-11", "y": 5079.97},
+              {"x": "2025-02-12", "y": 5090.79},
+              {"x": "2025-02-13", "y": 5156.39},
+              {"x": "2025-02-14", "y": 5160.94},
+              {"x": "2025-02-18", "y": 5247.86},
+              {"x": "2025-02-19", "y": 5309.69},
+              {"x": "2025-02-20", "y": 5310.63}
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Most material tech/AI signal and a real trend-break, selected on its own macro weight (~$3.3 trillion erased from global semiconductor market value, the worst weekly chip rout since April 2025, Philadelphia Semiconductor Index >20% below its late-June peak) with the standing tech/AI cross-cutting theme as the tie-breaker that lifts it above other equally-material market moves. Lead is the causal event: Beijing-based Moonshot AI's open-weight Kimi K3, which triggered the rout, then paused subscriptions and filed for a Hong Kong IPO. Merged with the market reactions that are the same underlying story — Japan's Nikkei correction [15], the Tuesday Asia snap-back and TSMC capex framing [44], and Alibaba's Qwen3.8-Max preview [55] (same compressed WAIC-week Chinese-model sequence). Claim discipline noted: [55]'s 'world No.2' billing has no benchmarks/model card (reported, C3-grade) and [44]/[15] also reflect the TSMC $60-64bn capex revision, a partially separate driver."
+    },
+    {
+      "signal": {
+        "headline": "US tariff regime hits a legal cliff this week: Section 122 blanket 10% expires July 24, Section 301 replacement not yet finalized",
+        "summary": "The blanket 10% tariff imposed February 24 under Section 122 of the Trade Act of 1974 (balance-of-payments authority, statutorily capped at 150 days) sunsets Friday, July 24, and cannot be extended without Congress. The intended replacement — Section 301 duties of 12.5% on 46 economies (including China, India, Japan, South Korea, Vietnam) and 10% on others, based on forced-labor findings announced June 2 — reached its July 20 completion deadline without a published final determination. A separate 25% Section 301 duty on Brazil takes effect Wednesday, July 22. If the broad Section 301 action is not in place by Friday, importers revert temporarily to pre-existing most-favored-nation rates plus surviving Section 232 and China Section 301 duties. European Union goods are insulated: they moved to a 15% all-inclusive ceiling on July 1 under the US-EU deal.",
+        "why_it_matters": "This is the single largest scheduled change in the applied United States tariff schedule this year, covering most of roughly $3 trillion in annual goods imports. A gap between July 24 expiry and Section 301 finalization would create a short low-tariff window — importers' rational response (accelerating clearance into that window) is already visible in record June port volumes. Unlike Section 122, Section 301 has no rate cap and no time limit, so the 12.5% proposal is a floor that can be ratcheted. Judgment: it is likely (55-80%) the administration finalizes the Section 301 action within days of the deadline rather than allowing a prolonged gap; resolution is observable in the Federal Register by July 24.",
+        "beat": "supply-trade",
+        "region": "United States / global",
+        "sector": "Trade policy / customs and import logistics",
+        "novelty": "The July 20 USTR (Office of the United States Trade Representative) completion deadline passed within the sweep window with no final determination published, making the July 22 (Brazil) and July 24 (expiry) sequence the live story.",
+        "status": "confirmed",
+        "confidence": 0.8,
+        "materiality": 4,
+        "tech_ai_angle": "The 46-country 12.5% list spans the electronics assembly belt (Vietnam, Thailand, India, Japan, South Korea), so where the replacement lands directly moves landed costs for servers, consumer electronics, and artificial-intelligence data-center hardware imported into the United States.",
+        "sources": [
+          {
+            "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action",
+            "publisher": "United States Trade Representative",
+            "grade": "A1",
+            "published_at": "2026-06-02"
+          },
+          {
+            "url": "https://www.tariffstool.com/guides/section-301-replacing-section-122",
+            "publisher": "Tariffs Tool (trade compliance guide)",
+            "grade": "C2",
+            "published_at": "2026-07"
+          },
+          {
+            "url": "https://www.techtimes.com/articles/321120/20260720/section-122-expires-friday-brazil-duty-hits-wednesday-section-301-looms.htm",
+            "publisher": "Tech Times",
+            "grade": "C3",
+            "published_at": "2026-07-20"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "Section 122 blanket tariff rate expiring",
+            "value": 10,
+            "unit": "percent; effective 2026-02-24, statutory 150-day sunset 2026-07-24",
+            "as_of": "2026-07-20",
+            "source_url": "https://www.tariffstool.com/guides/section-301-replacing-section-122"
+          },
+          {
+            "metric": "Proposed Section 301 replacement rate on 46 economies",
+            "value": 12.5,
+            "unit": "percent (10% on economies with forced-labor import bans)",
+            "as_of": "2026-06-02",
+            "source_url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/june/ustr-makes-findings-and-proposes-action-60-section-301-investigations-relating-failures-take-action"
+          },
+          {
+            "metric": "Brazil-specific Section 301 duty effective July 22",
+            "value": 25,
+            "unit": "percent",
+            "as_of": "2026-07-20",
+            "source_url": "https://www.techtimes.com/articles/321120/20260720/section-122-expires-friday-brazil-duty-hits-wednesday-section-301-looms.htm"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.85,
+        "best_source_grade": "A1",
+        "corrections": "1) The \"July 20 USTR completion deadline\" is stated as fact but could not be confirmed in any primary source: it appears only in the signal's own C-grade sources (Tariffs Tool C2, Tech Times C3) with no cited legal basis, and is absent from the June 5 Federal Register notice, the USTR press release, and independent law-firm analyses (Covington, Mayer Brown). The statutory clocks run differently (12 months from the March 12 initiation for determinations, already made June 2; implementation clock from that determination). Reframe as: post-hearing rebuttal comments closed July 16, the administrative record is closed, and the only binding date is the statutory Section 122 sunset of July 24. 2) \"Record June port volumes\" (front-loading evidence) is unverified — no source found; cut or source it. 3) The Brazil 25% duty carries substantial exemptions (beef, orange juice, civil aircraft, energy, Section 232-covered goods), so \"on Brazil\" slightly overstates coverage. 4) The EU 15% ceiling from July 1 reached only single C-grade confirmation in this sweep (consistent with a May 28 Federal Register implementing notice); fine as background, not load-bearing.",
+        "notes": "Core facts verified against primary documents. (a) Federal Register API (primary, A1) confirms no final determination on the 60-economy Section 301 forced-labor action as of July 20 — newest USTR document is the Brazil Notice of Action (2026-14542, published July 20, effective July 22, from the July 15 USTR notice). (b) I extracted the USTR-filed June 5 Federal Register notice PDF and counted the proposed-rate buckets directly: 60 economies investigated; the 10% group is 14 unique economies (Canada, Ecuador, EU, Indonesia, Mexico, Pakistan; Argentina, Bangladesh, Cambodia, El Salvador, Guatemala, Malaysia, Taiwan via reciprocal-trade-agreement commitments; United Kingdom via partial regime), leaving exactly 46 at 12.5% — matching the signal and independently corroborated by Covington & Burling (\"46 countries\" at 12.5%, \"remaining 14\" at 10%). China, India, Japan, South Korea, and Vietnam are all in the 12.5% bucket, so the tech/AI supply-chain angle holds. (c) Section 122: 10% effective Feb 24, 2026, 150-day statutory sunset July 24 (arithmetic checks exactly), extension requires Congress — corroborated by multiple independent customs/legal sources and consistent with 19 U.S.C. 2132; Covington confirms it replaced the Supreme-Court-struck IEEPA tariffs in February 2026. (d) Gap mechanics (reversion to MFN plus surviving Section 232 and pre-existing China Section 301 duties) confirmed by independent trade-compliance analysis. Base-rate treatment is sound: the IEEPA-to-Section-122 handoff in February was executed in days, and with rebuttal comments closed July 16 the \"likely (55-80%) finalized within days\" judgment is defensible, arguably conservative. Falsifiability is proper (Federal Register by July 24). Confidence raised slightly to 0.85 on the core claim set because the load-bearing facts (46/14 split, July 24 sunset, July 22 Brazil effective date, absence of a final determination) are all now primary-source confirmed; the deadline-provenance and port-volume items are flagged in corrections rather than eroding the core."
+      },
+      "context": {
+        "context_md": "The United States buys about $3.3 trillion of goods from abroad each year — roughly $9 billion crossing the border every day, making it the world's largest importer, taking in around one-eighth of everything traded globally. Tariffs are collected at the moment goods clear customs, so the rate in force on any given day is worth real money: at the current blanket 10%, each day represents roughly $900 million in duty. For decades that hardly mattered — the average United States tariff had drifted down to about 2%, and monthly customs collections ran near $7.5 billion as recently as early 2025. The 2025–26 tariff regime quadrupled that, peaking at $33 billion in October 2025. But blanket tariffs rest on borrowed legal authority: the Constitution gives tariff power to Congress, and presidents act through delegated statutes, each with built-in tripwires. The statute carrying the current 10% (Section 122 of the Trade Act of 1974, a balance-of-payments tool) is fast to invoke but self-destructs after 150 days — a clock that runs out this Friday, July 24, and only Congress can extend. Its intended replacement (Section 301, an unfair-trade-practices tool proposing 12.5% on 46 economies and 10% on 14 others) is slow — investigation, comments, hearings — but has no rate cap and no expiration. The government is mid-handoff between the two: the administrative record closed July 16, yet no final decision has been published. If the second leg is not down by Friday, most imports revert for however long the gap lasts to the old roughly-2% default rates — an arbitrage visible to every importer with cargo on the water.\n\nTwo episodes calibrate expectations. The only prior blanket import surcharge in modern American history was Richard Nixon's, imposed August 15, 1971 at the same 10%: it lasted barely four months, lifted that December after a currency deal, and an alarmed Congress then wrote the very 150-day fuse now burning into the 1974 Trade Act. More recently and more tellingly, when the Supreme Court struck down the previous emergency-powers tariffs in early 2026, the administration re-imposed the blanket 10% under Section 122 within days — evidence that these handoffs get executed fast when the White House wants continuity. The residue of that episode sits in the Treasury's own books: net customs receipts in June 2026 were minus $25.6 billion, as refunds of the struck-down tariffs flowed out faster than new duties came in — a reminder that tariffs imposed on shaky authority can be unwound, expensively. The 2018–19 China tariff rounds taught importers the other half of the game: front-run every effective date, so any gap after Friday should produce a visible surge of customs entries. It is likely (55–80%) the replacement is finalized within days of the deadline; the question resolves in the Federal Register by July 24.",
+        "base_rate": "Blanket all-country United States import surcharges have been imposed only twice since 1945 (Nixon's 10% in August 1971, which lasted four months, and the 2025–26 regime), and in the one directly comparable authority handoff — February 2026, after the Supreme Court struck the emergency-powers tariffs — the replacement was in place within days, so scheduled expiries of broad trade measures the executive wants to keep are overwhelmingly replaced on time rather than lapsing into a prolonged gap.",
+        "series": [
+          {
+            "label": "US monthly customs duties collected (gross)",
+            "unit": "billion US dollars per month, gross receipts",
+            "source": "US Treasury Monthly Treasury Statement, Table 4, via Fiscal Data API (api.fiscaldata.treasury.gov, mts_table_4, classification 'Customs Duties'); as of 2026-06-30 statement",
+            "message": "Customs collections ran about $7.5B a month through early 2025, quadrupled under the 2025 tariff regime to a $33.1B peak in October 2025, and have settled near $22-24B a month under the Section 122 blanket 10% — this is the monthly revenue whose legal basis expires July 24. (Gross receipts shown; net receipts in June 2026 were minus $25.6B because refunds of the court-struck emergency tariffs exceeded new collections.)",
+            "points": [
+              {"x": "2024-07", "y": 7.6},
+              {"x": "2024-08", "y": 7.6},
+              {"x": "2024-09", "y": 7.7},
+              {"x": "2024-10", "y": 7.9},
+              {"x": "2024-11", "y": 7.4},
+              {"x": "2024-12", "y": 7.4},
+              {"x": "2025-01", "y": 7.9},
+              {"x": "2025-02", "y": 7.7},
+              {"x": "2025-03", "y": 8.7},
+              {"x": "2025-04", "y": 16.3},
+              {"x": "2025-05", "y": 22.8},
+              {"x": "2025-06", "y": 27.2},
+              {"x": "2025-07", "y": 28.4},
+              {"x": "2025-08", "y": 30.1},
+              {"x": "2025-09", "y": 30.5},
+              {"x": "2025-10", "y": 33.1},
+              {"x": "2025-11", "y": 31.7},
+              {"x": "2025-12", "y": 29.3},
+              {"x": "2026-01", "y": 29.5},
+              {"x": "2026-02", "y": 27.2},
+              {"x": "2026-03", "y": 24},
+              {"x": "2026-04", "y": 23.9},
+              {"x": "2026-05", "y": 21.9},
+              {"x": "2026-06", "y": 23.6}
+            ]
+          },
+          {
+            "label": "Tariff rates in play this week",
+            "unit": "percent ad valorem",
+            "source": "USTR June 2 press release and June 5 Federal Register proposal (Section 301 rates); Section 122 notice of February 2026 (expiring 10%); USTR Brazil Notice of Action effective 2026-07-22; US-EU arrangement ceiling effective 2026-07-01; WTO World Tariff Profiles (pre-2025 trade-weighted most-favored-nation average)",
+            "message": "Render as a labeled bar comparison, not a trend line: only 6 policy rates, no time dimension. The takeaway is the spread between the roughly-2% default world importers briefly revert to if Friday's expiry outruns the replacement, and the 10-25% rates on either side of the gap.",
+            "points": [
+              {"x": "Default (most-favored-nation) average, pre-2025", "y": 2.2},
+              {"x": "Section 122 blanket (expires Jul 24)", "y": 10},
+              {"x": "Section 301 proposed, 14 economies", "y": 10},
+              {"x": "Section 301 proposed, 46 economies", "y": 12.5},
+              {"x": "EU all-inclusive ceiling (since Jul 1)", "y": 15},
+              {"x": "Brazil Section 301 (effective Jul 22)", "y": 25}
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "The most material trade-policy signal: the entire US tariff baseline hits a hard statutory wall this week. The blanket 10% Section 122 tariff (Trade Act of 1974, capped at 150 days, no executive extension) sunsets Friday 24 July with no congressional extension advancing, and the intended Section 301 replacement (12.5% on 46 economies) missed its 20 July completion deadline — so absent action, the baseline on most imports could drop toward pre-existing MFN rates. A distinct global-macro trend line (trade regime) from the oil/rates complex, confirmed against statute and White House releases (A/1-2), and imminent/falsifiable. Merged with [24] (same Section 122 cliff, americas beat). The other US-tariff tracks this week are genuinely SEPARATE events, not duplicates, and were edged out for slots: Canada's new 50% Section 338 tariffs [60], Brazil's 25% duty effective 22 July [25], the USMCA annual review [26], and the India BTA deadline [19] — all facets of the same restructuring theme, noted below."
+    },
+    {
+      "signal": {
+        "headline": "IEA: full Chinese rare-earth export curbs would put $6.5 trillion of annual downstream production at risk, as Beijing signals active enforcement",
+        "summary": "The International Energy Agency's critical-minerals assessment published around July 16 estimates that full implementation of China's rare-earth export restrictions would jeopardize about $6.5 trillion per year of downstream production outside China — automotive, defense, high-tech, and energy hardest hit, with the United States and Europe accounting for nearly half the exposure. Battery-grade graphite curbs alone would put over $300 billion at risk annually. China's expanded controls (announced October 2025, extended extraterritorially to foreign-made products containing Chinese rare earths) are suspended only until November 2026. In parallel, Chinese enforcement is visibly tightening: the Ministry of Commerce formalized a public reporting mechanism for strategic-mineral export violations (Announcement No. 26 of 2026), two Japanese nationals were detained in Dalian over alleged rare-earth-related smuggling, and in June Beijing added 10 United States entities — including rare-earth miners MP Materials and USA Rare Earth — to its own export-control list.",
+        "why_it_matters": "These are agency estimates, not realized losses — the $6.5 trillion is a claim about a scenario, and the controls' worst provisions remain suspended. But the structure is the point: China refines roughly 90% of the world's rare earths and effectively all heavy rare earths, a single-supplier concentration with few historical parallels (the 2010 China-Japan rare-earth embargo, at far smaller scale, tripled prices within months). Base rate: China has so far used these controls as negotiating leverage and suspended or licensed around them rather than imposing maximal cutoffs, so full implementation in November is unlikely (20-45%) — but the enforcement drumbeat raises the credibility of the threat, which is itself the leverage. IEA-coordinated stockpiling (~$900 million for 11 high-risk materials) covers a trivial fraction of the exposure.",
+        "beat": "supply-trade",
+        "region": "China / global",
+        "sector": "Critical minerals / export controls",
+        "novelty": "New quantification (the $6.5 trillion scenario estimate, July 16) layered on a known control regime, plus fresh enforcement actions in July signaling the November 2026 suspension expiry is a live deadline.",
+        "status": "reported",
+        "confidence": 0.75,
+        "materiality": 4,
+        "tech_ai_angle": "Heavy rare earths are irreplaceable inputs to the permanent magnets in electric-vehicle motors, precision-guided munitions, hard drives and robotics, and to semiconductor manufacturing — making Chinese refining capacity a chokepoint over the artificial-intelligence and defense hardware build-out comparable to Western chip export controls in the other direction.",
+        "sources": [
+          {
+            "url": "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/",
+            "publisher": "The National (UAE), reporting IEA release",
+            "grade": "B2",
+            "published_at": "2026-07-16"
+          },
+          {
+            "url": "https://www.bloomberg.com/news/articles/2026-07-16/iea-risk-china-rare-earth-curbs",
+            "publisher": "Bloomberg",
+            "grade": "B2",
+            "published_at": "2026-07-16"
+          },
+          {
+            "url": "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals",
+            "publisher": "Morgan Lewis (law firm client alert)",
+            "grade": "B2",
+            "published_at": "2026-07"
+          }
+        ],
+        "data_points": [
+          {
+            "metric": "IEA estimate of annual downstream production at risk from full Chinese rare-earth curbs",
+            "value": 6.5,
+            "unit": "trillion USD per year (scenario estimate)",
+            "as_of": "2026-07-16",
+            "source_url": "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/"
+          },
+          {
+            "metric": "Annual downstream production at risk from battery-grade graphite disruption",
+            "value": 300,
+            "unit": "billion USD per year",
+            "as_of": "2026-07-16",
+            "source_url": "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/"
+          },
+          {
+            "metric": "Expiry of China's suspension of expanded export-control measures",
+            "value": "November 2026",
+            "unit": "date",
+            "as_of": "2026-07-16",
+            "source_url": "https://www.morganlewis.com/pubs/2026/07/recent-china-export-control-actions-signal-active-enforcement-for-rare-earths-and-strategic-minerals"
+          },
+          {
+            "metric": "Public financing for non-China critical-mineral projects, 2023-2025",
+            "value": 65,
+            "unit": "billion USD (quadrupled over the period)",
+            "as_of": "2026-07-16",
+            "source_url": "https://www.thenationalnews.com/business/economy/2026/07/16/chinas-rare-earth-export-curbs-may-hit-65tn-in-global-production/"
+          }
+        ]
+      },
+      "verdict": {
+        "stands": true,
+        "revised_status": "confirmed",
+        "revised_confidence": 0.85,
+        "best_source_grade": "B1",
+        "corrections": "1) Stockpiling mischaracterized: the ~$900 million for 11 high-risk materials is the IEA's estimated COST of a PROPOSED multilateral stockpiling effort, not an existing \"IEA-coordinated stockpiling\" program; the trivial-vs-exposure point still holds. 2) Suspension expiry has a precise date: November 10, 2026 (not just \"November 2026\"). 3) The Dalian detentions occurred in May 2026 (Japanese-government-confirmed, employees of a major Japanese company), not a fresh July action; that sub-claim rests on a single secondary source in this check (C2). 4) \"Refines roughly 90%\" should read \"processes up to ~90%\" (IEA/press phrasing); China's mine-output share is ~69%. 5) The US/Europe \"nearly half\" exposure figure attaches specifically to the seven heavy rare earths controlled since April 2025.",
+        "notes": "All load-bearing claims verified against sources independent of those cited. The $6.5T and $300B figures, July 16 publication (Birol presented at the Council on Foreign Relations), Nov 10, 2026 suspension expiry, MOFCOM Announcement No. 26 of 2026 (published June 24, effective July 1, whistleblower hotline 010-12369), the June 2026 addition of 10 US entities including MP Materials and USA Rare Earth, and the $65B quadrupled public financing all confirm across multiple independent outlets (Bloomberg, The National, Metal Tech News, Yahoo Finance, Pillsbury, CIRS, Geopolitechs). Status upgraded reported->confirmed at the statement level: it is confirmed that the IEA published these estimates and that the enforcement actions occurred; the $6.5T itself remains a model scenario by an agency with a diversification agenda, which the signal already discloses (\"agency estimates, not realized losses\"). Base-rate discipline is sound: 20-45% (\"unlikely\") for full November implementation matches China's pattern of licensing/suspending around maximal cutoffs; the 2010 embargo price comparison (\"tripled\") is conservative relative to the historical record. Falsifiability: the signal resolves on whether the October 2025 measures resume after November 10, 2026. Best source B1: wire-service reporting of an official agency release, independently corroborated; the underlying IEA report is A-grade primary but was not directly fetchable (HTTP 403)."
+      },
+      "context": {
+        "context_md": "Rare earths are seventeen metallic elements that are not actually rare in the ground — they are rare in usable form, because separating them from ore and from each other is a filthy, capital-hungry chemical process that most countries spent thirty years happily outsourcing to China. The result is one of the most lopsided leverage ratios in the world economy: global rare-earth mining is a market measured in the low tens of billions of dollars a year, yet the International Energy Agency now estimates that a full Chinese export cutoff would put roughly $6.5 trillion of annual downstream production at risk — car plants, defense lines, wind turbines, robotics — because a few kilograms of rare-earth magnet sit inside every electric-vehicle motor and roughly 400 kilograms of rare-earth material go into a single F-35 fighter jet, with no drop-in substitute. China mines about 69% of the world's supply but processes up to 90% of it, and for the \"heavy\" rare earths that make magnets survive high temperatures (dysprosium, terbium), its separation share is effectively 100%. That is a chokepoint of the same order as the Strait of Hormuz for oil — except one government owns the strait, and in October 2025 it wrote itself rules claiming authority over foreign-made products anywhere on Earth that contain Chinese rare earths. Those rules are suspended, under a trade truce, only until November 10, 2026.\n\nTwo episodes calibrate what happens when Beijing squeezes. In September 2010, after Japan arrested a Chinese trawler captain near disputed islands, China quietly halted rare-earth shipments to Japan for about two months: prices of some elements rose as much as tenfold into 2011, Japan bankrolled an Australian producer and redesigned products to use less, and by 2015 prices had crashed and China's mining share had slid from about 97% toward today's 69% — but the processing monopoly never broke. The second episode just happened: on April 4, 2025 China imposed licensing on seven heavy rare earths and the magnets made from them, and within two months its worldwide magnet exports collapsed from 6,357 tonnes in January to 1,238 tonnes in May, a five-year low; Ford halted Explorer production in Chicago and European suppliers warned of shutdowns before a June truce restored license flows and exports rebounded above pre-control levels by August. The lesson cuts both ways: the weapon works within weeks, but Beijing has so far used it as a dial — throttle, extract concessions, re-license — not a switch, because every month of cutoff accelerates the $65 billion in public money now funding non-Chinese alternatives. The July 16 report is the first official attempt to price the switch, and the detentions, whistleblower hotline, and entity listings of mid-2026 are Beijing making sure everyone believes it still has its hand on the dial as the November deadline approaches.",
+        "base_rate": "In every Chinese rare-earth restriction episode on record — the 2010 Japan embargo, the 2010-2015 export quotas, and the April 2025 licensing squeeze — Beijing throttled supply for weeks to months and then re-licensed rather than sustaining a maximal cutoff, so the historical frequency of a threatened full cutoff actually being implemented and sustained is near zero, while partial, temporary disruption is the norm (making the signal's 20-45% \"unlikely\" for full November implementation, if anything, generous).",
+        "series": [
+          {
+            "label": "China rare-earth permanent magnet exports, worldwide (monthly)",
+            "unit": "tonnes per month",
+            "source": "China General Administration of Customs monthly trade data, as reported by Reuters and other wire services (gaps: Mar 2025, Dec 2025, Mar 2026 not directly reported in retrievable sources)",
+            "message": "The dial, demonstrated: after the April 4, 2025 export controls, China's magnet exports collapsed from 6,357 tonnes (January) to 1,238 tonnes (May, lowest since February 2020) — an 81% throttle in four months — then recovered above pre-control levels by August once the June truce restored licensing, and have since oscillated around 5,000-6,000 tonnes. The chart is the base rate made visible: Beijing has already run a full rehearsal of the cutoff the IEA priced at $6.5 trillion, and chose to turn the tap back on. The November 10, 2026 suspension expiry asks whether the next squeeze stays a rehearsal.",
+            "points": [
+              {"x": "2025-01", "y": 6357},
+              {"x": "2025-02", "y": 3585},
+              {"x": "2025-04", "y": 2626},
+              {"x": "2025-05", "y": 1238},
+              {"x": "2025-06", "y": 3188},
+              {"x": "2025-07", "y": 5577},
+              {"x": "2025-08", "y": 6146},
+              {"x": "2025-09", "y": 5774},
+              {"x": "2025-10", "y": 5473},
+              {"x": "2025-11", "y": 6150},
+              {"x": "2026-01", "y": 6024},
+              {"x": "2026-02", "y": 4739},
+              {"x": "2026-04", "y": 5126},
+              {"x": "2026-05", "y": 4730},
+              {"x": "2026-06", "y": 5649}
+            ]
+          }
+        ]
+      },
+      "rank_rationale": "Fifth slot on structural global-macro materiality with a tech/AI supply-chain dimension. The IEA's critical-minerals assessment puts ~$6.5 trillion/year of downstream production outside China (autos, defense, high-tech, energy; US+Europe ~half the exposure) at risk under full implementation of China's rare-earth export controls, with battery-grade graphite alone ~$300bn — and enforcement is visibly tightening (Announcement No. 26 reporting mechanism, two Japanese nationals detained in Dalian, MP Materials/USA Rare Earth added to Beijing's control list). Chosen over the China-slowdown print ([13]/[37], PBOC hold + Q2 GDP 4.3%, largely expected and trend-continuing) and the ECB/Bank-of-Korea tightening items ([38],[40], rates lens already carried by #2): this is the more consequential swing factor and illuminates the tech current. Discipline: the $6.5tn figure is a modeled IEA assessment and the curbs are a continuation (announced Oct 2025, suspended to Nov 2026), so this is graded reported (C/2-3) — ranked fifth, not higher, for that reason."
+    }
+  ],
+  "killed": [
+    {
+      "headline": "Markets reprice toward a Federal Reserve rate HIKE on July 29: futures-implied odds jump to 46.5% from 34% in a day",
+      "reason": "What survives verification: (1) June CPI figures are exactly right — headline -0.4% m/m (largest drop since April 2020), 3.5% y/y vs 3.8% expected; core 2.6% y/y vs ~2.9% expected; energy index -5.7% (BLS data via CNBC/CBS, grade B1). (2) The Warsh/dot-plot background is right — June 2026 SEP median moved to 3.8% from 3.4% in March, nine of eighteen officials projecting a year-end rate above the current 3.50-3.75% range, at Kevin Warsh's first meeting as chair (Bloomberg/CNBC/Yahoo, B1). (3) Yields roughly check: 10-year 4.574% on July 20 (matches signal's 4.57%); 2-year 4.21% on July 10 vs signal's 4.16% for July 20 — plausible, unverified to the day. (4) A genuine 34%-to-46.5% repricing DID occur — on July 12-13, not July 19-20. Base-rate check the signal ignored: single-day, oil-shock-driven spikes in meeting-odds are fragile and frequently unwind within days when hard data intervenes; near-coin-flip pricing eight days out that the signal treats as durable had already round-tripped to ~13% by its own as-of date. If the desk wants a live signal, the accurate version is: 'Hike odds round-trip: spiked to 46.5% July 13 on Hormuz oil shock, collapsed to ~13% by July 20 after soft CPI (3.5% vs 3.8% expected) and PPI (-0.3%); hike risk now hinges on the collapsed US-Iran ceasefire re-escalating before July 29.' Residual risk: some reporting (Techtimes, July 15) notes the ceasefire has collapsed and war escalation 'threatens reversal' of the odds collapse, so hike odds could climb again before July 29 — but that is a forecast, not the signal's claim. Materiality of the corrected story remains high (4/5); the signal as written would have misinformed the brief on the single most market-moving number it contains."
+    }
+  ],
+  "deep_dives": []
+}

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Brief — 2026-07-20</title>
+<style>
+:root {
+  color-scheme: light;
+  --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e;
+  --muted:#898781; --grid:#e1e0d9; --baseline:#c3c2b7; --series:#2a78d6;
+  --border:rgba(11,11,11,0.10); --accent-wash:rgba(42,120,214,0.07);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7;
+    --muted:#898781; --grid:#2c2c2a; --baseline:#383835; --series:#3987e5;
+    --border:rgba(255,255,255,0.10); --accent-wash:rgba(57,135,229,0.10);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7;
+  --muted:#898781; --grid:#2c2c2a; --baseline:#383835; --series:#3987e5;
+  --border:rgba(255,255,255,0.10); --accent-wash:rgba(57,135,229,0.10);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin:0; background:var(--page); color:var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size:16px; line-height:1.62;
+}
+main { max-width:47rem; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+h1 { font-size:1.7rem; line-height:1.25; margin:0 0 .4rem; letter-spacing:-.01em; }
+h2 { font-size:1.3rem; line-height:1.3; margin:2.6rem 0 .9rem; padding-top:1.1rem; border-top:1px solid var(--border); }
+h3 { font-size:1.08rem; line-height:1.35; margin:2rem 0 .6rem; }
+h4 { font-size:.95rem; margin:1.3rem 0 .4rem; text-transform:uppercase; letter-spacing:.05em; color:var(--ink2); }
+p { margin:.7rem 0; }
+ol.bluf { padding-left:1.3rem; }
+ol.bluf > li { margin:.75rem 0; }
+ul.dissent > li { margin: .9rem 0; }
+.kicker { color:var(--muted); font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; margin:0 0 .2rem; }
+.note { color:var(--ink2); font-size:.9rem; border-left:3px solid var(--baseline); padding:.15rem 0 .15rem .85rem; margin:1rem 0 1.6rem; }
+.meta { color:var(--ink2); font-size:.88rem; margin:.2rem 0 .9rem; }
+.meta strong { color:var(--ink); }
+.lbl { font-weight:600; }
+.band { font-style:italic; }
+.srcs { color:var(--ink2); font-size:.85rem; }
+.srcs a { color:inherit; }
+.angle { background:var(--accent-wash); border-radius:8px; padding:.6rem .85rem; font-size:.92rem; }
+figure.chart { margin:1.6rem 0; padding:1rem 1.1rem 0.8rem; background:var(--surface);
+  border:1px solid var(--border); border-radius:12px; }
+.chart-title { font-weight:600; font-size:.95rem; line-height:1.4; }
+.chart-msg { color:var(--ink2); font-size:.86rem; line-height:1.5; margin:.25rem 0 .7rem; }
+.chart-wrap { overflow-x:auto; }
+.chart-wrap svg { width:100%; min-width:560px; height:auto; display:block; font-family:inherit; }
+figure.chart figcaption { color:var(--muted); font-size:.78rem; line-height:1.45; margin-top:.55rem; }
+details.tbl { margin:.5rem 0 0; font-size:.85rem; }
+details.tbl summary { color:var(--muted); cursor:pointer; font-size:.8rem; }
+details.tbl table { border-collapse:collapse; margin:.5rem 0; width:100%; max-height:none; }
+details.tbl th, details.tbl td { text-align:left; padding:.22rem .6rem .22rem 0; border-bottom:1px solid var(--grid); font-weight:normal; }
+details.tbl th { color:var(--ink2); font-weight:600; }
+details.tbl td.num { font-variant-numeric: tabular-nums; }
+details.tbl .scroll { max-height:16rem; overflow-y:auto; }
+/* SVG chart chrome */
+.grid { stroke:var(--grid); stroke-width:1; }
+.axis { stroke:var(--baseline); stroke-width:1; fill:none; }
+.ref  { stroke:var(--baseline); stroke-width:1.25; }
+.tick { fill:var(--muted); font-size:11.5px; font-variant-numeric:tabular-nums; }
+.unit { font-size:10.5px; letter-spacing:.03em; }
+.ann  { fill:var(--ink2); font-size:12px; }
+.series-line { fill:none; stroke:var(--series); stroke-width:2; stroke-linejoin:round; stroke-linecap:round; }
+.marker { fill:var(--series); stroke:var(--surface); stroke-width:2; }
+.bar { fill:var(--series); }
+.bar.mute { opacity:.5; }
+.bar-alt { fill:var(--accent-wash); stroke:var(--series); stroke-width:1.5; stroke-dasharray:4 3; }
+.evband { fill:var(--accent-wash); }
+.ref-dash { stroke:var(--baseline); stroke-width:1.25; stroke-dasharray:4 4; fill:none; }
+.arrow { stroke:var(--ink2); stroke-width:1.25; fill:none; }
+.arrowhead { fill:var(--ink2); }
+.tierhdr { fill:var(--muted); font-size:10.5px; font-weight:600; letter-spacing:.08em; }
+.inbar { fill:var(--surface); font-size:11.5px; }
+.hit { fill:transparent; }
+.hit:hover { fill:var(--series); fill-opacity:.18; }
+.blab { fill:var(--ink2); font-size:12px; }
+.val { fill:var(--ink); font-size:12.5px; font-weight:600; font-variant-numeric:tabular-nums; }
+footer { margin-top:3rem; color:var(--muted); font-size:.8rem; border-top:1px solid var(--border); padding-top:1rem; }
+@media print { .hit { display:none; } figure.chart { break-inside:avoid; } }
+</style>
+</head>
+<body>
+
+<main>
+<p class="kicker">Presidential-style daily brief &middot; produced by the daily-briefing workflow</p>
+<h1>Daily Brief &mdash; July 20, 2026</h1>
+<p class="note">All judgments carry ICD-203 probability bands; all sources carry NATO two-axis grades
+(reliability A&ndash;F &times; credibility 1&ndash;6). See <code>pdb/METHODOLOGY.md</code>. All figures are
+post-adversarial-review: where the verifier corrected a number, the corrected value appears, with the
+correction folded into the item's prose.</p>
+
+<h2 id="bluf">Key judgments (BLUF)</h2>
+<ol class="bluf">
+<li><strong>Neither of this week's two contested chokepoints goes to sustained maximal disruption in the
+next three months &mdash; a weeks-long Strait of Hormuz closure or full November implementation of China's
+rare-earth controls</strong> (<span class="band">unlikely, 20&ndash;45%</span>). The base rates converge: Hormuz has
+never been effectively closed since 1945 (even the 1984&ndash;88 Tanker War, with roughly 450 ships attacked,
+never stopped traffic), and every Chinese rare-earth squeeze on record ended in re-licensing. Conversely,
+a new US&ndash;Iran truce or a recovery above 50 transits a day would <span class="band">very likely
+(80&ndash;95%)</span> send Brent back toward the $70s, as it did in June.</li>
+<li><strong>The administration publishes the Section 301 tariff replacement in the Federal Register on or
+within days of the July 24 expiry of the blanket 10% tariff, avoiding a prolonged low-tariff window</strong>
+(<span class="band">likely, 55&ndash;80%</span>). The February 2026 precedent &mdash; the replacement for the
+court-struck emergency tariffs was in place within days &mdash; plus a closed administrative record (July 16)
+argue for continuity executed late rather than a lapse.</li>
+<li><strong>The July 21&ndash;31 hyperscaler earnings round reaffirms rather than cuts announced capital
+spending, repeating the January 2025 DeepSeek pattern</strong> (<span class="band">likely, 55&ndash;80%</span>).
+Taiwan Semiconductor raised its 2026 investment budget to $60&ndash;64 billion the same week the chip rout
+unfolded, and Moonshot AI's own computing capacity buckled within roughly 96 hours of its Kimi K3 launch
+&mdash; demand for running these models is real and binding. Falsified by any of Microsoft, Alphabet, Amazon,
+or Meta guiding 2026 capital expenditure down this cycle.</li>
+<li><strong>The July 2026 US Consumer Price Index print (released mid-August) shows the energy component
+swinging positive month-over-month</strong> (<span class="band">likely, 55&ndash;80%</span>), given retail fuel
+prices track the roughly $20-per-barrel crude move since July 2 within weeks. No broader claim that this
+tips the Federal Reserve hawkish is made &mdash; the signals do not yet support it.</li>
+</ol>
+<p><strong>Correlation warning:</strong> judgments 1 and 4 share a falsifier &mdash; a durable US&ndash;Iran truce
+&mdash; and should be scored as one correlated prediction, not two independent ones.</p>
+
+<h2 id="items">Items</h2>
+
+<h3 id="item-1">1. Brent tops $90 as US-Iran war re-escalates and Strait of Hormuz traffic collapses again</h3>
+<p class="meta"><strong>Status:</strong> confirmed &middot; <strong>Confidence:</strong> 0.85
+(verifier-revised from 0.90) &middot; <strong>Beat:</strong> energy &amp; commodities &middot;
+<strong>Best source grade:</strong> A2</p>
+<p><span class="lbl">What happened.</span> Brent crude futures rose about 3% on Monday, July 20, touching
+$90.79 a barrel &mdash; the highest since June 11 &mdash; before paring back to about $88.26 after an Iranian
+foreign-ministry spokesperson signaled openness to negotiations; the $90 level was an intraday high, not a
+settled price. It caps a 15.9% gain last week, the biggest weekly rise since April. The driver is the
+resumed US-Iran war: President Trump declared the June 17 truce over on July 7 (the verifier corrected the
+original July 8 date), the United States has since carried out eight consecutive nights of strikes on Iran,
+and Iran's Islamic Revolutionary Guard Corps attacked three tankers on July 13&ndash;14 &mdash; the chemical
+tanker Stolt Magnesium off Qalhat, Oman, and the crude carriers Mombasa B and Al Bahyah off Musandam &mdash;
+killing one Indian crew member, with Oman reporting three more crew missing. Transits through the Strait of
+Hormuz fell to roughly 10 ships on July 12 against a normal 88 a day (corroborated by the International
+Monetary Fund's PortWatch dataset), and hull war-risk insurance now runs roughly 12 to 40 times pre-crisis
+levels &mdash; the originally reported 8-times figure, sourced to the weakest outlet cited, understated it.</p>
+<p><span class="lbl">Why it matters.</span> Hormuz is the single largest oil chokepoint on earth, carrying
+roughly 20&ndash;25% of seaborne oil trade, and a sustained closure has no full workaround: Saudi and Emirati
+bypass pipelines can reroute only about 6&ndash;7 million barrels a day of the 17&ndash;20 million that normally
+transit. The earlier leg of this crisis took Brent spot to $138.21 on April 7 (the verifier moved the
+misdated &ldquo;May peak&rdquo; to April), and it slid to $68.53 on July 2 during the truce &mdash; so at
+$88&ndash;90 the market is pricing a partial, contested strait, not a closed one. Falsifier: a new truce or
+resumption of more than 50 transits a day, trackable daily via ship-counting services, would very likely
+(80&ndash;95%) send Brent back toward the $70s, as it did in June.</p>
+<h4>The mechanics</h4>
+<p>The world burns roughly 100 million barrels of oil a day, and about two-fifths of it travels by sea. Of
+that seaborne flow, around one barrel in four &mdash; 17 to 20 million barrels a day, about a fifth of all the
+oil humanity uses &mdash; passes through the Strait of Hormuz, the waterway between Iran and Oman that narrows
+to about 21 nautical miles, with inbound and outbound shipping lanes just two miles wide apiece. It is one of
+only three maritime chokepoints of that magnitude on earth (the others being the Strait of Malacca and the
+Suez Canal&ndash;Bab el-Mandeb corridor), and the only one with no real detour: Saudi Arabia and the United
+Arab Emirates have bypass pipelines to the Red Sea and the Gulf of Oman, but together those can reroute only
+about 6&ndash;7 million barrels a day &mdash; a third of the normal flow &mdash; and Qatar's liquefied natural
+gas, roughly a fifth of the world's total, has no bypass at all. So when transits fell to about 10 ships on
+July 12 against a normal 88 a day, the market was watching something with no modern precedent: even at its
+worst, the Gulf has never lost 90% of its traffic.</p>
+<p>History says attacks on Gulf shipping usually fail to stop it &mdash; which is precisely why this episode
+stands out. During the 1984&ndash;88 &ldquo;Tanker War&rdquo; phase of the Iran-Iraq war, the two sides attacked
+roughly 450 merchant ships over four years, yet traffic never stopped: insurance premiums rose, crews drew
+danger pay, and oil prices actually fell across the period because the world was oversupplied. The better
+calibrator for price is Iraq's August 1990 invasion of Kuwait, which roughly doubled oil prices in two months
+on fear of lost supply, then gave the entire move back within months when the feared shortage never
+materialized. The current crisis has already traced both halves of that pattern once: Brent spot ran from the
+low $70s before the war to $138 at the April 7 peak, collapsed to $68.53 on July 2 during the June truce, and
+has retraced to roughly $88&ndash;90 in the nine trading days since the truce was declared over on July 7. At
+$90 the market is pricing a partial, contested strait &mdash; not a closed one. A genuinely sustained closure
+of a fifth of world oil supply would put prices well above April's peak; conversely, a new truce or a recovery
+to more than 50 transits a day would very likely (80&ndash;95%) send Brent back toward the $70s, exactly as it
+did in June.</p>
+<figure class="chart"><div class="chart-title">Oil has already round-tripped this war once: $138 peak, $69 truce low, back to $82 as fighting resumed</div><div class="chart-msg">The full crisis arc in one consistent primary-source series: a $138.21 peak on April 7, a truce-era low of $68.53 on July 2, then back over $80 within four trading days of the July 7 truce collapse. The agency publishes with roughly a one-week lag, so the July 14&ndash;20 futures leg to ~$90 is not yet in this series &mdash; intraday futures quotes are deliberately not spliced on.</div><div class="chart-wrap"><svg viewBox="0 0 680 300" role="img" xmlns="http://www.w3.org/2000/svg"><line x1="52" y1="266.0" x2="656" y2="266.0" class="grid"/><text x="44" y="270.0" class="tick" text-anchor="end">$60</text><line x1="52" y1="207.6" x2="656" y2="207.6" class="grid"/><text x="44" y="211.6" class="tick" text-anchor="end">$80</text><line x1="52" y1="149.3" x2="656" y2="149.3" class="grid"/><text x="44" y="153.3" class="tick" text-anchor="end">$100</text><line x1="52" y1="90.9" x2="656" y2="90.9" class="grid"/><text x="44" y="94.9" class="tick" text-anchor="end">$120</text><line x1="52" y1="32.6" x2="656" y2="32.6" class="grid"/><text x="44" y="36.6" class="tick" text-anchor="end">$140</text><text x="8" y="12" class="tick unit" text-anchor="start">USD/bbl</text><line x1="52" y1="266" x2="656" y2="266" class="axis"/><line x1="52.0" y1="266" x2="52.0" y2="270" class="axis"/><text x="52.0" y="284" class="tick" text-anchor="middle">Apr</text><line x1="227.9" y1="266" x2="227.9" y2="270" class="axis"/><text x="227.9" y="284" class="tick" text-anchor="middle">May</text><line x1="409.7" y1="266" x2="409.7" y2="270" class="axis"/><text x="409.7" y="284" class="tick" text-anchor="middle">Jun</text><line x1="585.6" y1="266" x2="585.6" y2="270" class="axis"/><text x="585.6" y="284" class="tick" text-anchor="middle">Jul</text><rect x="503.5" y="16" width="117.3" height="250" class="evband"/><text x="562.2" y="46" class="ann" text-anchor="middle">truce</text><line x1="52" y1="233.9" x2="656" y2="233.9" class="ref-dash"/><text x="56" y="229" class="ann" text-anchor="start">June truce settled level ($71)</text><line x1="620.8" y1="16" x2="620.8" y2="266" class="ref"/><text x="614.8" y="28" class="ann" text-anchor="end">truce ends Jul 7</text><path d="M 52.0,92.2 L 57.9,68.7 L 87.2,37.8 L 93.0,84.8 L 98.9,93.8 L 104.8,93.7 L 122.4,81.4 L 128.2,94.8 L 134.1,105.7 L 140.0,100.8 L 145.8,153.3 L 163.4,139.4 L 169.3,131.4 L 175.1,110.1 L 181.0,110.6 L 186.9,114.7 L 204.5,108.8 L 210.3,97.9 L 216.2,78.8 L 222.1,78.6 L 227.9,96.0 L 251.4,107.0 L 257.2,138.5 L 263.1,144.0 L 269.0,139.1 L 286.6,131.5 L 292.4,116.1 L 298.3,119.3 L 304.2,117.5 L 310.0,108.6 L 327.6,100.5 L 333.5,106.6 L 339.3,123.2 L 345.2,132.3 L 351.1,129.2 L 374.5,141.3 L 380.4,157.7 L 386.3,162.5 L 392.1,170.1 L 409.7,154.3 L 415.6,153.7 L 421.4,144.4 L 427.3,152.3 L 433.2,157.2 L 450.8,156.7 L 456.6,166.4 L 462.5,161.8 L 468.3,170.2 L 474.2,182.4 L 491.8,194.9 L 497.7,206.2 L 503.5,206.7 L 509.4,209.5 L 515.3,206.3 L 532.9,217.9 L 538.7,220.2 L 544.6,230.7 L 550.4,225.9 L 556.3,236.4 L 573.9,232.2 L 579.8,235.5 L 585.6,239.0 L 591.5,241.1 L 597.4,240.7 L 615.0,238.1 L 620.8,231.6 L 626.7,217.9 L 632.5,223.8 L 638.4,224.2 L 656.0,202.9" class="series-line"/><circle cx="87.2" cy="37.8" r="4.5" class="marker"/><text x="97.2" y="41.8" class="ann" text-anchor="start">$138.21 peak, Apr 7</text><circle cx="591.5" cy="241.1" r="4.5" class="marker"/><text x="583.5" y="263.1" class="ann" text-anchor="end">$68.53 truce low, Jul 2</text><circle cx="656.0" cy="202.9" r="4.5" class="marker"/><text x="590.0" y="188.9" class="ann" text-anchor="start">$81.62, Jul 13</text><text x="654" y="120" class="ann" text-anchor="end">EIA series ends Jul 13 (&#8776;1-week lag);</text><text x="654" y="134" class="ann" text-anchor="end">futures traded ~$88&ndash;90 by Jul 20 &mdash;</text><text x="654" y="148" class="ann" text-anchor="end">different price type, not plotted</text><circle cx="52.0" cy="92.2" r="9" class="hit"><title>Apr 01, 2026: $119.56/bbl</title></circle><circle cx="57.9" cy="68.7" r="9" class="hit"><title>Apr 02, 2026: $127.61/bbl</title></circle><circle cx="87.2" cy="37.8" r="9" class="hit"><title>Apr 07, 2026: $138.21/bbl</title></circle><circle cx="93.0" cy="84.8" r="9" class="hit"><title>Apr 08, 2026: $122.11/bbl</title></circle><circle cx="98.9" cy="93.8" r="9" class="hit"><title>Apr 09, 2026: $119.03/bbl</title></circle><circle cx="104.8" cy="93.7" r="9" class="hit"><title>Apr 10, 2026: $119.07/bbl</title></circle><circle cx="122.4" cy="81.4" r="9" class="hit"><title>Apr 13, 2026: $123.28/bbl</title></circle><circle cx="128.2" cy="94.8" r="9" class="hit"><title>Apr 14, 2026: $118.69/bbl</title></circle><circle cx="134.1" cy="105.7" r="9" class="hit"><title>Apr 15, 2026: $114.93/bbl</title></circle><circle cx="140.0" cy="100.8" r="9" class="hit"><title>Apr 16, 2026: $116.63/bbl</title></circle><circle cx="145.8" cy="153.3" r="9" class="hit"><title>Apr 17, 2026: $98.63/bbl</title></circle><circle cx="163.4" cy="139.4" r="9" class="hit"><title>Apr 20, 2026: $103.40/bbl</title></circle><circle cx="169.3" cy="131.4" r="9" class="hit"><title>Apr 21, 2026: $106.14/bbl</title></circle><circle cx="175.1" cy="110.1" r="9" class="hit"><title>Apr 22, 2026: $113.44/bbl</title></circle><circle cx="181.0" cy="110.6" r="9" class="hit"><title>Apr 23, 2026: $113.25/bbl</title></circle><circle cx="186.9" cy="114.7" r="9" class="hit"><title>Apr 24, 2026: $111.86/bbl</title></circle><circle cx="204.5" cy="108.8" r="9" class="hit"><title>Apr 27, 2026: $113.89/bbl</title></circle><circle cx="210.3" cy="97.9" r="9" class="hit"><title>Apr 28, 2026: $117.62/bbl</title></circle><circle cx="216.2" cy="78.8" r="9" class="hit"><title>Apr 29, 2026: $124.16/bbl</title></circle><circle cx="222.1" cy="78.6" r="9" class="hit"><title>Apr 30, 2026: $124.24/bbl</title></circle><circle cx="227.9" cy="96.0" r="9" class="hit"><title>May 01, 2026: $118.26/bbl</title></circle><circle cx="251.4" cy="107.0" r="9" class="hit"><title>May 05, 2026: $114.51/bbl</title></circle><circle cx="257.2" cy="138.5" r="9" class="hit"><title>May 06, 2026: $103.70/bbl</title></circle><circle cx="263.1" cy="144.0" r="9" class="hit"><title>May 07, 2026: $101.82/bbl</title></circle><circle cx="269.0" cy="139.1" r="9" class="hit"><title>May 08, 2026: $103.48/bbl</title></circle><circle cx="286.6" cy="131.5" r="9" class="hit"><title>May 11, 2026: $106.11/bbl</title></circle><circle cx="292.4" cy="116.1" r="9" class="hit"><title>May 12, 2026: $111.37/bbl</title></circle><circle cx="298.3" cy="119.3" r="9" class="hit"><title>May 13, 2026: $110.28/bbl</title></circle><circle cx="304.2" cy="117.5" r="9" class="hit"><title>May 14, 2026: $110.91/bbl</title></circle><circle cx="310.0" cy="108.6" r="9" class="hit"><title>May 15, 2026: $113.96/bbl</title></circle><circle cx="327.6" cy="100.5" r="9" class="hit"><title>May 18, 2026: $116.73/bbl</title></circle><circle cx="333.5" cy="106.6" r="9" class="hit"><title>May 19, 2026: $114.64/bbl</title></circle><circle cx="339.3" cy="123.2" r="9" class="hit"><title>May 20, 2026: $108.93/bbl</title></circle><circle cx="345.2" cy="132.3" r="9" class="hit"><title>May 21, 2026: $105.84/bbl</title></circle><circle cx="351.1" cy="129.2" r="9" class="hit"><title>May 22, 2026: $106.90/bbl</title></circle><circle cx="374.5" cy="141.3" r="9" class="hit"><title>May 26, 2026: $102.75/bbl</title></circle><circle cx="380.4" cy="157.7" r="9" class="hit"><title>May 27, 2026: $97.11/bbl</title></circle><circle cx="386.3" cy="162.5" r="9" class="hit"><title>May 28, 2026: $95.47/bbl</title></circle><circle cx="392.1" cy="170.1" r="9" class="hit"><title>May 29, 2026: $92.88/bbl</title></circle><circle cx="409.7" cy="154.3" r="9" class="hit"><title>Jun 01, 2026: $98.29/bbl</title></circle><circle cx="415.6" cy="153.7" r="9" class="hit"><title>Jun 02, 2026: $98.49/bbl</title></circle><circle cx="421.4" cy="144.4" r="9" class="hit"><title>Jun 03, 2026: $101.69/bbl</title></circle><circle cx="427.3" cy="152.3" r="9" class="hit"><title>Jun 04, 2026: $98.98/bbl</title></circle><circle cx="433.2" cy="157.2" r="9" class="hit"><title>Jun 05, 2026: $97.29/bbl</title></circle><circle cx="450.8" cy="156.7" r="9" class="hit"><title>Jun 08, 2026: $97.46/bbl</title></circle><circle cx="456.6" cy="166.4" r="9" class="hit"><title>Jun 09, 2026: $94.15/bbl</title></circle><circle cx="462.5" cy="161.8" r="9" class="hit"><title>Jun 10, 2026: $95.73/bbl</title></circle><circle cx="468.3" cy="170.2" r="9" class="hit"><title>Jun 11, 2026: $92.84/bbl</title></circle><circle cx="474.2" cy="182.4" r="9" class="hit"><title>Jun 12, 2026: $88.64/bbl</title></circle><circle cx="491.8" cy="194.9" r="9" class="hit"><title>Jun 15, 2026: $84.36/bbl</title></circle><circle cx="497.7" cy="206.2" r="9" class="hit"><title>Jun 16, 2026: $80.50/bbl</title></circle><circle cx="503.5" cy="206.7" r="9" class="hit"><title>Jun 17, 2026: $80.33/bbl</title></circle><circle cx="509.4" cy="209.5" r="9" class="hit"><title>Jun 18, 2026: $79.35/bbl</title></circle><circle cx="515.3" cy="206.3" r="9" class="hit"><title>Jun 19, 2026: $80.46/bbl</title></circle><circle cx="532.9" cy="217.9" r="9" class="hit"><title>Jun 22, 2026: $76.49/bbl</title></circle><circle cx="538.7" cy="220.2" r="9" class="hit"><title>Jun 23, 2026: $75.69/bbl</title></circle><circle cx="544.6" cy="230.7" r="9" class="hit"><title>Jun 24, 2026: $72.09/bbl</title></circle><circle cx="550.4" cy="225.9" r="9" class="hit"><title>Jun 25, 2026: $73.74/bbl</title></circle><circle cx="556.3" cy="236.4" r="9" class="hit"><title>Jun 26, 2026: $70.16/bbl</title></circle><circle cx="573.9" cy="232.2" r="9" class="hit"><title>Jun 29, 2026: $71.59/bbl</title></circle><circle cx="579.8" cy="235.5" r="9" class="hit"><title>Jun 30, 2026: $70.46/bbl</title></circle><circle cx="585.6" cy="239.0" r="9" class="hit"><title>Jul 01, 2026: $69.24/bbl</title></circle><circle cx="591.5" cy="241.1" r="9" class="hit"><title>Jul 02, 2026: $68.53/bbl</title></circle><circle cx="597.4" cy="240.7" r="9" class="hit"><title>Jul 03, 2026: $68.68/bbl</title></circle><circle cx="615.0" cy="238.1" r="9" class="hit"><title>Jul 06, 2026: $69.56/bbl</title></circle><circle cx="620.8" cy="231.6" r="9" class="hit"><title>Jul 07, 2026: $71.78/bbl</title></circle><circle cx="626.7" cy="217.9" r="9" class="hit"><title>Jul 08, 2026: $76.50/bbl</title></circle><circle cx="632.5" cy="223.8" r="9" class="hit"><title>Jul 09, 2026: $74.46/bbl</title></circle><circle cx="638.4" cy="224.2" r="9" class="hit"><title>Jul 10, 2026: $74.34/bbl</title></circle><circle cx="656.0" cy="202.9" r="9" class="hit"><title>Jul 13, 2026: $81.62/bbl</title></circle></svg></div><details class="tbl"><summary>Data table</summary><table><thead><tr><th scope="col">Date</th><th scope="col">Brent spot, USD per barrel</th></tr></thead><tbody><tr><td>2026-04-01</td><td class="num">$119.56</td></tr><tr><td>2026-04-02</td><td class="num">$127.61</td></tr><tr><td>2026-04-07</td><td class="num">$138.21</td></tr><tr><td>2026-04-08</td><td class="num">$122.11</td></tr><tr><td>2026-04-09</td><td class="num">$119.03</td></tr><tr><td>2026-04-10</td><td class="num">$119.07</td></tr><tr><td>2026-04-13</td><td class="num">$123.28</td></tr><tr><td>2026-04-14</td><td class="num">$118.69</td></tr><tr><td>2026-04-15</td><td class="num">$114.93</td></tr><tr><td>2026-04-16</td><td class="num">$116.63</td></tr><tr><td>2026-04-17</td><td class="num">$98.63</td></tr><tr><td>2026-04-20</td><td class="num">$103.40</td></tr><tr><td>2026-04-21</td><td class="num">$106.14</td></tr><tr><td>2026-04-22</td><td class="num">$113.44</td></tr><tr><td>2026-04-23</td><td class="num">$113.25</td></tr><tr><td>2026-04-24</td><td class="num">$111.86</td></tr><tr><td>2026-04-27</td><td class="num">$113.89</td></tr><tr><td>2026-04-28</td><td class="num">$117.62</td></tr><tr><td>2026-04-29</td><td class="num">$124.16</td></tr><tr><td>2026-04-30</td><td class="num">$124.24</td></tr><tr><td>2026-05-01</td><td class="num">$118.26</td></tr><tr><td>2026-05-05</td><td class="num">$114.51</td></tr><tr><td>2026-05-06</td><td class="num">$103.70</td></tr><tr><td>2026-05-07</td><td class="num">$101.82</td></tr><tr><td>2026-05-08</td><td class="num">$103.48</td></tr><tr><td>2026-05-11</td><td class="num">$106.11</td></tr><tr><td>2026-05-12</td><td class="num">$111.37</td></tr><tr><td>2026-05-13</td><td class="num">$110.28</td></tr><tr><td>2026-05-14</td><td class="num">$110.91</td></tr><tr><td>2026-05-15</td><td class="num">$113.96</td></tr><tr><td>2026-05-18</td><td class="num">$116.73</td></tr><tr><td>2026-05-19</td><td class="num">$114.64</td></tr><tr><td>2026-05-20</td><td class="num">$108.93</td></tr><tr><td>2026-05-21</td><td class="num">$105.84</td></tr><tr><td>2026-05-22</td><td class="num">$106.90</td></tr><tr><td>2026-05-26</td><td class="num">$102.75</td></tr><tr><td>2026-05-27</td><td class="num">$97.11</td></tr><tr><td>2026-05-28</td><td class="num">$95.47</td></tr><tr><td>2026-05-29</td><td class="num">$92.88</td></tr><tr><td>2026-06-01</td><td class="num">$98.29</td></tr><tr><td>2026-06-02</td><td class="num">$98.49</td></tr><tr><td>2026-06-03</td><td class="num">$101.69</td></tr><tr><td>2026-06-04</td><td class="num">$98.98</td></tr><tr><td>2026-06-05</td><td class="num">$97.29</td></tr><tr><td>2026-06-08</td><td class="num">$97.46</td></tr><tr><td>2026-06-09</td><td class="num">$94.15</td></tr><tr><td>2026-06-10</td><td class="num">$95.73</td></tr><tr><td>2026-06-11</td><td class="num">$92.84</td></tr><tr><td>2026-06-12</td><td class="num">$88.64</td></tr><tr><td>2026-06-15</td><td class="num">$84.36</td></tr><tr><td>2026-06-16</td><td class="num">$80.50</td></tr><tr><td>2026-06-17</td><td class="num">$80.33</td></tr><tr><td>2026-06-18</td><td class="num">$79.35</td></tr><tr><td>2026-06-19</td><td class="num">$80.46</td></tr><tr><td>2026-06-22</td><td class="num">$76.49</td></tr><tr><td>2026-06-23</td><td class="num">$75.69</td></tr><tr><td>2026-06-24</td><td class="num">$72.09</td></tr><tr><td>2026-06-25</td><td class="num">$73.74</td></tr><tr><td>2026-06-26</td><td class="num">$70.16</td></tr><tr><td>2026-06-29</td><td class="num">$71.59</td></tr><tr><td>2026-06-30</td><td class="num">$70.46</td></tr><tr><td>2026-07-01</td><td class="num">$69.24</td></tr><tr><td>2026-07-02</td><td class="num">$68.53</td></tr><tr><td>2026-07-03</td><td class="num">$68.68</td></tr><tr><td>2026-07-06</td><td class="num">$69.56</td></tr><tr><td>2026-07-07</td><td class="num">$71.78</td></tr><tr><td>2026-07-08</td><td class="num">$76.50</td></tr><tr><td>2026-07-09</td><td class="num">$74.46</td></tr><tr><td>2026-07-10</td><td class="num">$74.34</td></tr><tr><td>2026-07-13</td><td class="num">$81.62</td></tr></tbody></table></details><figcaption>Source: US Energy Information Administration, daily Europe Brent spot price (free-on-board), retrieved July 21, 2026.</figcaption></figure><figure class="chart"><div class="chart-title">Hormuz traffic down ~89% &mdash; 10 ships vs a normal 88 &mdash; a collapse with no post-1945 precedent</div><div class="chart-msg">One lagged post-attack observation has been published, so this is a two-bar comparison, not a trend: traffic at the world's largest oil chokepoint is down roughly 89% &mdash; a collapse with no post-1945 precedent.</div><div class="chart-wrap"><svg viewBox="0 0 680 172" role="img" xmlns="http://www.w3.org/2000/svg"><text x="674" y="14" class="tick unit" text-anchor="end">ships per day</text><path d="M 16,32 h 584.0 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -584.0 z" class="bar"><title>Normal (pre-crisis baseline): 88 ships</title></path><text x="16" y="24" class="blab">Normal (pre-crisis baseline)</text><text x="612.0" y="47.0" class="val">88 ships</text><line x1="347.8" y1="26" x2="347.8" y2="60" class="ref-dash"/><text x="342.8" y="70" class="ann" text-anchor="end">falsifier trips at &gt;50 ships/day</text><line x1="460" y1="58" x2="460" y2="88" class="arrow"/><path d="M 455,88 L 465,88 L 460,96 z" class="arrowhead"/><text x="470" y="80" class="val">&minus;89%</text><text x="16" y="112" class="blab">July 12, 2026 &mdash; latest published count, 8 days old at publication</text><path d="M 16,120 h 62.8 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -62.8 z" class="bar"><title>July 12, 2026 (latest published count): 10 ships</title></path><text x="90.8" y="135.0" class="val">10 ships</text><line x1="16" y1="10" x2="16" y2="148" class="axis"/></svg></div><details class="tbl"><summary>Data table</summary><table><thead><tr><th scope="col">Period</th><th scope="col">Strait of Hormuz transits</th></tr></thead><tbody><tr><td>Normal (pre-crisis baseline)</td><td class="num">≈88 ships/day</td></tr><tr><td>2026-07-12</td><td class="num">≈10 ships</td></tr></tbody></table></details><figcaption>Source: straits.live transit count, corroborated by IMF PortWatch (per verifier); latest published count is multi-day-lagged.</figcaption></figure>
+<p><span class="lbl">Data.</span> Brent intraday high $90.79/barrel, pared to ~$88.26 (July 20); weekly gain
+15.9%, largest since April (week ended July 17); Hormuz transits ~10 ships vs ~88/day normal (July 12); hull
+war-risk insurance ~12&ndash;40&times; pre-crisis (July 17); crisis arc in official spot data: $138.21 peak
+(April 7) to $68.53 truce low (July 2).</p>
+<p class="srcs"><span class="lbl">Sources.</span> Reuters via Yahoo Finance (B1); Bloomberg (B1); Axios (B2);
+Trading Economics, exchange data (B2). Best composite grade after verification (IMF PortWatch corroboration):
+<strong>A2</strong>.</p>
+
+<h3 id="item-2">2. Moonshot AI's Kimi K3 shock enters phase two: subscriptions paused, Hong Kong listing push, chip rout stabilizes</h3>
+<p class="meta"><strong>Status:</strong> confirmed &middot; <strong>Confidence:</strong> 0.88
+(verifier-revised from 0.90) &middot; <strong>Beat:</strong> tech &amp; AI &middot;
+<strong>Best source grade:</strong> A1</p>
+<p><span class="lbl">What happened.</span> Beijing-based Moonshot AI &mdash; whose 2.8-trillion-parameter Kimi
+K3 model, released July 16&ndash;17 at the World Artificial Intelligence Conference in Shanghai, triggered the
+worst weekly rout in semiconductor stocks since April 2025 &mdash; took two consequential steps over the
+weekend. It circulated a shareholder resolution on Sunday, July 19 seeking approval for a Hong Kong initial
+public offering within six months at a valuation above $30 billion (a detail the verifier traced to Bloomberg
+rather than the originally cited wire story), and over the same July 19&ndash;20 weekend it paused all new
+Kimi K3 subscriptions, saying 48 hours of demand had pushed its computing capacity to its limits; existing
+subscribers are unaffected and capacity will reopen in batches. One label needs care: K3 is billed as the
+largest &ldquo;open-weight&rdquo; model, but the weights themselves are only promised for publication on July
+27 &mdash; until then it is a commitment, not a fact. The selloff K3 triggered &mdash; an estimated $3.3
+trillion erased from global semiconductor market value (a single-origin estimate, directionally confirmed by
+the index move), with the Philadelphia Semiconductor Index more than 20% below its late-June peak &mdash;
+paused on Monday, July 20, a major semiconductor exchange-traded fund rising about 2.6% intraday as Big Tech
+earnings week began.</p>
+<p><span class="lbl">Why it matters.</span> This is the most direct test since the January 2025 DeepSeek
+episode of the core assumption funding the artificial-intelligence buildout: that frontier capability requires
+proportional Western capital spending on chips and data centers. Two facts cut against the bear case.
+Moonshot's own compute ran out within days of launch &mdash; demand for running models is real and physically
+binding, even in China &mdash; and Taiwan Semiconductor Manufacturing Company reported a 77% year-over-year
+profit jump and raised guidance the same week the rout unfolded. It is likely (55&ndash;80%) that this rout,
+like DeepSeek's, fails to dent announced hyperscaler capital spending &mdash; though a Chinese open-weight
+model at claimed near-frontier quality permanently pressures Western model pricing power. Falsifier:
+capital-spending guidance cuts in the July 21&ndash;31 earnings round would invalidate the &ldquo;demand is
+intact&rdquo; read.</p>
+<h4>The mechanics</h4>
+<p>The system in play is the machinery of the entire digital economy. Semiconductors are a roughly
+$700-billion-a-year industry whose stock-market value had been bid to many multiples of that on a single
+thesis: that frontier artificial intelligence requires staggering, ongoing Western capital spending &mdash;
+the four biggest American cloud builders (Microsoft, Alphabet, Amazon, Meta) have guided toward roughly half a
+trillion dollars of 2026 capital outlays, most of it data centers and the chips inside them, and about 90% of
+the world's most advanced chips come out of one company, Taiwan Semiconductor Manufacturing Company. A Chinese
+startup releasing a claimed near-frontier model, with a promise to publish the model's weights for anyone to
+download on July 27, attacks that thesis at its root: if frontier capability turns out to be cheap and
+copyable, hundreds of billions in planned spending looks like malinvestment. That is the mechanism behind the
+roughly $3.3 trillion (a single-origin estimate, but directionally confirmed) wiped off chip stocks worldwide
+in the week of Kimi K3's July 16&ndash;17 launch &mdash; an erasure comparable to the annual economic output of
+France, or nearly five years of the entire chip industry's revenue. Two hard facts cut the other way:
+Moonshot's own computing capacity buckled within about 96 hours of launch &mdash; meaning demand for running
+these models is real and physically binding even in China &mdash; and Taiwan Semiconductor, the company that
+would feel a real demand collapse first, reported a 77% jump in quarterly profit and raised its 2026
+investment budget to $60&ndash;64 billion the very week the rout unfolded.</p>
+<p>Two calibrating facts, both from the exchange tape rather than the headlines. First, the closest precedent:
+on January 27, 2025, the release of China's DeepSeek R1 model knocked 9.1% off the Philadelphia Semiconductor
+Index (a basket of 30 major chip companies) in one day and erased $589 billion from Nvidia alone &mdash; then
+the largest one-day loss of value by any company in history. Within days the big cloud builders reaffirmed and
+even raised their spending plans, and the index regained its pre-shock level in 18 trading days. Second, this
+rout was mostly not K3's doing: the index had already fallen 15.3% from its June 22 peak by July 15, the day
+before K3 appeared; the launch added a final 5.8% over two days, tipping the drawdown past the 20% bear-market
+line on July 17. K3 was the trigger pulled on an already-primed valuation correction, not the whole cause
+&mdash; which is precisely why the DeepSeek precedent (sharp shock, fast reversal once spending plans were
+confirmed) is the right template, and why the July 21&ndash;31 earnings round, when those spending plans are
+either reaffirmed or cut, is the event that resolves the question. It is likely (55&ndash;80%) the capex holds;
+a guidance cut would falsify it within ten days.</p>
+<figure class="chart"><div class="chart-title">The chip rout was mostly pre-K3: &minus;15.3% before launch; the two K3 days added the final 5.8%</div><div class="chart-msg">The rout was mostly pre-K3: from the June 22 record the index was already down 15.3% by July 15, the day before Kimi K3 launched; the two launch days added a further 5.8%, tipping the drawdown to &minus;20.2% and past the bear-market line, before a +0.6% stabilization on July 20. K3 triggered the final leg of an already-primed correction, not the whole slide.</div><div class="chart-wrap"><svg viewBox="0 0 680 300" role="img" xmlns="http://www.w3.org/2000/svg"><line x1="52" y1="266.0" x2="656" y2="266.0" class="grid"/><text x="44" y="270.0" class="tick" text-anchor="end">11,000</text><line x1="52" y1="204.0" x2="656" y2="204.0" class="grid"/><text x="44" y="208.0" class="tick" text-anchor="end">12,000</text><line x1="52" y1="142.0" x2="656" y2="142.0" class="grid"/><text x="44" y="146.0" class="tick" text-anchor="end">13,000</text><line x1="52" y1="80.0" x2="656" y2="80.0" class="grid"/><text x="44" y="84.0" class="tick" text-anchor="end">14,000</text><line x1="52" y1="18.0" x2="656" y2="18.0" class="grid"/><text x="44" y="22.0" class="tick" text-anchor="end">15,000</text><text x="8" y="12" class="tick unit" text-anchor="start">index pts</text><line x1="52" y1="266" x2="656" y2="266" class="axis"/><line x1="52.0" y1="266" x2="52.0" y2="270" class="axis"/><text x="52.0" y="284" class="tick" text-anchor="middle">Jun 1</text><line x1="224.6" y1="266" x2="224.6" y2="270" class="axis"/><text x="224.6" y="284" class="tick" text-anchor="middle">Jun 15</text><line x1="421.8" y1="266" x2="421.8" y2="270" class="axis"/><text x="421.8" y="284" class="tick" text-anchor="middle">Jul 1</text><line x1="594.4" y1="266" x2="594.4" y2="270" class="axis"/><text x="594.4" y="284" class="tick" text-anchor="middle">Jul 15</text><rect x="600.5" y="16" width="24.7" height="250" class="evband"/><line x1="52" y1="222.1" x2="656" y2="222.1" class="ref-dash"/><text x="56" y="218" class="ann" text-anchor="start">bear-market line (&minus;20% from Jun 22 record)</text><line x1="606.7" y1="16" x2="606.7" y2="266" class="ref"/><text x="600.7" y="28" class="ann" text-anchor="end">Kimi K3 launch</text><path d="M 52.0,144.1 L 64.3,97.0 L 76.7,85.1 L 89.0,103.7 L 101.3,190.3 L 138.3,147.8 L 150.6,163.2 L 162.9,191.2 L 175.3,131.4 L 187.6,119.0 L 224.6,73.8 L 236.9,123.8 L 249.2,112.4 L 261.6,58.8 L 310.9,40.6 L 323.2,112.1 L 335.5,113.6 L 347.8,83.7 L 360.2,129.4 L 397.1,98.0 L 409.5,64.7 L 421.8,120.1 L 434.1,165.2 L 483.4,148.2 L 495.8,185.4 L 508.1,168.4 L 520.4,144.5 L 532.7,144.0 L 569.7,182.4 L 582.0,163.0 L 594.4,179.3 L 606.7,212.2 L 619.0,224.2 L 656.0,219.9" class="series-line"/><circle cx="310.9" cy="40.6" r="4.5" class="marker"/><text x="318.9" y="32.6" class="ann" text-anchor="start">14,634.7 record, Jun 22</text><circle cx="594.4" cy="179.3" r="4.5" class="marker"/><text x="584.4" y="203.3" class="ann" text-anchor="end">−15.3% by Jul 15,</text><text x="584.4" y="217.3" class="ann" text-anchor="end">pre-launch</text><circle cx="619.0" cy="224.2" r="4.5" class="marker"/><text x="615.0" y="258.2" class="ann" text-anchor="end">11,673.9 Jul 17 (−20.2%)</text><circle cx="656.0" cy="219.9" r="4.5" class="marker"/><text x="650.0" y="240.0" class="ann" text-anchor="end">+0.6% stabilization, Jul 20</text><circle cx="52.0" cy="144.1" r="9" class="hit"><title>Jun 01, 2026: 12,965.65</title></circle><circle cx="64.3" cy="97.0" r="9" class="hit"><title>Jun 02, 2026: 13,726.27</title></circle><circle cx="76.7" cy="85.1" r="9" class="hit"><title>Jun 03, 2026: 13,916.96</title></circle><circle cx="89.0" cy="103.7" r="9" class="hit"><title>Jun 04, 2026: 13,617.50</title></circle><circle cx="101.3" cy="190.3" r="9" class="hit"><title>Jun 05, 2026: 12,220.76</title></circle><circle cx="138.3" cy="147.8" r="9" class="hit"><title>Jun 08, 2026: 12,906.69</title></circle><circle cx="150.6" cy="163.2" r="9" class="hit"><title>Jun 09, 2026: 12,657.81</title></circle><circle cx="162.9" cy="191.2" r="9" class="hit"><title>Jun 10, 2026: 12,206.46</title></circle><circle cx="175.3" cy="131.4" r="9" class="hit"><title>Jun 11, 2026: 13,171.44</title></circle><circle cx="187.6" cy="119.0" r="9" class="hit"><title>Jun 12, 2026: 13,371.47</title></circle><circle cx="224.6" cy="73.8" r="9" class="hit"><title>Jun 15, 2026: 14,099.62</title></circle><circle cx="236.9" cy="123.8" r="9" class="hit"><title>Jun 16, 2026: 13,294.22</title></circle><circle cx="249.2" cy="112.4" r="9" class="hit"><title>Jun 17, 2026: 13,477.07</title></circle><circle cx="261.6" cy="58.8" r="9" class="hit"><title>Jun 18, 2026: 14,341.78</title></circle><circle cx="310.9" cy="40.6" r="9" class="hit"><title>Jun 22, 2026: 14,634.72</title></circle><circle cx="323.2" cy="112.1" r="9" class="hit"><title>Jun 23, 2026: 13,482.51</title></circle><circle cx="335.5" cy="113.6" r="9" class="hit"><title>Jun 24, 2026: 13,458.20</title></circle><circle cx="347.8" cy="83.7" r="9" class="hit"><title>Jun 25, 2026: 13,940.87</title></circle><circle cx="360.2" cy="129.4" r="9" class="hit"><title>Jun 26, 2026: 13,203.57</title></circle><circle cx="397.1" cy="98.0" r="9" class="hit"><title>Jun 29, 2026: 13,709.66</title></circle><circle cx="409.5" cy="64.7" r="9" class="hit"><title>Jun 30, 2026: 14,246.96</title></circle><circle cx="421.8" cy="120.1" r="9" class="hit"><title>Jul 01, 2026: 13,353.28</title></circle><circle cx="434.1" cy="165.2" r="9" class="hit"><title>Jul 02, 2026: 12,626.22</title></circle><circle cx="483.4" cy="148.2" r="9" class="hit"><title>Jul 06, 2026: 12,900.14</title></circle><circle cx="495.8" cy="185.4" r="9" class="hit"><title>Jul 07, 2026: 12,300.52</title></circle><circle cx="508.1" cy="168.4" r="9" class="hit"><title>Jul 08, 2026: 12,574.97</title></circle><circle cx="520.4" cy="144.5" r="9" class="hit"><title>Jul 09, 2026: 12,960.00</title></circle><circle cx="532.7" cy="144.0" r="9" class="hit"><title>Jul 10, 2026: 12,967.16</title></circle><circle cx="569.7" cy="182.4" r="9" class="hit"><title>Jul 13, 2026: 12,347.78</title></circle><circle cx="582.0" cy="163.0" r="9" class="hit"><title>Jul 14, 2026: 12,661.93</title></circle><circle cx="594.4" cy="179.3" r="9" class="hit"><title>Jul 15, 2026: 12,398.89</title></circle><circle cx="606.7" cy="212.2" r="9" class="hit"><title>Jul 16, 2026: 11,867.50</title></circle><circle cx="619.0" cy="224.2" r="9" class="hit"><title>Jul 17, 2026: 11,673.89</title></circle><circle cx="656.0" cy="219.9" r="9" class="hit"><title>Jul 20, 2026: 11,743.85</title></circle></svg></div><details class="tbl"><summary>Data table</summary><table><thead><tr><th scope="col">Date</th><th scope="col">Philadelphia Semiconductor Index close</th></tr></thead><tbody><tr><td>2026-06-01</td><td class="num">12,965.65</td></tr><tr><td>2026-06-02</td><td class="num">13,726.27</td></tr><tr><td>2026-06-03</td><td class="num">13,916.96</td></tr><tr><td>2026-06-04</td><td class="num">13,617.50</td></tr><tr><td>2026-06-05</td><td class="num">12,220.76</td></tr><tr><td>2026-06-08</td><td class="num">12,906.69</td></tr><tr><td>2026-06-09</td><td class="num">12,657.81</td></tr><tr><td>2026-06-10</td><td class="num">12,206.46</td></tr><tr><td>2026-06-11</td><td class="num">13,171.44</td></tr><tr><td>2026-06-12</td><td class="num">13,371.47</td></tr><tr><td>2026-06-15</td><td class="num">14,099.62</td></tr><tr><td>2026-06-16</td><td class="num">13,294.22</td></tr><tr><td>2026-06-17</td><td class="num">13,477.07</td></tr><tr><td>2026-06-18</td><td class="num">14,341.78</td></tr><tr><td>2026-06-22</td><td class="num">14,634.72</td></tr><tr><td>2026-06-23</td><td class="num">13,482.51</td></tr><tr><td>2026-06-24</td><td class="num">13,458.20</td></tr><tr><td>2026-06-25</td><td class="num">13,940.87</td></tr><tr><td>2026-06-26</td><td class="num">13,203.57</td></tr><tr><td>2026-06-29</td><td class="num">13,709.66</td></tr><tr><td>2026-06-30</td><td class="num">14,246.96</td></tr><tr><td>2026-07-01</td><td class="num">13,353.28</td></tr><tr><td>2026-07-02</td><td class="num">12,626.22</td></tr><tr><td>2026-07-06</td><td class="num">12,900.14</td></tr><tr><td>2026-07-07</td><td class="num">12,300.52</td></tr><tr><td>2026-07-08</td><td class="num">12,574.97</td></tr><tr><td>2026-07-09</td><td class="num">12,960.00</td></tr><tr><td>2026-07-10</td><td class="num">12,967.16</td></tr><tr><td>2026-07-13</td><td class="num">12,347.78</td></tr><tr><td>2026-07-14</td><td class="num">12,661.93</td></tr><tr><td>2026-07-15</td><td class="num">12,398.89</td></tr><tr><td>2026-07-16</td><td class="num">11,867.50</td></tr><tr><td>2026-07-17</td><td class="num">11,673.89</td></tr><tr><td>2026-07-20</td><td class="num">11,743.85</td></tr></tbody></table></details><figcaption>Source: PHLX Semiconductor Index (^SOX), Nasdaq Global Index Data Service closes via Yahoo Finance chart API, retrieved July 21, 2026.</figcaption></figure><figure class="chart"><div class="chart-title">The template: DeepSeek's &minus;9.1% shock fully retraced in 18 trading days</div><div class="chart-msg">The base-rate template: DeepSeek knocked 9.1% off the index in one day, and once hyperscalers reaffirmed capital spending the index regained its pre-shock level in 18 trading days (February 20 close within 0.6% of January 24). The slide visible after February 20 in the wider record was tariff-driven, not a DeepSeek relapse.</div><div class="chart-wrap"><svg viewBox="0 0 680 300" role="img" xmlns="http://www.w3.org/2000/svg"><line x1="52" y1="266.0" x2="656" y2="266.0" class="grid"/><text x="44" y="270.0" class="tick" text-anchor="end">4,700</text><line x1="52" y1="183.3" x2="656" y2="183.3" class="grid"/><text x="44" y="187.3" class="tick" text-anchor="end">5,000</text><line x1="52" y1="100.7" x2="656" y2="100.7" class="grid"/><text x="44" y="104.7" class="tick" text-anchor="end">5,300</text><line x1="52" y1="18.0" x2="656" y2="18.0" class="grid"/><text x="44" y="22.0" class="tick" text-anchor="end">5,600</text><text x="8" y="12" class="tick unit" text-anchor="start">index pts</text><line x1="52" y1="266" x2="656" y2="266" class="axis"/><line x1="52.0" y1="266" x2="52.0" y2="270" class="axis"/><text x="52.0" y="284" class="tick" text-anchor="middle">Jan 21</text><line x1="313.7" y1="266" x2="313.7" y2="270" class="axis"/><text x="313.7" y="284" class="tick" text-anchor="middle">Feb 3</text><line x1="615.7" y1="266" x2="615.7" y2="270" class="axis"/><text x="615.7" y="284" class="tick" text-anchor="middle">Feb 18</text><line x1="52" y1="89.1" x2="656" y2="89.1" class="ref-dash"/><line x1="172.8" y1="16" x2="172.8" y2="266" class="ref"/><text x="177.8" y="28" class="ann">DeepSeek R1</text><path d="M 52.0,79.0 L 72.1,54.0 L 92.3,60.8 L 112.4,89.1 L 172.8,223.8 L 192.9,209.0 L 213.1,205.9 L 233.2,174.9 L 253.3,179.0 L 313.7,204.1 L 333.9,189.8 L 354.0,158.1 L 374.1,157.8 L 394.3,180.8 L 454.7,160.6 L 474.8,161.3 L 494.9,158.3 L 515.1,140.2 L 535.2,139.0 L 615.7,115.0 L 635.9,98.0 L 656.0,97.7" class="series-line"/><circle cx="112.4" cy="89.1" r="4.5" class="marker"/><text x="122.4" y="83.1" class="ann" text-anchor="start">5,341.9 pre-shock level, Jan 24</text><circle cx="172.8" cy="223.8" r="4.5" class="marker"/><text x="180.8" y="239.8" class="ann" text-anchor="start">4,853.2 (−9.1% in a day)</text><circle cx="656.0" cy="97.7" r="4.5" class="marker"/><text x="650.0" y="70.0" class="ann" text-anchor="end">5,310.6 — back at the</text><text x="650.0" y="84.0" class="ann" text-anchor="end">pre-shock line in 18 sessions</text><text x="654" y="226" class="ann" text-anchor="end">window ends at recovery;</text><text x="654" y="240" class="ann" text-anchor="end">the late-Feb slide that followed was tariff-driven</text><text x="654" y="254" class="ann" text-anchor="end">(n=1 — treat as template, not law)</text><circle cx="52.0" cy="79.0" r="9" class="hit"><title>Jan 21, 2025: 5,378.50</title></circle><circle cx="72.1" cy="54.0" r="9" class="hit"><title>Jan 22, 2025: 5,469.29</title></circle><circle cx="92.3" cy="60.8" r="9" class="hit"><title>Jan 23, 2025: 5,444.69</title></circle><circle cx="112.4" cy="89.1" r="9" class="hit"><title>Jan 24, 2025: 5,341.94</title></circle><circle cx="172.8" cy="223.8" r="9" class="hit"><title>Jan 27, 2025: 4,853.24</title></circle><circle cx="192.9" cy="209.0" r="9" class="hit"><title>Jan 28, 2025: 4,907.03</title></circle><circle cx="213.1" cy="205.9" r="9" class="hit"><title>Jan 29, 2025: 4,918.10</title></circle><circle cx="233.2" cy="174.9" r="9" class="hit"><title>Jan 30, 2025: 5,030.53</title></circle><circle cx="253.3" cy="179.0" r="9" class="hit"><title>Jan 31, 2025: 5,015.85</title></circle><circle cx="313.7" cy="204.1" r="9" class="hit"><title>Feb 03, 2025: 4,924.81</title></circle><circle cx="333.9" cy="189.8" r="9" class="hit"><title>Feb 04, 2025: 4,976.59</title></circle><circle cx="354.0" cy="158.1" r="9" class="hit"><title>Feb 05, 2025: 5,091.50</title></circle><circle cx="374.1" cy="157.8" r="9" class="hit"><title>Feb 06, 2025: 5,092.59</title></circle><circle cx="394.3" cy="180.8" r="9" class="hit"><title>Feb 07, 2025: 5,009.34</title></circle><circle cx="454.7" cy="160.6" r="9" class="hit"><title>Feb 10, 2025: 5,082.67</title></circle><circle cx="474.8" cy="161.3" r="9" class="hit"><title>Feb 11, 2025: 5,079.97</title></circle><circle cx="494.9" cy="158.3" r="9" class="hit"><title>Feb 12, 2025: 5,090.79</title></circle><circle cx="515.1" cy="140.2" r="9" class="hit"><title>Feb 13, 2025: 5,156.39</title></circle><circle cx="535.2" cy="139.0" r="9" class="hit"><title>Feb 14, 2025: 5,160.94</title></circle><circle cx="615.7" cy="115.0" r="9" class="hit"><title>Feb 18, 2025: 5,247.86</title></circle><circle cx="635.9" cy="98.0" r="9" class="hit"><title>Feb 19, 2025: 5,309.69</title></circle><circle cx="656.0" cy="97.7" r="9" class="hit"><title>Feb 20, 2025: 5,310.63</title></circle></svg></div><details class="tbl"><summary>Data table</summary><table><thead><tr><th scope="col">Date</th><th scope="col">Philadelphia Semiconductor Index close</th></tr></thead><tbody><tr><td>2025-01-21</td><td class="num">5,378.50</td></tr><tr><td>2025-01-22</td><td class="num">5,469.29</td></tr><tr><td>2025-01-23</td><td class="num">5,444.69</td></tr><tr><td>2025-01-24</td><td class="num">5,341.94</td></tr><tr><td>2025-01-27</td><td class="num">4,853.24</td></tr><tr><td>2025-01-28</td><td class="num">4,907.03</td></tr><tr><td>2025-01-29</td><td class="num">4,918.10</td></tr><tr><td>2025-01-30</td><td class="num">5,030.53</td></tr><tr><td>2025-01-31</td><td class="num">5,015.85</td></tr><tr><td>2025-02-03</td><td class="num">4,924.81</td></tr><tr><td>2025-02-04</td><td class="num">4,976.59</td></tr><tr><td>2025-02-05</td><td class="num">5,091.50</td></tr><tr><td>2025-02-06</td><td class="num">5,092.59</td></tr><tr><td>2025-02-07</td><td class="num">5,009.34</td></tr><tr><td>2025-02-10</td><td class="num">5,082.67</td></tr><tr><td>2025-02-11</td><td class="num">5,079.97</td></tr><tr><td>2025-02-12</td><td class="num">5,090.79</td></tr><tr><td>2025-02-13</td><td class="num">5,156.39</td></tr><tr><td>2025-02-14</td><td class="num">5,160.94</td></tr><tr><td>2025-02-18</td><td class="num">5,247.86</td></tr><tr><td>2025-02-19</td><td class="num">5,309.69</td></tr><tr><td>2025-02-20</td><td class="num">5,310.63</td></tr></tbody></table></details><figcaption>Source: PHLX Semiconductor Index (^SOX), Nasdaq Global Index Data Service closes via Yahoo Finance chart API, retrieved July 21, 2026.</figcaption></figure>
+<p><span class="lbl">Data.</span> Kimi K3: 2.8 trillion parameters, 1-million-token context window (July 16);
+estimated $3.3 trillion global chip market value erased since the launch (July 20, single-origin estimate);
+Philadelphia Semiconductor Index &minus;20.2% from its June 22 record at Friday's close (July 17);
+new-subscription pause announced (July 19&ndash;20); semiconductor exchange-traded fund +~2.6% intraday Monday
+(July 20); TSMC: net income +77.4% year-over-year, 2026 capital budget raised to $60&ndash;64 billion (July 16,
+company release / SEC filing, A1).</p>
+<p class="angle"><span class="lbl">Tech/AI angle.</span> An open-weight 2.8-trillion-parameter Chinese model
+hitting compute capacity limits within 96 hours of launch is direct evidence that inference compute, not model
+weights, is the binding strategic resource.</p>
+<p class="srcs"><span class="lbl">Sources.</span> Reuters syndicated (B1); Caixin Global (B2); Fortune (B2);
+TechTimes (C3 &mdash; the $3.3T estimate's weakest carrier). Best grade after verification (TSMC earnings via
+SEC Form 6-K): <strong>A1</strong>.</p>
+
+<h3 id="item-3">3. US tariff regime hits a legal cliff this week: Section 122 blanket 10% expires July 24, Section 301 replacement not yet finalized</h3>
+<p class="meta"><strong>Status:</strong> confirmed &middot; <strong>Confidence:</strong> 0.85
+(verifier-revised from 0.80) &middot; <strong>Beat:</strong> supply chains &amp; trade &middot;
+<strong>Best source grade:</strong> A1</p>
+<p><span class="lbl">What happened.</span> The blanket 10% tariff imposed February 24 under Section 122 of the
+Trade Act of 1974 &mdash; a balance-of-payments authority statutorily capped at 150 days &mdash; sunsets this
+Friday, July 24, and cannot be extended without Congress. The intended replacement, built on Section 301 of
+the same act (an unfair-trade-practices authority), would set duties of 12.5% on 46 economies including China,
+India, Japan, South Korea and Vietnam, and 10% on 14 others, based on forced-labor findings announced June 2;
+the Federal Register confirms no final determination has been published as of July 20. One correction from
+verification: the widely reported &ldquo;July 20 completion deadline&rdquo; for that determination could not be
+confirmed in any primary source, so the accurate framing is that the administrative record closed July 16 and
+the only binding date is Friday's statutory sunset &mdash; and the &ldquo;record June port volumes&rdquo;
+front-loading claim was cut as unsourced. A separate 25% Section 301 duty on Brazil (with substantial
+carve-outs for beef, orange juice, civil aircraft and energy) takes effect Wednesday, July 22. If the broad
+action is not in place by Friday, importers revert temporarily to the old default rates &mdash; roughly 2% on
+average &mdash; plus surviving steel/aluminum and China-specific duties. European Union goods are insulated,
+having moved to a 15% all-inclusive ceiling on July 1 under the US-EU deal.</p>
+<p><span class="lbl">Why it matters.</span> This is the single largest scheduled change in the applied United
+States tariff schedule this year, covering most of roughly $3 trillion in annual goods imports. A gap between
+Friday's expiry and the replacement would create a short low-tariff window that every importer with cargo on
+the water can see. And unlike Section 122, Section 301 has no rate cap and no time limit &mdash; the 12.5%
+proposal is a floor that can be ratcheted. Judgment: it is likely (55&ndash;80%) the administration finalizes
+the Section 301 action within days of the deadline rather than allowing a prolonged gap; resolution is
+observable in the Federal Register by July 24.</p>
+<h4>The mechanics</h4>
+<p>The United States buys about $3.3 trillion of goods from abroad each year &mdash; roughly $9 billion
+crossing the border every day, making it the world's largest importer, taking in around one-eighth of
+everything traded globally. Tariffs are collected at the moment goods clear customs, so the rate in force on
+any given day is worth real money: at the current blanket 10%, each day represents roughly $900 million in
+duty. For decades that hardly mattered &mdash; the average United States tariff had drifted down to about 2%,
+and monthly customs collections ran near $7.5 billion as recently as early 2025. The 2025&ndash;26 tariff
+regime quadrupled that, peaking at $33 billion in October 2025. But blanket tariffs rest on borrowed legal
+authority: the Constitution gives tariff power to Congress, and presidents act through delegated statutes,
+each with built-in tripwires. The statute carrying the current 10% (Section 122 of the Trade Act of 1974, a
+balance-of-payments tool) is fast to invoke but self-destructs after 150 days &mdash; a clock that runs out
+this Friday, July 24, and only Congress can extend. Its intended replacement (Section 301, an
+unfair-trade-practices tool proposing 12.5% on 46 economies and 10% on 14 others) is slow &mdash;
+investigation, comments, hearings &mdash; but has no rate cap and no expiration. The government is mid-handoff
+between the two: the administrative record closed July 16, yet no final decision has been published. If the
+second leg is not down by Friday, most imports revert for however long the gap lasts to the old roughly-2%
+default rates &mdash; an arbitrage visible to every importer with cargo on the water.</p>
+<p>Two episodes calibrate expectations. The only prior blanket import surcharge in modern American history was
+Richard Nixon's, imposed August 15, 1971 at the same 10%: it lasted barely four months, lifted that December
+after a currency deal, and an alarmed Congress then wrote the very 150-day fuse now burning into the 1974
+Trade Act. More recently and more tellingly, when the Supreme Court struck down the previous emergency-powers
+tariffs in early 2026, the administration re-imposed the blanket 10% under Section 122 within days &mdash;
+evidence that these handoffs get executed fast when the White House wants continuity. The residue of that
+episode sits in the Treasury's own books: net customs receipts in June 2026 were minus $25.6 billion, as
+refunds of the struck-down tariffs flowed out faster than new duties came in &mdash; a reminder that tariffs
+imposed on shaky authority can be unwound, expensively. The 2018&ndash;19 China tariff rounds taught importers
+the other half of the game: front-run every effective date, so any gap after Friday should produce a visible
+surge of customs entries. It is likely (55&ndash;80%) the replacement is finalized within days of the deadline;
+the question resolves in the Federal Register by July 24.</p>
+<figure class="chart"><div class="chart-title">~$23 billion a month rides on Friday: the revenue whose legal basis expires July 24</div><div class="chart-msg">Collections ran about $7.5B a month through early 2025, quadrupled under the 2025 tariff regime to a $33.1B peak in October 2025, and have settled near $22&ndash;24B a month under the Section 122 blanket 10% &mdash; this is the monthly revenue whose legal basis expires July 24. Gross receipts shown; net receipts in June 2026 were minus $25.6B because refunds of the court-struck emergency tariffs exceeded new collections.</div><div class="chart-wrap"><svg viewBox="0 0 680 312" role="img" xmlns="http://www.w3.org/2000/svg"><line x1="52" y1="266.0" x2="660" y2="266.0" class="grid"/><text x="44" y="270.0" class="tick" text-anchor="end">$0B</text><line x1="52" y1="197.7" x2="660" y2="197.7" class="grid"/><text x="44" y="201.7" class="tick" text-anchor="end">$10B</text><line x1="52" y1="129.3" x2="660" y2="129.3" class="grid"/><text x="44" y="133.3" class="tick" text-anchor="end">$20B</text><line x1="52" y1="61.0" x2="660" y2="61.0" class="grid"/><text x="44" y="65.0" class="tick" text-anchor="end">$30B</text><text x="8" y="13" class="tick unit" text-anchor="start">$B/month</text><line x1="52" y1="213.4" x2="660" y2="213.4" class="ref-dash"/><text x="56" y="204" class="ann" text-anchor="start">pre-2025 norm (~2% average tariff)</text><path d="M 54.0,266 v -47.9 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 47.9 z" class="bar mute"><title>2024-07: $7.6B gross</title></path><path d="M 79.3,266 v -47.9 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 47.9 z" class="bar mute"><title>2024-08: $7.6B gross</title></path><path d="M 104.7,266 v -48.6 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 48.6 z" class="bar mute"><title>2024-09: $7.7B gross</title></path><path d="M 130.0,266 v -50.0 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 50.0 z" class="bar mute"><title>2024-10: $7.9B gross</title></path><path d="M 155.3,266 v -46.6 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 46.6 z" class="bar mute"><title>2024-11: $7.4B gross</title></path><path d="M 180.7,266 v -46.6 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 46.6 z" class="bar mute"><title>2024-12: $7.4B gross</title></path><path d="M 206.0,266 v -50.0 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 50.0 z" class="bar mute"><title>2025-01: $7.9B gross</title></path><path d="M 231.3,266 v -48.6 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 48.6 z" class="bar mute"><title>2025-02: $7.7B gross</title></path><path d="M 256.7,266 v -55.4 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 55.4 z" class="bar mute"><title>2025-03: $8.7B gross</title></path><path d="M 282.0,266 v -107.4 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 107.4 z" class="bar"><title>2025-04: $16.3B gross</title></path><path d="M 307.3,266 v -151.8 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 151.8 z" class="bar"><title>2025-05: $22.8B gross</title></path><path d="M 332.7,266 v -181.9 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 181.9 z" class="bar"><title>2025-06: $27.2B gross</title></path><path d="M 358.0,266 v -190.1 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 190.1 z" class="bar"><title>2025-07: $28.4B gross</title></path><path d="M 383.3,266 v -201.7 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 201.7 z" class="bar"><title>2025-08: $30.1B gross</title></path><path d="M 408.7,266 v -204.4 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 204.4 z" class="bar"><title>2025-09: $30.5B gross</title></path><path d="M 434.0,266 v -222.2 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 222.2 z" class="bar"><title>2025-10: $33.1B gross</title></path><path d="M 459.3,266 v -212.6 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 212.6 z" class="bar"><title>2025-11: $31.7B gross</title></path><path d="M 484.7,266 v -196.2 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 196.2 z" class="bar"><title>2025-12: $29.3B gross</title></path><path d="M 510.0,266 v -197.6 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 197.6 z" class="bar"><title>2026-01: $29.5B gross</title></path><path d="M 535.3,266 v -181.9 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 181.9 z" class="bar"><title>2026-02: $27.2B gross</title></path><path d="M 560.7,266 v -160.0 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 160.0 z" class="bar"><title>2026-03: $24.0B gross</title></path><path d="M 586.0,266 v -159.3 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 159.3 z" class="bar"><title>2026-04: $23.9B gross</title></path><path d="M 611.3,266 v -145.6 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 145.6 z" class="bar"><title>2026-05: $21.9B gross</title></path><path d="M 636.7,266 v -157.3 a 4,4 0 0 1 4,-4 h 13.3 a 4,4 0 0 1 4,4 v 157.3 z" class="bar"><title>2026-06: $23.6B gross</title></path><line x1="52" y1="266" x2="660" y2="266" class="axis"/><text x="64.7" y="284" class="tick" text-anchor="middle">Jul ’24</text><text x="216.7" y="284" class="tick" text-anchor="middle">Jan ’25</text><text x="368.7" y="284" class="tick" text-anchor="middle">Jul ’25</text><text x="520.7" y="284" class="tick" text-anchor="middle">Jan ’26</text><text x="647.3" y="284" class="tick" text-anchor="middle">Jun ’26</text><text x="444.7" y="31.8" class="ann" text-anchor="middle">$33.1B peak</text><text x="647.3" y="96.7" class="ann" text-anchor="middle">$23.6B&#8224;</text><line x1="280" y1="44" x2="280" y2="266" class="ref"/><text x="284" y="52" class="ann">Apr 2025</text><text x="284" y="66" class="ann">tariffs ramp</text><line x1="533" y1="66" x2="533" y2="266" class="ref"/><text x="674" y="48" class="ann" text-anchor="end">Feb 2026: Section 122 takes over</text><text x="674" y="62" class="ann" text-anchor="end">after court strike</text><text x="660" y="304" class="ann" text-anchor="end">&#8224; gross; net June 2026 receipts were &minus;$25.6B (refunds of struck-down tariffs)</text></svg></div><details class="tbl"><summary>Data table</summary><table><thead><tr><th scope="col">Month</th><th scope="col">Gross customs duties collected</th></tr></thead><tbody><tr><td>2024-07</td><td class="num">$7.6B</td></tr><tr><td>2024-08</td><td class="num">$7.6B</td></tr><tr><td>2024-09</td><td class="num">$7.7B</td></tr><tr><td>2024-10</td><td class="num">$7.9B</td></tr><tr><td>2024-11</td><td class="num">$7.4B</td></tr><tr><td>2024-12</td><td class="num">$7.4B</td></tr><tr><td>2025-01</td><td class="num">$7.9B</td></tr><tr><td>2025-02</td><td class="num">$7.7B</td></tr><tr><td>2025-03</td><td class="num">$8.7B</td></tr><tr><td>2025-04</td><td class="num">$16.3B</td></tr><tr><td>2025-05</td><td class="num">$22.8B</td></tr><tr><td>2025-06</td><td class="num">$27.2B</td></tr><tr><td>2025-07</td><td class="num">$28.4B</td></tr><tr><td>2025-08</td><td class="num">$30.1B</td></tr><tr><td>2025-09</td><td class="num">$30.5B</td></tr><tr><td>2025-10</td><td class="num">$33.1B</td></tr><tr><td>2025-11</td><td class="num">$31.7B</td></tr><tr><td>2025-12</td><td class="num">$29.3B</td></tr><tr><td>2026-01</td><td class="num">$29.5B</td></tr><tr><td>2026-02</td><td class="num">$27.2B</td></tr><tr><td>2026-03</td><td class="num">$24.0B</td></tr><tr><td>2026-04</td><td class="num">$23.9B</td></tr><tr><td>2026-05</td><td class="num">$21.9B</td></tr><tr><td>2026-06</td><td class="num">$23.6B</td></tr></tbody></table></details><figcaption>Source: US Treasury Monthly Treasury Statement, Table 4, via the Fiscal Data API; as of the June 30, 2026 statement.</figcaption></figure><figure class="chart"><div class="chart-title">The gap trade: if Friday's expiry outruns the replacement, most imports briefly revert from 10% to ~2%</div><div class="chart-msg">Six policy rates, no time dimension, grouped by causal role: the rate that dies Friday, the reversion state if a gap opens, and the rates incoming or already in force. The 2.2% reversion figure is a trade-weighted average, not a statutory rate &mdash; hence its distinct outline fill.</div><div class="chart-wrap"><svg viewBox="0 0 680 416" role="img" xmlns="http://www.w3.org/2000/svg"><text x="674" y="14" class="tick unit" text-anchor="end">percent ad valorem</text><text x="16" y="32" class="tierhdr">EXPIRES FRIDAY, JUL 24</text><path d="M 16,56 h 231.2 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -231.2 z" class="bar"><title>Section 122 blanket (expires Jul 24): 10%</title></path><text x="16" y="48" class="blab">Section 122 blanket (statutory sunset Jul 24)</text><text x="259.2" y="71.0" class="val">10%</text><text x="16" y="112" class="tierhdr">IF A GAP OPENS &mdash; REVERSION STATE</text><line x1="251.2" y1="78" x2="251.2" y2="114" class="ref-dash"/><line x1="251.2" y1="134" x2="251.2" y2="147" class="ref-dash"/><line x1="122" y1="147" x2="251.2" y2="147" class="arrow"/><path d="M 122,142 L 122,152 L 112,147 z" class="arrowhead"/><text x="259" y="100" class="ann">&minus;7.8 pts for however long the gap lasts</text><path d="M 16,136 h 47.7 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -47.7 z" class="bar-alt"><title>Default (most-favored-nation) average, pre-2025: 2.2% (trade-weighted average, not a statutory rate)</title></path><text x="16" y="128" class="blab">Default (most-favored-nation) average &mdash; trade-weighted average, not a statutory rate</text><text x="75.7" y="151.0" class="val">2.2%</text><text x="16" y="192" class="tierhdr">INCOMING / IN FORCE</text><path d="M 16,216 h 231.2 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -231.2 z" class="bar"><title>Section 301 proposed, 14 economies: 10%</title></path><text x="16" y="208" class="blab">Section 301 proposed, 14 economies</text><text x="259.2" y="231.0" class="val">10%</text><path d="M 16,270 h 290.0 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -290.0 z" class="bar"><title>Section 301 proposed, 46 economies: 12.5%</title></path><text x="16" y="262" class="blab">Section 301 proposed, 46 economies</text><text x="318.0" y="285.0" class="val">12.5%</text><path d="M 16,324 h 348.8 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -348.8 z" class="bar"><title>EU all-inclusive ceiling (since Jul 1): 15%</title></path><text x="16" y="316" class="blab">EU all-inclusive ceiling (since Jul 1)</text><text x="376.8" y="339.0" class="val">15%</text><path d="M 16,378 h 584.0 a 4,4 0 0 1 4,4 v 14 a 4,4 0 0 1 -4,4 h -584.0 z" class="bar"><title>Brazil Section 301 (effective Jul 22): 25%, substantial carve-outs</title></path><text x="16" y="370" class="blab">Brazil Section 301 (effective Jul 22)</text><text x="596" y="393.0" class="inbar" text-anchor="end">substantial carve-outs</text><text x="612.0" y="393.0" class="val">25%</text><line x1="16" y1="22" x2="16" y2="406" class="axis"/></svg></div><details class="tbl"><summary>Data table</summary><table><thead><tr><th scope="col">Rate in play</th><th scope="col">Percent ad valorem</th></tr></thead><tbody><tr><td>Default (most-favored-nation) average, pre-2025</td><td class="num">2.2%</td></tr><tr><td>Section 122 blanket (expires Jul 24)</td><td class="num">10%</td></tr><tr><td>Section 301 proposed, 14 economies</td><td class="num">10%</td></tr><tr><td>Section 301 proposed, 46 economies</td><td class="num">12.5%</td></tr><tr><td>EU all-inclusive ceiling (since Jul 1)</td><td class="num">15%</td></tr><tr><td>Brazil Section 301 (effective Jul 22)</td><td class="num">25%</td></tr></tbody></table></details><figcaption>Source: USTR June 2 press release and June 5 Federal Register proposal (Section 301 rates); Section 122 notice of February 2026; USTR Brazil Notice of Action effective July 22, 2026; US-EU arrangement ceiling effective July 1, 2026; WTO World Tariff Profiles (pre-2025 trade-weighted most-favored-nation average). Note: the 2.2% figure is a trade-weighted average; all other bars are statutory rates.</figcaption></figure>
+<p><span class="lbl">Data.</span> Section 122 blanket rate 10%, effective February 24, statutory sunset July
+24; proposed Section 301 replacement 12.5% on 46 economies / 10% on 14 (announced June 2, rate split verified
+against the June 5 Federal Register notice); Brazil duty 25%, effective July 22 (Federal Register document
+2026-14542); US monthly customs collections: ~$7.5B/month early 2025, $33.1B peak October 2025, $23.6B gross
+June 2026 (Treasury Monthly Statement).</p>
+<p class="angle"><span class="lbl">Tech/AI angle.</span> The 46-country 12.5% list spans the electronics
+assembly belt (Vietnam, Thailand, India, Japan, South Korea), so where the replacement lands directly moves
+landed costs for servers, consumer electronics, and artificial-intelligence data-center hardware imported into
+the United States. (See the dissent: the red team argues this angle is theme-stretching.)</p>
+<p class="srcs"><span class="lbl">Sources.</span> United States Trade Representative (A1); Federal Register API
+(A1, verification); Tariffs Tool trade-compliance guide (C2); Tech Times (C3). Best grade:
+<strong>A1</strong>.</p>
+
+<h3 id="item-4">4. IEA: full Chinese rare-earth export curbs would put $6.5 trillion of annual downstream production at risk, as Beijing signals active enforcement</h3>
+<p class="meta"><strong>Status:</strong> confirmed (that the estimates were published and the enforcement
+actions occurred; the $6.5T itself is a model scenario) &middot; <strong>Confidence:</strong> 0.85
+(verifier-revised from 0.75, status upgraded from reported) &middot; <strong>Beat:</strong> supply chains
+&amp; trade &middot; <strong>Best source grade:</strong> B1</p>
+<p><span class="lbl">What happened.</span> The International Energy Agency's critical-minerals assessment,
+published July 16, estimates that full implementation of China's rare-earth export restrictions would
+jeopardize about $6.5 trillion per year of downstream production outside China &mdash; automotive, defense,
+high-tech and energy hardest hit, with the United States and Europe accounting for nearly half the exposure to
+the seven heavy rare earths controlled since April 2025. Battery-grade graphite curbs alone would put over
+$300 billion at risk annually. China's expanded controls &mdash; announced October 2025 and extended
+extraterritorially to foreign-made products containing Chinese rare earths &mdash; are suspended only until
+November 10, 2026. In parallel, Chinese enforcement is visibly tightening: the Ministry of Commerce formalized
+a public whistleblower mechanism for strategic-mineral export violations (Announcement No. 26 of 2026,
+effective July 1), two Japanese nationals were detained in Dalian over alleged rare-earth smuggling (in May,
+the verifier notes, not a fresh July action), and in June Beijing added 10 United States entities &mdash;
+including rare-earth miners MP Materials and USA Rare Earth &mdash; to its own export-control list.</p>
+<p><span class="lbl">Why it matters.</span> These are agency estimates, not realized losses &mdash; the $6.5
+trillion is a claim about a scenario, from an agency with a diversification agenda, and the controls' worst
+provisions remain suspended. But the structure is the point: China processes up to 90% of the world's rare
+earths (it mines about 69%) and effectively all heavy rare earths, a single-supplier concentration with few
+historical parallels &mdash; the 2010 China-Japan embargo, at far smaller scale, sent prices up severalfold
+within months. Base rate: China has so far used these controls as negotiating leverage, suspending or
+licensing around them rather than imposing maximal cutoffs, so full implementation in November is unlikely
+(20&ndash;45%) &mdash; but the enforcement drumbeat raises the credibility of the threat, which is itself the
+leverage. The proposed multilateral stockpiling effort the IEA costs at roughly $900 million for 11 high-risk
+materials (a proposal, not an existing program) would cover a trivial fraction of the exposure.</p>
+<h4>The mechanics</h4>
+<p>Rare earths are seventeen metallic elements that are not actually rare in the ground &mdash; they are rare
+in usable form, because separating them from ore and from each other is a filthy, capital-hungry chemical
+process that most countries spent thirty years happily outsourcing to China. The result is one of the most
+lopsided leverage ratios in the world economy: global rare-earth mining is a market measured in the low tens
+of billions of dollars a year, yet the International Energy Agency now estimates that a full Chinese export
+cutoff would put roughly $6.5 trillion of annual downstream production at risk &mdash; car plants, defense
+lines, wind turbines, robotics &mdash; because a few kilograms of rare-earth magnet sit inside every
+electric-vehicle motor and roughly 400 kilograms of rare-earth material go into a single F-35 fighter jet,
+with no drop-in substitute. China mines about 69% of the world's supply but processes up to 90% of it, and for
+the &ldquo;heavy&rdquo; rare earths that make magnets survive high temperatures (dysprosium, terbium), its
+separation share is effectively 100%. That is a chokepoint of the same order as the Strait of Hormuz for oil
+&mdash; except one government owns the strait, and in October 2025 it wrote itself rules claiming authority
+over foreign-made products anywhere on Earth that contain Chinese rare earths. Those rules are suspended,
+under a trade truce, only until November 10, 2026.</p>
+<p>Two episodes calibrate what happens when Beijing squeezes. In September 2010, after Japan arrested a
+Chinese trawler captain near disputed islands, China quietly halted rare-earth shipments to Japan for about
+two months: prices of some elements rose as much as tenfold into 2011, Japan bankrolled an Australian producer
+and redesigned products to use less, and by 2015 prices had crashed and China's mining share had slid from
+about 97% toward today's 69% &mdash; but the processing monopoly never broke. The second episode just
+happened: on April 4, 2025 China imposed licensing on seven heavy rare earths and the magnets made from them,
+and within two months its worldwide magnet exports collapsed from 6,357 tonnes in January to 1,238 tonnes in
+May, a five-year low; Ford halted Explorer production in Chicago and European suppliers warned of shutdowns
+before a June truce restored license flows and exports rebounded above pre-control levels by August. The
+lesson cuts both ways: the weapon works within weeks, but Beijing has so far used it as a dial &mdash;
+throttle, extract concessions, re-license &mdash; not a switch, because every month of cutoff accelerates the
+$65 billion in public money now funding non-Chinese alternatives. The July 16 report is the first official
+attempt to price the switch, and the detentions, whistleblower hotline, and entity listings of mid-2026 are
+Beijing making sure everyone believes it still has its hand on the dial as the November deadline
+approaches.</p>
+<figure class="chart"><div class="chart-title">Beijing has already rehearsed the cutoff: exports &minus;81% in four months, then re-licensed above pre-control levels</div><div class="chart-msg">The dial, demonstrated: after the April 4, 2025 export controls, exports collapsed from 6,357 tonnes (January) to 1,238 tonnes (May, lowest since February 2020) &mdash; an 81% throttle in four months &mdash; then recovered above pre-control levels by August once the June truce restored licensing. Beijing has already run a full rehearsal of the cutoff the IEA priced at $6.5 trillion, and chose to turn the tap back on. Months without a bar have no reported figure.</div><div class="chart-wrap"><svg viewBox="0 0 680 300" role="img" xmlns="http://www.w3.org/2000/svg"><line x1="52" y1="266.0" x2="660" y2="266.0" class="grid"/><text x="44" y="270.0" class="tick" text-anchor="end">0</text><line x1="52" y1="195.7" x2="660" y2="195.7" class="grid"/><text x="44" y="199.7" class="tick" text-anchor="end">2,000</text><line x1="52" y1="125.4" x2="660" y2="125.4" class="grid"/><text x="44" y="129.4" class="tick" text-anchor="end">4,000</text><line x1="52" y1="55.1" x2="660" y2="55.1" class="grid"/><text x="44" y="59.1" class="tick" text-anchor="end">6,000</text><text x="8" y="13" class="tick unit" text-anchor="start">tonnes/mo</text><line x1="153.3" y1="18" x2="153.3" y2="266" class="ref"/><text x="147.3" y="24" class="ann" text-anchor="end">controls Apr 4</text><line x1="220.9" y1="18" x2="220.9" y2="266" class="ref"/><text x="225.9" y="24" class="ann">truce, re-licensing</text><text x="656" y="36" class="ann" text-anchor="end">Oct 2025 controls suspended only until</text><text x="656" y="50" class="ann" text-anchor="end">Nov 10, 2026 &mdash; the next test</text><path d="M 56.9,266 v -219.4 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 219.4 z" class="bar"><title>2025-01: 6,357 tonnes</title></path><path d="M 90.7,266 v -122.0 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 122.0 z" class="bar"><title>2025-02: 3,585 tonnes</title></path><path d="M 158.2,266 v -88.3 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 88.3 z" class="bar"><title>2025-04: 2,626 tonnes</title></path><path d="M 192.0,266 v -39.5 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 39.5 z" class="bar"><title>2025-05: 1,238 tonnes</title></path><path d="M 225.8,266 v -108.0 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 108.0 z" class="bar"><title>2025-06: 3,188 tonnes</title></path><path d="M 259.6,266 v -192.0 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 192.0 z" class="bar"><title>2025-07: 5,577 tonnes</title></path><path d="M 293.3,266 v -212.0 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 212.0 z" class="bar"><title>2025-08: 6,146 tonnes</title></path><path d="M 327.1,266 v -198.9 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 198.9 z" class="bar"><title>2025-09: 5,774 tonnes</title></path><path d="M 360.9,266 v -188.3 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 188.3 z" class="bar"><title>2025-10: 5,473 tonnes</title></path><path d="M 394.7,266 v -212.1 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 212.1 z" class="bar"><title>2025-11: 6,150 tonnes</title></path><path d="M 462.2,266 v -207.7 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 207.7 z" class="bar"><title>2026-01: 6,024 tonnes</title></path><path d="M 496.0,266 v -162.5 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 162.5 z" class="bar"><title>2026-02: 4,739 tonnes</title></path><path d="M 563.6,266 v -176.1 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 176.1 z" class="bar"><title>2026-04: 5,126 tonnes</title></path><path d="M 597.3,266 v -162.2 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 162.2 z" class="bar"><title>2026-05: 4,730 tonnes</title></path><path d="M 631.1,266 v -194.5 a 4,4 0 0 1 4,-4 h 16.0 a 4,4 0 0 1 4,4 v 194.5 z" class="bar"><title>2026-06: 5,649 tonnes</title></path><line x1="52" y1="266" x2="660" y2="266" class="axis"/><text x="68.9" y="284" class="tick" text-anchor="middle">Jan ’25</text><text x="237.8" y="284" class="tick" text-anchor="middle">Jun ’25</text><text x="440.4" y="284" class="tick" text-anchor="middle">Dec ’25</text><text x="643.1" y="284" class="tick" text-anchor="middle">Jun ’26</text><text x="68.9" y="34.6" class="ann" text-anchor="middle">6,357</text><text x="204.0" y="214.5" class="ann" text-anchor="middle">1,238</text><text x="305.3" y="42.0" class="ann" text-anchor="middle">6,146</text><line x1="85" y1="55" x2="186" y2="196" class="arrow"/><path d="M 191,202 L 181.4,196.5 L 188.8,191.3 z" class="arrowhead"/><text x="106" y="72" class="val" text-anchor="start">&minus;81%</text></svg></div><details class="tbl"><summary>Data table</summary><table><thead><tr><th scope="col">Month</th><th scope="col">China magnet exports, tonnes</th></tr></thead><tbody><tr><td>2025-01</td><td class="num">6,357 t</td></tr><tr><td>2025-02</td><td class="num">3,585 t</td></tr><tr><td>2025-03</td><td class="num">no reported figure</td></tr><tr><td>2025-04</td><td class="num">2,626 t</td></tr><tr><td>2025-05</td><td class="num">1,238 t</td></tr><tr><td>2025-06</td><td class="num">3,188 t</td></tr><tr><td>2025-07</td><td class="num">5,577 t</td></tr><tr><td>2025-08</td><td class="num">6,146 t</td></tr><tr><td>2025-09</td><td class="num">5,774 t</td></tr><tr><td>2025-10</td><td class="num">5,473 t</td></tr><tr><td>2025-11</td><td class="num">6,150 t</td></tr><tr><td>2025-12</td><td class="num">no reported figure</td></tr><tr><td>2026-01</td><td class="num">6,024 t</td></tr><tr><td>2026-02</td><td class="num">4,739 t</td></tr><tr><td>2026-03</td><td class="num">no reported figure</td></tr><tr><td>2026-04</td><td class="num">5,126 t</td></tr><tr><td>2026-05</td><td class="num">4,730 t</td></tr><tr><td>2026-06</td><td class="num">5,649 t</td></tr></tbody></table></details><figcaption>Source: China General Administration of Customs monthly trade data, as reported by Reuters and other wire services (March 2025, December 2025 and March 2026 not directly reported in retrievable sources).</figcaption></figure>
+<p><span class="lbl">Data.</span> $6.5 trillion/year of downstream production at risk under full
+implementation (IEA scenario estimate, July 16); battery-grade graphite exposure &gt;$300 billion/year;
+suspension of the October 2025 measures expires November 10, 2026; public financing for non-China
+critical-mineral projects $65 billion 2023&ndash;25, a quadrupling; China magnet exports 6,357 tonnes (January
+2025) &rarr; 1,238 tonnes (May 2025) &rarr; ~5,600 tonnes (June 2026, China customs data via wires).</p>
+<p class="angle"><span class="lbl">Tech/AI angle.</span> Heavy rare earths are irreplaceable inputs to the
+permanent magnets in electric-vehicle motors, precision-guided munitions, hard drives and robotics, and to
+semiconductor manufacturing &mdash; making Chinese refining capacity a chokepoint over the
+artificial-intelligence and defense hardware build-out comparable to Western chip export controls in the other
+direction. (See the dissent: the red team argues the semiconductor and AI framing overreaches &mdash; this is
+a magnets story.)</p>
+<p class="srcs"><span class="lbl">Sources.</span> Bloomberg (B2, upgraded to B1 composite on corroboration);
+The National, reporting the IEA release (B2); Morgan Lewis client alert (B2). Best grade: <strong>B1</strong>
+(the underlying IEA report is A-grade primary but was not directly fetchable).</p>
+
+<h2 id="trends">Macro trends</h2>
+
+<h3>Tech &amp; AI thread</h3>
+<p>Every technology angle this week points at the same object: the physical substrate of the
+artificial-intelligence buildout, layer by layer. Moonshot AI's Kimi K3 was supposed to be evidence that
+frontier capability is cheap and copyable &mdash; instead its own computing clusters buckled within roughly 96
+hours of launch, direct evidence that inference compute, not model weights, is the binding resource. Taiwan
+Semiconductor reported profit up 77% and raised 2026 capital spending to $60-64 billion in the same week its
+customers' valuations fell into a bear market. Meanwhile the other two layers of the stack took policy fire:
+the proposed 12.5% Section 301 tariff list covers the entire electronics assembly belt (Vietnam, Thailand,
+India, Japan, South Korea), raising landed costs on servers and data-center hardware, and China's rare-earth
+controls sit as a chokepoint on the magnets inside every hard drive, robot, and defense system &mdash; the
+mirror image of Western chip export controls. The synthesis: the market spent the week arguing about whether
+AI software is overvalued while every hardware input &mdash; chips, assembly, magnets &mdash; got more
+expensive or more contested. <strong>Key judgment:</strong> it is <span class="band">likely (55-80%)</span>
+that the July 21-31 hyperscaler earnings round reaffirms rather than cuts announced capital spending,
+repeating the January 2025 DeepSeek pattern (full retracement in 18 trading days). <strong>Falsified
+by:</strong> any of Microsoft, Alphabet, Amazon, or Meta guiding 2026 capital expenditure down in this
+earnings cycle.</p>
+
+<h3>Trend 1: Chokepoint weaponization &mdash; single points of failure are being used as leverage, and used as a dial, not a switch</h3>
+<p><strong>Supported by:</strong> Signal 1 (Strait of Hormuz: ~10 transits July 12 vs ~88/day normal, roughly
+20% of seaborne oil at risk), Signal 4 (Chinese rare-earth processing: up to ~90% of world capacity,
+effectively 100% for heavy rare earths, controls suspended only until November 10, 2026), with Signal 2 as
+backdrop (about 90% of the most advanced semiconductors from a single company, Taiwan Semiconductor
+Manufacturing Company).</p>
+<p>Two of the world's most concentrated physical supply nodes came under active pressure in the same week, and
+in both cases the historical pattern is throttle-and-negotiate rather than maximal cutoff. Iran attacked three
+tankers but signaled openness to negotiations Monday (which knocked Brent from its $90.79 intraday high back
+to about $88). Beijing tightened rare-earth enforcement (a whistleblower mechanism, detentions, entity
+listings) while keeping the worst provisions of its October 2025 controls suspended &mdash; its April 2025
+licensing squeeze cut magnet exports 81% in four months, then re-licensed above pre-control levels by August.
+Markets are pricing exactly this: Brent at $88-90 is a contested strait, not a closed one (the April 7 spot
+peak was $138.21).</p>
+<p><strong>Key judgment:</strong> It is <span class="band">unlikely (20-45%)</span> that either chokepoint
+goes to sustained maximal disruption in the next three months &mdash; a Hormuz closure lasting weeks or a full
+November implementation of the Chinese controls. The base rates converge: Hormuz has never been effectively
+closed since 1945, and every Chinese rare-earth episode on record ended in re-licensing.</p>
+<p><strong>Falsified by:</strong> Brent settling above the April peak of $138.21 (US Energy Information
+Administration daily spot series); Hormuz transits staying below ~20/day for more than two weeks
+(International Monetary Fund PortWatch / ship-tracking data); or, on the mineral side, the October 2025
+measures taking effect after November 10 with license denials visible in China customs monthly magnet-export
+data. Conversely, a new truce or recovery above 50 transits/day <span class="band">very likely
+(80-95%)</span> sends Brent back toward the $70s and confirms the dial-not-switch read.</p>
+
+<h3>Trend 2: The deadline economy &mdash; the next ten days of policy are governed by hard, dated tripwires, and the modal outcome is continuity executed late</h3>
+<p><strong>Supported by:</strong> Signal 3 (Section 122 blanket 10% tariff sunsets Friday July 24 with the
+Section 301 replacement unpublished; Brazil's 25% duty effective Wednesday July 22), Signal 4 (rare-earth
+suspension expiry November 10, 2026), Signal 2 (hyperscaler capital-spending guidance in the July 21-31
+earnings round is the scheduled resolution event for the semiconductor rout), Signal 1 (the entire oil
+repricing dates from a single dated event, the July 7 truce termination).</p>
+<p>Across all four signals, the analytically decisive facts are calendar entries, not surprises: statutory
+sunsets, suspension expiries, earnings dates. That makes this week unusually resolvable &mdash; and it makes
+gaps between expiry and replacement the tradeable object (importers front-running a possible reversion to
+roughly 2% most-favored-nation rates after Friday; chip investors positioning ahead of capex guidance).</p>
+<p><strong>Key judgment:</strong> It is <span class="band">likely (55-80%)</span> that the administration
+publishes the Section 301 replacement in the Federal Register on or within days of July 24, avoiding a
+prolonged low-tariff window. The base rate is the February 2026 handoff: when the Supreme Court struck the
+emergency-powers tariffs, the Section 122 replacement was in place within days. The administrative record
+closed July 16; nothing procedural remains.</p>
+<p><strong>Falsified by:</strong> No final determination in the Federal Register by July 31, accompanied by a
+visible surge in customs entries (US Customs and Border Protection weekly entry data, and eventually the
+Treasury Monthly Statement customs line for July).</p>
+
+<h3>Trend 3: A synchronized cost-push impulse is building into the second half &mdash; energy, tariffs, and materials all moving the same direction</h3>
+<p><strong>Supported by:</strong> Signal 1 (Brent up ~29% from the July 2 low of $68.53 to ~$88-90; European
+gas up 29% in July per the ranking context), Signal 3 (the tariff floor on most United States imports is set
+to move from 10% to 12.5% on 46 economies &mdash; a ratchetable rate with no statutory cap, on roughly $3
+trillion of annual goods imports), Signal 4 (a priced threat of $6.5 trillion/year of downstream production
+exposure keeps a scarcity premium in critical-minerals-dependent goods).</p>
+<p>These are three independent cost shocks with one sign. None is individually unprecedented, but they are
+additive and hit through different channels at different speeds: gasoline passes through to consumer prices in
+weeks, tariffs over one to two quarters, materials scarcity over quarters to years. The one offsetting force
+is the possible tariff gap after July 24 &mdash; which Trend 2 judges likely to be brief.</p>
+<p><strong>Key judgment:</strong> It is <span class="band">likely (55-80%)</span> that the July 2026 United
+States Consumer Price Index print (Bureau of Labor Statistics, released mid-August) shows the energy component
+swinging positive month-over-month, given retail fuel prices track the ~$20/barrel crude move within weeks. A
+broader claim &mdash; that this tips the Federal Reserve hawkish &mdash; is not yet supported by these signals
+and is not made.</p>
+<p><strong>Falsified by:</strong> A United States-Iran truce returning Brent to the $70s before end-July
+(which would mute the pass-through), or the July CPI energy index printing flat-to-negative on August's
+release.</p>
+
+<h2 id="dissent">What we might be getting wrong</h2>
+<ul class="dissent">
+<li><strong>Hormuz (Signal 1): our most dramatic number is our stalest, and the market itself disagrees with
+our framing.</strong> The "10 ships vs. ~88/day" transit collapse is a single observation from July 12 &mdash;
+eight days old at publication, from a multi-day-lagged source &mdash; presented as the current state of the
+strait. We do not actually know today's transit count, and the falsifier we set (&gt;50 transits/day) could
+already be tripping. Meanwhile the price tape argues against the re-escalation narrative we lead with: Brent
+at ~$88-90 against an April peak of $138 means the market is pricing sustained closure as <em>unlikely</em>
+(20-45%), and Monday's fade from the $90.79 intraday print to ~$88.26 on a single Iranian foreign-ministry
+comment about negotiations shows how much of the premium is one headline from evaporating. Given this war has
+already produced one truce (June 17), the base rate for "another negotiated pause within weeks" is not low;
+the consensus "war premium builds" read would miss that the likelier (55-80%) near-term path is the June
+pattern repeating &mdash; truce, reopening, Brent back toward the $70s.</li>
+<li><strong>Hormuz (Signal 1): the insurance data point should not have survived to print.</strong> The "8x
+pre-crisis war-risk premium" figure is sourced solely to straits.live, an ungraded aggregator, and the
+verifier found better sourcing (The National) putting the multiple at roughly 12-40x. When a load-bearing
+number is both wrong by a factor of up to five <em>and</em> sourced below our own C3 floor for stated fact,
+the fix is replacement, not a confidence trim from 0.90 to 0.85.</li>
+<li><strong>Kimi K3 (Signal 2): we are over-attributing a $3.3 trillion move to a model launch &mdash; our own
+chart says so.</strong> The Philadelphia Semiconductor Index was already down 15.3% from its June 22 peak
+<em>before</em> K3 appeared; the launch added 5.8% over two days. The headline ("K3 ... triggered the worst
+weekly rout") assigns the whole drawdown to the trigger of its final leg. The $3.3 trillion figure itself is a
+single-origin market-cap aggregation circulating through C-grade aggregators (TechTimes C3, KuCoin) &mdash; it
+should be labeled an estimate everywhere it appears, including the rank rationale, which currently repeats it
+as fact. And the comforting base rate ("DeepSeek retraced in 18 trading days") is a sample of one; a base rate
+built on n=1 is an anecdote wearing a lab coat.</li>
+<li><strong>Kimi K3 (Signal 2): the tech-and-AI angle is built on the vendor's own marketing, days before its
+initial public offering vote.</strong> The claim that "inference compute, not model weights, is the binding
+strategic resource" rests entirely on Moonshot's self-reported capacity strain &mdash; announced the same
+weekend it circulated a shareholder resolution for a Hong Kong listing. A subscription pause is also a
+textbook scarcity-marketing device, and demand-signaling ahead of a fundraise is exactly the interested-party
+incentive our methodology tells us to discount. Add that the "largest open-weight model" is a promise (weights
+due July 27, not yet published) and that independent testing reportedly found a ~51% hallucination rate on
+confidently-attempted answers, and the strategic-inflection framing looks likely (55-80%) to be recycled
+DeepSeek-moment hype rather than evidence of a new regime.</li>
+<li><strong>Tariff cliff (Signal 3): the "legal cliff" is probably a non-event, and its central deadline may
+not exist.</strong> The "July 20 completion deadline" that anchors the drama appears only in two C-grade
+sources (a compliance-tool website and TechTimes) and could not be found in the Federal Register, the United
+States Trade Representative's own releases, or law-firm analyses &mdash; a claim that specific should not
+headline a confirmed signal. The brief's own base rate (the February 2026 handoff from the struck-down
+emergency tariffs to Section 122 was executed within days) implies a smooth transition is <em>likely</em> to
+<em>very likely</em>, which makes "hits a legal cliff" the least probable branch dressed up as the lead. The
+"record June port volumes" front-running evidence is unsourced and should be cut. The honest headline is
+"routine authority handoff expected on time; watch the Federal Register Friday" &mdash; which would not rank
+third.</li>
+<li><strong>Tariff cliff (Signal 3): the tech-and-AI angle here is theme-stretching &mdash; call it what it
+is.</strong> "The 12.5% list spans the electronics assembly belt, so it moves landed costs for
+artificial-intelligence data-center hardware" is true of essentially every broad tariff action ever taken; by
+this logic any customs story is a tech story. Nothing in the signal is specific to artificial-intelligence
+hardware (no exclusion list, no server-specific line item, no hyperscaler exposure figure). This is the
+standing theme being fed, not informed.</li>
+<li><strong>Rare earths (Signal 4): the $6.5 trillion figure measures gross exposure, not loss, from an agency
+with a diversification agenda &mdash; and the strongest evidence in the signal cuts against its own
+headline.</strong> "Production at risk" counts the full value of every car, jet, and turbine containing a few
+kilograms of rare-earth material; the recoverable analytic content (replacement cost, substitution lag) is
+orders of magnitude smaller, and the International Energy Agency has an institutional interest in large
+numbers that motivate member-state stockpiling. Meanwhile the signal's own export series shows Beijing ran the
+full cutoff rehearsal in April-May 2025 and <em>chose to re-license within two months</em> &mdash; and its own
+base-rate paragraph says the historical frequency of a sustained maximal cutoff is "near zero," which makes
+the stated 20-45% for full November implementation internally inconsistent (too high, by the signal's own
+evidence; 5-20%, "very unlikely," fits the record better). The "fresh enforcement drumbeat" is also partly
+recycled: the Dalian detentions date to May 2026.</li>
+<li><strong>Rare earths (Signal 4): the tech-and-AI angle overreaches on semiconductors &mdash; this is a
+magnets story, not a chips story.</strong> The claim that Chinese rare-earth refining is a chokepoint on the
+artificial-intelligence build-out "comparable to Western chip export controls in the other direction" does not
+survive contact with the bill of materials: heavy rare earths are critical to permanent magnets
+(electric-vehicle motors, guided munitions, robotics actuators) but are marginal inputs to semiconductor
+fabrication and essentially irrelevant to training or serving frontier models. The defense and automotive
+exposure is real and sufficient to justify the signal; grafting an artificial-intelligence angle onto it is
+the standing theme distorting the analysis, and the "comparable to chip controls" line should be cut.</li>
+</ul>
+
+<h2 id="killed">Cutting-room floor</h2>
+<p>Killed in verification: <strong>"Markets reprice toward a Federal Reserve rate HIKE on July 29:
+futures-implied odds jump to 46.5% from 34% in a day"</strong> &mdash; the repricing was real but misdated by
+a week (it happened July 12-13, driven by the Hormuz oil shock) and had already round-tripped to roughly 13%
+by the signal's own as-of date after soft June inflation data; as written it would have misinformed the brief
+on its single most market-moving number.</p>
+
+<footer>Daily Brief &middot; 2026-07-20 &middot; four verified items, one killed in verification, no operator
+deep dives &middot; methodology: pdb/METHODOLOGY.md &middot; charts render only series carried in
+signals.json; hover any mark for exact values, or open each chart's data table.</footer>
+</main>
+
+</body>
+</html>
+<!--
+Visual critic review record (2026-07-21) — 7 charts reviewed, 7 verdicts: redesign. All applied in place.
+
+1. Brent crude (Item 1) — REDESIGN. Strongest dataset (71 EIA points, one price type) wearing a pure
+   series-name title; takeaway buried in .chart-msg; June 17 truce START unmarked so the round-trip shape
+   had to be reconstructed; the Jul 13 series end vs the Jul 20 headline was disclosed only in caption prose.
+   Applied: takeaway title; shaded labeled truce band (Jun 17 - Jul 7); $71 dashed "June truce settled level"
+   reference; on-chart right-edge note declaring the EIA ~1-week lag and that Jul 14-20 futures (~$88-90)
+   are a different price type, deliberately not plotted. Peak/low/endpoint markers kept; no data changes.
+
+2. Hormuz transits (Item 1) — REDESIGN. Right two-bar form (praised), but comparison-label title, the -89%
+   delta absent from the chart, and the 8-day staleness confined to the caption.
+   Applied: takeaway title with the -89%; connecting drop arrow labeled -89%; falsifier tick at 50 ships/day
+   on the baseline bar; staleness ("8 days old at publication") rendered on the chart label.
+
+3. PHLX Semiconductor Index, Jun-Jul 2026 (Item 2) — REDESIGN. Good bones, wrong hierarchy: the
+   "rout was mostly pre-K3" point was the title of nothing, and the bear-market threshold (11,707.8) was
+   asserted, never drawn.
+   Applied: takeaway title; dashed bear-market line (-20% from Jun 22 record) labeled; Jul 16-17 launch
+   sessions shaded; Jul 20 endpoint marked "+0.6% stabilization". Record/pre-launch markers and K3 line kept.
+
+4. DeepSeek precedent panel (Item 2) — REDESIGN. Closest to a pass; failed on episode-name title and
+   recovery claimed but not drawn (no pre-shock reference at 5,341.9); curated endpoint unacknowledged.
+   Applied: takeaway title; dashed pre-shock reference line so the Feb 20 close visibly touches it;
+   right-edge note: window ends at recovery, late-Feb slide was tariff-driven, n=1 - template, not law.
+
+5. US monthly customs duties (Item 3) — REDESIGN. Right form (24 bars, zero baseline), wrong story: series-
+   label title, regime narrative unmarked, gross-vs-net caveat caption-only.
+   Applied: takeaway title (~$23B/month rides on Friday); dashed pre-2025 norm line (~$7.7B); vertical event
+   markers "Apr 2025 tariffs ramp" and "Feb 2026 Section 122 takes over after court strike"; dagger footnote
+   on the Jun 2026 bar (net June receipts -$25.6B); pre-2025 bars muted so the regime era pops.
+
+6. Tariff rates in play (Item 3) — REDESIGN. Right no-fake-trend form, but magnitude ordering buried the
+   causal structure, the reversion spread was unstated, and the average-vs-statutory mix was caption-only.
+   Applied: takeaway title (the gap trade, 10% -> ~2%); bars regrouped into three labeled tiers (EXPIRES
+   FRIDAY JUL 24 / IF A GAP OPENS - REVERSION STATE / INCOMING-IN FORCE); -7.8 pts bracket; 2.2% bar
+   restyled as outlined accent fill marking it as a trade-weighted average; Brazil bar carries an on-bar
+   "substantial carve-outs" note; caveat added to figcaption.
+
+7. China magnet exports (Item 4) — REDESIGN. Analytically the best chart; failed only the five-second test
+   (series-name title) and lacked the Nov 10, 2026 forward hook.
+   Applied: takeaway title (Beijing has already rehearsed the cutoff); -81% arrow between the Jan-25 and
+   May-25 bars; right-edge forward note "Oct 2025 controls suspended only until Nov 10, 2026 - the next
+   test". Both event lines, value labels, and honest missing-month gaps kept; no data changes.
+
+Tally: kept 0, redesigned 7, dropped 0. No prose touched; all data tables, hover targets, sources, and
+both color themes preserved.
+-->
